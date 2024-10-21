@@ -1,0 +1,8 @@
+amazoncaptcha
+babel
+curl_cffi
+dateparser
+lxml
+price_parser
+PyICU
+regex
