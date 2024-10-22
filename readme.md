@@ -41,7 +41,6 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 * lxml
 * price_parser
 * PyICU 
-* regex
 
 ## Options
 

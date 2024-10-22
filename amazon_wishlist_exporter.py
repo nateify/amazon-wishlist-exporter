@@ -2,7 +2,7 @@ import argparse
 import json
 from pathlib import Path
 
-import regex as re
+import re
 
 from utils._locale import (
     get_default_locale,
