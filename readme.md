@@ -1,11 +1,12 @@
 # amazon-wishlist-exporter
 amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 
-    usage: amazon_wishlist_exporter.py [-h] (-i ID | -f HTML_FILE) [-t STORE_TLD] [-l STORE_LOCALE] [-p] [-d] [-s SORT_KEYS] [-c] [-y] [-o OUTPUT_FILE]
+    usage: amazon_wishlist_exporter.py [-h] (-i ID | -u URL | -f HTML_FILE) [-t STORE_TLD] [-l STORE_LOCALE] [-p] [-d] [-s SORT_KEYS] [-c] [-y] [-o OUTPUT_FILE]
     
     options:
       -h, --help            show this help message and exit
       -i ID, --id ID        Amazon wishlist ID
+      -u URL, --url URL     Amazon wishlist URL
       -f HTML_FILE, --html-file HTML_FILE
                             Amazon wishlist HTML file
       -t STORE_TLD, --store-tld STORE_TLD
@@ -45,9 +46,10 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 ## Options
 
 * `--id`: The ID of the wishlist, highlighted in bold in this example URL: `https://www.amazon.com/hz/wishlist/ls/` **XXXXXXXXXX** `/ref=nav_wishlist_lists_1`
+* `--url`: Alternative to the above, allows whole wishlist URL as input - may need to be quoted
 * `--html`: For HTML files generated via below instructions
-* `--store-tld`: Required - Any valid Amazon store TLD such as com, co.uk, de, etc.
-* `--store-locale`: Optional - Store locale such as en_US, en_GB, de_DE, etc. - not all stores support all locales. If not specified, the default locale for that store will be chosen.
+* `--store-tld`: Required unless using `--url` - Any valid Amazon store TLD such as com, co.uk, de, etc.
+* `--store-locale`: Optional unless using `--html` - Store locale such as en_US, en_GB, de_DE, etc. - not all stores support all locales. If not specified, the default locale for that store will be chosen.
 * `--sort-keys`: Optional - A single key or comma separated list of key names to sort the wishlist items by. Example `priority,name` sorts first by priority value highest to lowest, then sorts by name
   * Numeric values (such as priority, rating) are sorted largest to smallest
   * String values (such as name, comment) are sorted using the Unicode Collation Algorithm and adjusted to the specified locale
@@ -80,3 +82,10 @@ Alternatively, you can open a console using your browser's development tools, an
 ```javascript
 if(window.location.host.startsWith("www.amazon."))var previousCount=-1,unchangedCount=0,checkExist=setInterval(function(){var e=document.querySelectorAll(".g-item-sortable");if(document.getElementById("endOfListMarker")||unchangedCount>=3){clearInterval(checkExist);let t=document.createElement("a"),n=new Blob([document.getElementById("wishlist-page").outerHTML],{type:"text/html"});var o=window.location.host+"_"+document.getElementById("listId").value+"_"+opts.language+".html";t.href=URL.createObjectURL(n),t.download=o,t.click(),URL.revokeObjectURL(t.href)}else e.length===previousCount?unchangedCount++:unchangedCount=0,previousCount=e.length,(last=e[e.length-1]).scrollIntoView()},2e3);else alert("This bookmarklet must be run on an Amazon site!");
 ```
+
+# Todo
+
+* Remove `--store-locale` being required with `--html` since bookmarklet already puts the locale in the filename
+* Packaging with pip
+* Proper logging
+* Testing

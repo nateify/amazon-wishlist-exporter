@@ -1,6 +1,9 @@
 import re
 
-import icu
+try:
+    import icu
+except ImportError:
+    import utils.locale_collator as icu
 from babel import Locale
 from babel.dates import format_date
 from babel.numbers import format_currency, get_territory_currencies
