@@ -25,12 +25,25 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 
 ## Installation
 
-1. Clone the Git repo
-2. Create a new venv
-3. Install the pip requirements
-   1. PyICU may need to be installed separately, see here for non-Windows instructions: https://gitlab.pyicu.org/main/pyicu#installing-pyicu
-   2. Windows users can use pre-built wheels from here: https://github.com/cgohlke/pyicu-build
-4. Run `amazon_wishlist_exporter.py`
+Install with pip:
+
+    pip install amazon-wishlist-exporter
+
+[uv](https://docs.astral.sh/uv/) or [pipx](https://pipx.pypa.io/stable/) is recommended to install the package in a managed environment:
+
+    uv tool install amazon-wishlist-exporter
+
+For improved sorting of non-Latin or mixed scripts with the Unicode Collation Algorithm, install with the optional `icu` dependency:
+
+    uv tool install amazon-wishlist-exporter[icu]
+
+PyICU may need to be built separately: https://gitlab.pyicu.org/main/pyicu#installing-pyicu
+
+Windows users can use pre-built wheels from here: https://github.com/cgohlke/pyicu-build/releases
+
+Utilizing uv:
+
+    uv tool install amazon-wishlist-exporter --python 3.11 --with https://github.com/cgohlke/pyicu-build/releases/download/v2.13/PyICU-2.13-cp311-cp311-win_amd64.whl
 
 ## Dependencies
 
@@ -41,7 +54,7 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 * dateparser
 * lxml
 * price_parser
-* PyICU 
+* PyICU (optional)
 
 ## Options
 
@@ -85,6 +98,5 @@ if(window.location.host.startsWith("www.amazon."))var previousCount=-1,unchanged
 
 # Todo
 
-* Packaging with pip
-* Proper logging
+* Logging
 * Testing
