@@ -97,7 +97,7 @@ def validate_tld_locale(store_tld, locale):
 
     valid_locales = tld_to_locale_mapping[store_tld]
 
-    if locale not in valid_locales:
+    if locale.lower() not in valid_locales:
         raise ValueError(f"Invalid locale: '{locale}' for TLD: '{store_tld}'. Valid locales are: {valid_locales}")
 
 

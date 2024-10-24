@@ -1,8 +1,7 @@
 import argparse
 import json
-from pathlib import Path
-
 import re
+from pathlib import Path
 
 from utils._locale import (
     get_default_locale,
@@ -145,6 +144,7 @@ class WishlistItem(object):
     @property
     def priority(self):
         item_priority_text = self.element.xpath(".//span[starts-with(@id,'itemPriorityLabel_')]/text()")[0].strip()
+        item_priority_text = item_priority_text.split("\n")[-1].strip()
         item_priority_numerical = int(self.element.xpath(".//span[starts-with(@id,'itemPriority_')]/text()")[0].strip())
 
         if self.priority_is_localized:
@@ -320,6 +320,13 @@ class Wishlist(object):
             yield item.asdict()
 
 
+def re_group(match, group):
+    try:
+        return match.group(group)
+    except (IndexError, AttributeError):
+        return None
+
+
 def main(args):
     if args.html_file:
         parsed_path = str(Path(args.html_file).resolve())
@@ -383,7 +390,7 @@ def cli():
     input_group = parser.add_mutually_exclusive_group(required=True)
     input_group.add_argument("-i", "--id", type=str, help="Amazon wishlist ID")
     input_group.add_argument("-u", "--url", type=str, help="Amazon wishlist URL")
-    input_group.add_argument("-f", "--html-file", type=str, help="Amazon wishlist HTML file")
+    input_group.add_argument("-f", "--html-file", "--html", type=str, help="Amazon wishlist HTML file")
 
     parser.add_argument("-t", "--store-tld", type=str, help="Amazon store TLD")
     parser.add_argument("-l", "--store-locale", "--locale", type=str, help="Amazon store locale")
@@ -413,22 +420,20 @@ def cli():
     if args.id:
         if not args.store_tld:
             parser.error("--store-tld is required when --id is provided")
-
         if not args.store_locale:
-            # If locale is not provided, fetch the default one
             args.store_locale = get_default_locale(args.store_tld)
         else:
-            # Validate the provided locale
             validate_tld_locale(args.store_tld, args.store_locale)
 
     elif args.url:
         re_amazon_wishlist_url = re.compile(r"\.amazon\.([a-z.]{2,})/.*?/wishlist.*/([A-Z0-9]{10,})[/?]?\b")
-        wishlist_parts = re.search(re_amazon_wishlist_url, args.url)
-        wishlist_tld = wishlist_parts.group(1)
-        wishlist_id = wishlist_parts.group(2)
-        if wishlist_tld and wishlist_id:
-            args.store_tld = wishlist_tld
-            args.id = wishlist_id
+        url_parts = re.search(re_amazon_wishlist_url, args.url)
+        matched_tld = re_group(url_parts, 1)
+        matched_id = re_group(url_parts, 2)
+
+        if matched_tld and matched_id:
+            args.store_tld = matched_tld
+            args.id = matched_id
         else:
             parser.error(f"Invalid URL input: {args.url}")
 
@@ -438,14 +443,26 @@ def cli():
             validate_tld_locale(args.store_tld, args.store_locale)
 
     elif args.html_file:
-        # Both store-tld and locale are required
-        if not args.store_tld:
-            parser.error("--store-tld is required when --html-file is provided")
-        if not args.store_locale:
-            parser.error("--locale is required when --html-file is provided")
+        html_file_path = Path(args.html_file)
+        re_amazon_html_name = re.compile(r"www\.amazon\.([a-z.]{2,})_\w+?_([A-z]{2}_[A-z]{2})")
+        filename_parts = re.search(re_amazon_html_name, html_file_path.stem)
+        matched_tld = re_group(filename_parts, 1)
+        matched_locale = re_group(filename_parts, 2)
 
-        if not Path(args.html_file).is_file():
+        if not html_file_path.is_file():
             parser.error("The provided HTML file path does not exist")
+
+        if not args.store_tld:
+            if not matched_tld:
+                parser.error("Could not determine TLD from HTML file name and --store-tld was not provided")
+            else:
+                args.store_tld = matched_tld
+
+        if not args.store_locale:
+            if not matched_locale:
+                parser.error("Could not determine locale from HTML file name and --store-locale was not provided")
+            else:
+                args.store_locale = matched_locale
 
         validate_tld_locale(args.store_tld, args.store_locale)
 

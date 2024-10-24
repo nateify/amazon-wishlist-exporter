@@ -85,7 +85,6 @@ if(window.location.host.startsWith("www.amazon."))var previousCount=-1,unchanged
 
 # Todo
 
-* Remove `--store-locale` being required with `--html` since bookmarklet already puts the locale in the filename
 * Packaging with pip
 * Proper logging
 * Testing
