@@ -139,6 +139,4 @@ dmypy.json
 cython_debug/
 
 # Custom
-html_samples/
-json_samples/
-testing/
+test/
