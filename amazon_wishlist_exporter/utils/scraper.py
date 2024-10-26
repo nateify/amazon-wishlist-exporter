@@ -7,6 +7,8 @@ from amazoncaptcha import AmazonCaptcha
 from curl_cffi import requests
 from lxml import etree, html
 
+from .logger_config import logger
+
 
 def get_current_chrome_version_headers():  # Not currently used
     try:
@@ -38,7 +40,7 @@ def extract_pagination_details(page_html):
 
 
 def get_external_image(link):
-    print(f"Requesting external image from {link}")
+    logger.debug(f"Retrieving canonical image from external link {link}")
 
     external_image_session = requests.Session(impersonate="chrome")
 
@@ -75,6 +77,7 @@ def get_external_image(link):
         except json.JSONDecodeError:
             continue  # Skip if not valid JSON
 
+    logger.debug(f"No canonical image determined for {link}")
     return None
 
 
@@ -83,13 +86,13 @@ def get_pages_from_web(base_url, wishlist_url):
     wishlist_pages = []
 
     s = requests.Session(impersonate="chrome")
-    print(f"Requesting {wishlist_url}")
+    logger.debug(f"Requesting {wishlist_url}")
     initial_request = s.get(wishlist_url)
     initial_page_html = html.fromstring(initial_request.content)
 
     captcha_element = initial_page_html.xpath("//*/form[@action='/errors/validateCaptcha']")
     if captcha_element:
-        print("Captcha was hit. Attempting to solve...")
+        logger.debug("Captcha was hit. Attempting to solve...")
         initial_page_html = solve_captcha(s, base_url, initial_page_html, wishlist_url)
 
     wishlist_pages.append(initial_page_html)
@@ -100,7 +103,7 @@ def get_pages_from_web(base_url, wishlist_url):
     while pagination_details and pagination_details["lastEvaluatedKey"]:
         next_page_url = f"{base_url}{pagination_details['showMoreUrl']}"
         sleep(3)  # Slightly prevent anti-bot measures
-        print(f"Requesting {next_page_url}")
+        logger.debug(f"Requesting paginated URL {next_page_url}")
         r = s.get(next_page_url)
         current_page = html.fromstring(r.content, parser=parser)
         wishlist_pages.append(current_page)
@@ -115,7 +118,7 @@ def get_pages_from_local_file(html_file):
 
     end_of_list_element = page.xpath("//div[@id='endOfListMarker']")
     if not end_of_list_element:
-        warnings.warn("HTML file does not contain endOfListMarker")
+        logger.warning("HTML file does not contain endOfListMarker")
 
     return [page]
 
@@ -137,7 +140,7 @@ def solve_captcha(session, base_url, initial_page_html, wishlist_url, max_retrie
         solution = captcha.solve()
         if not solution:
             raise Exception("Failed to solve captcha.")
-        print("Captcha solved, sleeping 3 seconds")
+        logger.debug("Captcha solved, sleeping 3 seconds")
 
         validate_captcha_url = f"{base_url}/errors/validateCaptcha"
         params = {
@@ -150,13 +153,13 @@ def solve_captcha(session, base_url, initial_page_html, wishlist_url, max_retrie
         response = session.get(url=validate_captcha_url, params=params)
 
         if response.status_code == 200:
-            print("Successfully validated captcha URL")
+            logger.debug("Successfully validated captcha URL")
             # Retry loading the wishlist page after captcha validation
             retry_page_response = session.get(wishlist_url)
             if retry_page_response.status_code == 200:
-                print("Successfully requested wishlist URL after captcha")
+                logger.debug("Successfully requested wishlist page after captcha")
                 return html.fromstring(retry_page_response.content)
         else:
-            print(f"Captcha solution attempt {attempt + 1} failed. Retrying...")
+            logger.debug(f"Captcha solution attempt {attempt + 1} failed. Retrying...")
 
     raise Exception(f"Failed to solve captcha after {max_retries} attempts.")

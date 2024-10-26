@@ -11,6 +11,8 @@ from dateparser import parse as parse_date
 from dateparser.search import search_dates
 from price_parser import parse_price
 
+from .logger_config import logger
+
 tld_to_locale_mapping = {
     "ca": ["en_ca", "fr_ca"],
     "com": ["en_us", "es_us"],
@@ -133,7 +135,7 @@ def get_currency_from_territory(territory):
         else:
             return None
     except Exception as e:
-        print(f"Error retrieving currency for territory '{territory}': {e}")
+        logger.exception(f"Exception while retrieving currency for territory '{territory}': {e}")
         return None
 
 

@@ -1,14 +1,16 @@
 import argparse
+import logging
 import re
 from pathlib import Path
-from .exporter import main
 
+from .exporter import main
 from .utils.locale_ import (
     get_default_locale,
     normalize_locale,
     normalize_tld,
     validate_tld_locale,
 )
+from .utils.logger_config import logger
 
 
 def re_group(match, group):
@@ -18,8 +20,14 @@ def re_group(match, group):
         return None
 
 
+class LoggingArgumentParser(argparse.ArgumentParser):
+    def error(self, message):
+        logger.error(message)
+        self.exit(2)
+
+
 def cli():
-    parser = argparse.ArgumentParser()
+    parser = LoggingArgumentParser()
 
     input_group = parser.add_mutually_exclusive_group(required=True)
     input_group.add_argument("-i", "--id", type=str, help="Amazon wishlist ID")
@@ -41,8 +49,12 @@ def cli():
     parser.add_argument("-c", "--compact-json", action="store_true", help="Write compacted JSON")
     parser.add_argument("-y", "--force", action="store_true", help="Overwrite existing output file without asking")
     parser.add_argument("-o", "--output-file", type=str, help="Output JSON file path")
+    parser.add_argument("--debug", action="store_true", help="Debug output")
 
     args = parser.parse_args()
+
+    if args.debug:
+        logger.setLevel(logging.DEBUG)
 
     # Normalize the inputs
     if args.store_tld:
@@ -69,7 +81,7 @@ def cli():
             args.store_tld = matched_tld
             args.id = matched_id
         else:
-            parser.error(f"Invalid URL input: {args.url}")
+            parser.error(f"Provided URL input was invalid: {args.url}")
 
         if not args.store_locale:
             args.store_locale = get_default_locale(args.store_tld)
@@ -84,18 +96,15 @@ def cli():
         matched_locale = re_group(filename_parts, 2)
 
         if not html_file_path.is_file():
-            parser.error("The provided HTML file path does not exist")
+            parser.error(f"Provided HTML input does not exist: {html_file_path}")
 
-        if not args.store_tld:
-            if not matched_tld:
-                parser.error("Could not determine TLD from HTML file name and --store-tld was not provided")
+        if any(x is None for x in (args.store_tld, args.store_locale)):
+            if not matched_tld and not matched_locale:
+                parser.error(
+                    f'Input file name "{html_file_path.stem}" was not expected format and both --store-tld and --store-locale must be specified'
+                )
             else:
                 args.store_tld = matched_tld
-
-        if not args.store_locale:
-            if not matched_locale:
-                parser.error("Could not determine locale from HTML file name and --store-locale was not provided")
-            else:
                 args.store_locale = matched_locale
 
         validate_tld_locale(args.store_tld, args.store_locale)

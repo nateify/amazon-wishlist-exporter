@@ -65,7 +65,7 @@ Utilizing uv:
 * `--store-locale`: Optional unless using `--html` - Store locale such as en_US, en_GB, de_DE, etc. - not all stores support all locales. If not specified, the default locale for that store will be chosen.
 * `--sort-keys`: Optional - A single key or comma separated list of key names to sort the wishlist items by. Example `priority,name` sorts first by priority value highest to lowest, then sorts by name
   * Numeric values (such as priority, rating) are sorted largest to smallest
-  * String values (such as name, comment) are sorted using the Unicode Collation Algorithm and adjusted to the specified locale
+  * String values (such as name, comment) are sorted using the specified locale - when the package is installed with PyICU, the Unicode Collation Algorithm for the locale is used
 
 ## Limitations
 
@@ -98,5 +98,5 @@ if(window.location.host.startsWith("www.amazon."))var previousCount=-1,unchanged
 
 # Todo
 
-* Logging
+* Logging and exception improvements
 * Testing

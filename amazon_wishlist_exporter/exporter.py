@@ -8,6 +8,7 @@ from .utils.locale_ import (
     get_rating_from_locale,
     sort_items,
 )
+from .utils.logger_config import logger
 from .utils.scraper import get_external_image, get_pages_from_local_file, get_pages_from_web
 
 
@@ -367,6 +368,6 @@ def main(args):
         with open(p, mode="w", encoding="utf-8") as f:
             json.dump(wishlist_full, f, indent=indent, ensure_ascii=False)
 
-        print(f"JSON written to {p.resolve()}")
+        logger.info(f"JSON written to {p.resolve()}")
     else:
         print(json.dumps(wishlist_full, indent=indent, ensure_ascii=False))
