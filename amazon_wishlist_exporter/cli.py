@@ -49,7 +49,7 @@ def cli():
     parser.add_argument("-c", "--compact-json", action="store_true", help="Write compacted JSON")
     parser.add_argument("-y", "--force", action="store_true", help="Overwrite existing output file without asking")
     parser.add_argument("-o", "--output-file", type=str, help="Output JSON file path")
-    parser.add_argument("--debug", action="store_true", help="Debug output")
+    parser.add_argument("--debug", action="store_true", help="Print debug messages")
 
     args = parser.parse_args()
 
