@@ -1,6 +1,6 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.3.0"
+version = "0.4.0"
 description = "Export Amazon wishlist metadata to JSON"
 readme = "README.md"
 keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
@@ -14,8 +14,8 @@ dependencies = [
     "babel>=2.16.0",
     "curl-cffi>=0.7.3",
     "dateparser>=1.2.0",
-    "lxml>=5.3.0",
     "price-parser>=0.3.4",
+    "selectolax>=0.3.25",
 ]
 
 [project.urls]

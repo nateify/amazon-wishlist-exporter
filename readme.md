@@ -52,7 +52,7 @@ Utilizing uv:
 * babel
 * curl_cffi
 * dateparser
-* lxml
+* selectolax
 * price_parser
 * PyICU (optional)
 

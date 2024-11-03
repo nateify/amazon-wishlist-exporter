@@ -191,7 +191,7 @@ class WishlistItem(object):
 
         if self.is_external():
             # If Amazon does not have an image stored, we will try to find the open graph image
-            if re.search(r"[./-].*amazon\.\w{2,}\/.*wishlist.*no_image_", img_src):
+            if re.search(r"[./-].*amazon\.\w{2,}/.*wishlist.*no_image_", img_src):
                 img_src = get_external_image(self.link)
 
         return img_src
@@ -250,10 +250,12 @@ class WishlistItem(object):
             if isinstance(getattr(self.__class__, name), property)
         }
 
-        # Fix NBSP character
-        for key, value in return_dict.items():
-            if isinstance(value, str):
-                return_dict[key] = value.replace("\u00a0", " ")
+        # Whitespace fixer
+        zs_pattern = r"[\u00A0\u2000-\u200A\u202F\u2025\u3000]"
+
+        for k, v in return_dict.items():
+            if isinstance(v, str):
+                return_dict[k] = re.sub(zs_pattern, " ", v)
 
         return return_dict
 
@@ -288,17 +290,17 @@ class Wishlist(object):
 
     @property
     def id(self):
-        if not self.wishlist_id:
-            return self.first_page_html.css_first("input#listId").text(strip=True)
-        else:
+        if self.wishlist_id:
             return self.wishlist_id
+        else:
+            return get_attr_value(self.first_page_html.css_first("#listId"), "value")
 
     @property
     def wishlist_title(self):
         wishlist_title = self.first_page_html.css_first("span#profile-list-name").text(strip=True)
 
-        if wishlist_title:
-            return wishlist_title[0].strip()
+        if wishlist_title != "":
+            return wishlist_title
         else:
             return None
 
@@ -306,8 +308,8 @@ class Wishlist(object):
     def wishlist_comment(self):
         wishlist_comment = self.first_page_html.css_first("span#wlDesc").text(strip=True)
 
-        if wishlist_comment:
-            return wishlist_comment[0].strip()
+        if wishlist_comment != "":
+            return wishlist_comment
         else:
             return None
 
@@ -342,8 +344,7 @@ class Wishlist(object):
                 )
 
     def __iter__(self):
-        for item in self.wishlist_items:
-            yield item.asdict()
+        return (item.asdict() for item in self.wishlist_items)
 
 
 def main(args):
