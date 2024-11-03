@@ -39,6 +39,9 @@ class WishlistItem(object):
         }
         return action_mapping.get(element_action_value, "purchasable")
 
+    def is_purchasable(self):
+        return self.item_category == "purchasable"
+
     def is_deleted(self):
         return self.item_category == "deleted"
 
@@ -115,7 +118,7 @@ class WishlistItem(object):
 
     @property
     def old_price(self):
-        if any((self.is_idea(), self.is_external(), self.is_deleted())):
+        if not self.is_purchasable():
             return None
         else:
             # Amazon does not always show this value
@@ -151,7 +154,7 @@ class WishlistItem(object):
             return item_priority_numerical
 
     def ratings_data(self):
-        if any((self.is_idea(), self.is_external(), self.is_deleted())):
+        if not self.is_purchasable():
             return None, None
         else:
             item_rating_text = get_attr_value(
@@ -200,6 +203,45 @@ class WishlistItem(object):
     @property
     def has(self):
         return int(self.element.css_first("span[id^='itemPurchased_']").text(strip=True))
+
+    @property
+    def item_option(self):
+        twister_text_elem = self.element.css("span#twisterText")
+        options_dict = {}
+
+        for node in twister_text_elem:
+            node_pairs = [x.strip() for x in node.text().split(" : ")]
+            options_dict[node_pairs[0]] = node_pairs[1]
+
+        return options_dict if options_dict else None
+
+    @property
+    def byline(self):
+        if not self.is_purchasable():
+            return None
+        else:
+            return self.element.css_first("span[id^='item-byline']").text(strip=True)
+
+    @property
+    def badge(self):
+        badge_elem = self.element.css_first('span[id^="itemBadge_"][id$="-label"]')
+
+        if badge_elem:
+            badge_label = badge_elem.text(strip=True)
+            badge_sup = badge_elem.parent.css_first('span[id$="-supplementary"]').text(strip=True)
+            # todo: check other locales
+            return f"{badge_label} {badge_sup}"
+        else:
+            return None
+
+    @property
+    def coupon(self):
+        coupon_elem = self.element.css_first("i[id^='coupon-badge_']")
+
+        if coupon_elem:
+            return coupon_elem.text(strip=True)
+        else:
+            return None
 
     def asdict(self):
         return_dict = {
