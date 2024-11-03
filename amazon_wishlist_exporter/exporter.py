@@ -9,7 +9,13 @@ from .utils.locale_ import (
     sort_items,
 )
 from .utils.logger_config import logger
-from .utils.scraper import get_attr_value, get_external_image, get_pages_from_local_file, get_pages_from_web
+from .utils.scraper import (
+    get_attr_value,
+    get_external_image,
+    get_node_text,
+    get_pages_from_local_file,
+    get_pages_from_web,
+)
 
 
 class WishlistItem(object):
@@ -255,7 +261,8 @@ class WishlistItem(object):
 
         for k, v in return_dict.items():
             if isinstance(v, str):
-                return_dict[k] = re.sub(zs_pattern, " ", v)
+                v = re.sub(zs_pattern, " ", v)
+                return_dict[k] = v if v != "" else None
 
         return return_dict
 
@@ -297,21 +304,15 @@ class Wishlist(object):
 
     @property
     def wishlist_title(self):
-        wishlist_title = self.first_page_html.css_first("span#profile-list-name").text(strip=True)
+        wishlist_title = get_node_text(self.first_page_html.css_first("span#profile-list-name"))
 
-        if wishlist_title != "":
-            return wishlist_title
-        else:
-            return None
+        return wishlist_title
 
     @property
     def wishlist_comment(self):
-        wishlist_comment = self.first_page_html.css_first("span#wlDesc").text(strip=True)
+        wishlist_comment = get_node_text(self.first_page_html.css_first("span#wlDesc"))
 
-        if wishlist_comment != "":
-            return wishlist_comment
-        else:
-            return None
+        return wishlist_comment
 
     @property
     def wishlist_url(self):

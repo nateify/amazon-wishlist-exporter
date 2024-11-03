@@ -18,7 +18,7 @@ tld_to_locale_mapping = {
     "com": ["en_us", "es_us"],
     "com.mx": ["es_mx"],
     "com.br": ["pt_br"],
-    "es": ["es_es", "pt_pt"],
+    "es": ["es_es", "pt_pt", "en_gb"],
     "co.uk": ["en_gb"],
     "fr": ["fr_fr", "en_gb"],
     "nl": ["nl_nl", "en_gb"],
@@ -26,14 +26,16 @@ tld_to_locale_mapping = {
     "it": ["it_it", "en_gb"],
     "se": ["sv_se", "en_gb"],
     "pl": ["pl_pl"],
-    "eg": ["ar_eg", "en_ae"],
+    "eg": ["ar_ae", "en_ae"],
     "com.tr": ["tr_tr"],
-    "sa": ["ar_sa", "en_ae"],
+    "sa": ["ar_ae", "en_ae"],
     "ae": ["ar_ae", "en_ae"],
     "in": ["hi_in", "en_in", "ta_in", "te_in", "kn_in", "ml_in", "bn_in", "mr_in"],
     "sg": ["en_sg"],
     "com.au": ["en_au"],
     "co.jp": ["ja_jp", "en_us", "zh_cn"],
+    "co.za": ["en_za"],
+    "com.be": ["fr_be", "nl_be", "en_gb"]
 }
 
 special_tld_to_territory = {"com": "us", "co.uk": "gb"}

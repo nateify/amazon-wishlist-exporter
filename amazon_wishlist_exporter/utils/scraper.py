@@ -18,6 +18,15 @@ def get_attr_value(node, node_attr):
     return None
 
 
+def get_node_text(node):
+    node_text = None
+
+    if node:
+        node_text = node.text(strip=True)
+
+    return node_text
+
+
 def extract_pagination_details(page_html):
     pagination_elem = page_html.css_first('script[data-a-state=\'{"key":"scrollState"}\']')
     if pagination_elem:
