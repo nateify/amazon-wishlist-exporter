@@ -1,10 +1,8 @@
-import ast
 import json
 from time import sleep
 
 from amazoncaptcha import AmazonCaptcha
 from curl_cffi import requests
-from lxml import etree, html
 from selectolax.lexbor import LexborHTMLParser
 
 from .logger_config import logger
@@ -21,9 +19,9 @@ def get_attr_value(node, node_attr):
 
 
 def extract_pagination_details(page_html):
-    pagination_elem = page_html.xpath('//*/script[@data-a-state=\'{"key":"scrollState"}\']/text()')
+    pagination_elem = page_html.css_first('script[data-a-state=\'{"key":"scrollState"}\']')
     if pagination_elem:
-        pagination_details = ast.literal_eval(pagination_elem[0])
+        pagination_details = json.loads(pagination_elem.text())
         return pagination_details
     return None
 
@@ -33,31 +31,32 @@ def get_external_image(link):
 
     external_image_session = requests.Session(impersonate="chrome")
 
-    parser = etree.HTMLParser(encoding="utf-8", recover=True)
-
     external_r = external_image_session.get(link, headers={"Referer": "https://www.amazon.com/"})
-    external_page = html.fromstring(external_r.content, parser=parser)
 
-    og_image = external_page.xpath("//meta[@property='og:image']/@content")
+    tree = LexborHTMLParser(external_r.content)
+    head = tree.head
+
+    og_image = get_attr_value(head.css_first("meta[property='og:image']"), "content")
     if og_image:
-        return og_image[0]
+        return og_image
 
-    twitter_image = external_page.xpath("//meta[@name='twitter:image']/@content")
+    twitter_image = get_attr_value(head.css_first("meta[name='twitter:image']"), "content")
     if twitter_image:
-        return twitter_image[0]
+        return twitter_image
 
-    link_image_src = external_page.xpath("//link[@rel='image_src']/@href")
+    link_image_src = get_attr_value(head.css_first("link[rel='image_src']"), "href")
     if link_image_src:
-        return link_image_src[0]
+        return link_image_src
 
-    microdata_image = external_page.xpath("//*[@itemprop='image']/@content | //*[@itemprop='image']/@src")
+    microdata_attrs = getattr(head.css_first("*[itemprop='image']"), "attributes", None)
+    microdata_image = next((microdata_attrs[k] for k in ("content", "src") if k in microdata_attrs), None)
     if microdata_image:
-        return microdata_image[0]
+        return microdata_image
 
-    schema_image_json = external_page.xpath("//script[@type='application/ld+json']/text()")
+    schema_image_json = tree.select("script").text_contains("schema").matches
     for schema_json in schema_image_json:
         try:
-            schema_data = json.loads(schema_json)
+            schema_data = json.loads(schema_json.text())
             if isinstance(schema_data, dict) and "image" in schema_data:
                 # In case 'image' is a list or a single string, return the first URL
                 if isinstance(schema_data["image"], list):
@@ -71,30 +70,29 @@ def get_external_image(link):
 
 
 def get_pages_from_web(base_url, wishlist_url):
-    parser = etree.HTMLParser(encoding="utf-8")
     wishlist_pages = []
 
     s = requests.Session(impersonate="chrome")
     logger.debug(f"Requesting {wishlist_url}")
     initial_request = s.get(wishlist_url)
-    initial_page_html = html.fromstring(initial_request.content)
+    tree = LexborHTMLParser(initial_request.content)
 
-    captcha_element = initial_page_html.xpath("//*/form[@action='/errors/validateCaptcha']")
+    captcha_element = tree.css_first("form[action='/errors/validateCaptcha']")
     if captcha_element:
         logger.debug("Captcha was hit. Attempting to solve...")
-        initial_page_html = solve_captcha(s, base_url, initial_page_html, wishlist_url)
+        tree = solve_captcha(s, base_url, tree, wishlist_url)
 
-    wishlist_pages.append(initial_page_html)
+    wishlist_pages.append(tree)
 
     # Handle pagination
-    pagination_details = extract_pagination_details(initial_page_html)
+    pagination_details = extract_pagination_details(tree)
 
     while pagination_details and pagination_details["lastEvaluatedKey"]:
         next_page_url = f"{base_url}{pagination_details['showMoreUrl']}"
         sleep(3)  # Slightly prevent anti-bot measures
         logger.debug(f"Requesting paginated URL {next_page_url}")
         r = s.get(next_page_url)
-        current_page = html.fromstring(r.content, parser=parser)
+        current_page = LexborHTMLParser(r.content)
         wishlist_pages.append(current_page)
         pagination_details = extract_pagination_details(current_page)
 
@@ -114,17 +112,15 @@ def get_pages_from_local_file(html_file):
     return [page]
 
 
-def solve_captcha(session, base_url, initial_page_html, wishlist_url, max_retries=3):
-    captcha_link = initial_page_html.xpath(
-        "//*/img[starts-with(@src,'https://images-na.ssl-images-amazon.com/captcha')]/@src"
+def solve_captcha(session, base_url, input_tree, wishlist_url, max_retries=3):
+    captcha_link = get_attr_value(
+        input_tree.css_first("img[src^='https://images-na.ssl-images-amazon.com/captcha']"), "src"
     )
-    hidden_value = initial_page_html.xpath("//*/input[@name='amzn']/@value")
+    hidden_value = get_attr_value(input_tree.css_first("input[name='amzn']"), "value")
 
     if not captcha_link or not hidden_value:
         raise Exception("Captcha elements not found on the page.")
 
-    captcha_link = captcha_link[0]
-    hidden_value = hidden_value[0]
     captcha = AmazonCaptcha.fromlink(captcha_link)
 
     for attempt in range(max_retries):
@@ -149,7 +145,7 @@ def solve_captcha(session, base_url, initial_page_html, wishlist_url, max_retrie
             retry_page_response = session.get(wishlist_url)
             if retry_page_response.status_code == 200:
                 logger.debug("Successfully requested wishlist page after captcha")
-                return html.fromstring(retry_page_response.content)
+                return LexborHTMLParser(retry_page_response.content)
         else:
             logger.debug(f"Captcha solution attempt {attempt + 1} failed. Retrying...")
 
