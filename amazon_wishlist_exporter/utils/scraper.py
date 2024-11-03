@@ -1,34 +1,23 @@
 import ast
 import json
-import warnings
 from time import sleep
 
 from amazoncaptcha import AmazonCaptcha
 from curl_cffi import requests
 from lxml import etree, html
+from selectolax.lexbor import LexborHTMLParser
 
 from .logger_config import logger
 
 
-def get_current_chrome_version_headers():  # Not currently used
-    try:
-        response = requests.get("https://chrome-mask-remote-storage.0b101010.services/current-chrome-major-version.txt")
-        response.raise_for_status()  # Raise an error for bad responses
-        chrome_version = int(response.text.strip())  # Convert text to integer
+def get_attr_value(node, node_attr):
+    if hasattr(node, "attributes") and isinstance(node.attributes, dict):
+        value = node.attributes.get(node_attr)
+        if isinstance(value, str):
+            return value.strip()
+        return value
 
-        with open("current-chrome-major-version.txt", "w") as f:
-            f.write(str(chrome_version))
-
-    except (requests.RequestException, ValueError):
-        with open("current-chrome-major-version.txt", "r") as f:
-            chrome_version = int(f.read().strip()) + 1
-
-    headers = {
-        "Sec-Ch-Ua": f'"Google Chrome";v="{chrome_version}", "Not=A?Brand";v="8", "Chromium";v="{chrome_version}"',
-        "User-Agent": f"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36",
-    }
-
-    return headers
+    return None
 
 
 def extract_pagination_details(page_html):
@@ -113,11 +102,13 @@ def get_pages_from_web(base_url, wishlist_url):
 
 
 def get_pages_from_local_file(html_file):
-    parser = etree.HTMLParser(encoding="utf-8")
-    page = html.parse(html_file, parser=parser).getroot()
+    with open(html_file, encoding="utf-8") as f:
+        html = f.read()
 
-    end_of_list_element = page.xpath("//div[@id='endOfListMarker']")
-    if not end_of_list_element:
+    tree = LexborHTMLParser(html)
+    page = tree.root
+
+    if not page.css_matches("div#endOfListMarker"):
         logger.warning("HTML file does not contain endOfListMarker")
 
     return [page]

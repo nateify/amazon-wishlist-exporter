@@ -9,7 +9,7 @@ from .utils.locale_ import (
     sort_items,
 )
 from .utils.logger_config import logger
-from .utils.scraper import get_external_image, get_pages_from_local_file, get_pages_from_web
+from .utils.scraper import get_attr_value, get_external_image, get_pages_from_local_file, get_pages_from_web
 
 
 class WishlistItem(object):
@@ -22,66 +22,63 @@ class WishlistItem(object):
         self.priority_is_localized = priority_is_localized
         self.date_as_iso8601 = date_as_iso8601
 
-    def item_action(self):
-        element_action_button_class = self.element.xpath(
-            ".//div[starts-with(@id,'itemAction_')]//span[starts-with(@id,'pab-') and not(starts-with(@id,'pab-declarative'))]/@class"
+    @property
+    def item_category(self):
+        element_action_button = self.element.css_first(
+            "div[id^='itemAction_'] span[id^='pab-']:not([id^='pab-declarative'])"
         )
+        element_action_button_class = get_attr_value(element_action_button, "class")
 
         if not element_action_button_class:
             return "deleted"
 
-        element_action_value = re.search(r"\s(wl.*$)", element_action_button_class[0].strip()).group(1)
+        element_action_value = re.search(r"\s(wl.*$)", element_action_button_class).group(1)
         action_mapping = {
             "wl-info-aa_shop_this_store": "external",
             "wl-info-wl_kindle_ov_wfa_button": "idea",
         }
         return action_mapping.get(element_action_value, "purchasable")
 
-    @property
     def is_deleted(self):
-        return self.item_action() == "deleted"
+        return self.item_category == "deleted"
 
-    @property
     def is_external(self):
-        return self.item_action() == "external"
+        return self.item_category == "external"
 
-    @property
     def is_idea(self):
-        return self.item_action() == "idea"
+        return self.item_category == "idea"
 
     @property
     def name(self):
-        if self.is_deleted:
+        if self.is_deleted():
             return None
-        elif any((self.is_external, self.is_idea)):
-            return self.element.xpath(".//span[starts-with(@id,'itemName_')]/text()")[0].strip()
+        elif any((self.is_external(), self.is_idea())):
+            return self.element.css_first("span[id^='itemName_']").text(strip=True)
         else:
-            return self.element.xpath(".//a[starts-with(@id,'itemName_')]")[0].get("title")
+            return get_attr_value(self.element.css_first("a[id^='itemName_']"), "title")
 
     @property
     def link(self):
-        if any((self.is_idea, self.is_deleted)):
+        if any((self.is_idea(), self.is_deleted())):
             return None
-        elif self.is_external:
-            return self.element.xpath(
-                ".//div[starts-with(@id,'itemAction_')]//div[contains(@class,'g-visible-no-js')]//a/@href"
-            )[0]
+        elif self.is_external():
+            return get_attr_value(self.element.css_first("div[id^='itemAction_'] div.g-visible-no-js a"), "href")
         else:
-            item_link = self.element.xpath(".//a[starts-with(@id,'itemName_')]")[0].get("href")
+            item_link = get_attr_value(self.element.css_first("a[id^='itemName_']"), "href")
             if not item_link.startswith("http"):
                 item_link = f"{self.base_url}{item_link}"
             return item_link
 
     @property
     def asin(self):
-        if any((self.is_idea, self.is_external)):
+        if any((self.is_idea(), self.is_external())):
             return None
         else:
-            return re.search(r"ASIN:([A-z0-9]+)\|", self.element.get("data-reposition-action-params")).group(1)
+            return re.search(r"ASIN:([A-z0-9]+)\|", self.element.attributes["data-reposition-action-params"]).group(1)
 
     @property
     def comment(self):
-        item_comment = self.element.xpath(".//span[starts-with(@id,'itemComment_')]/text()")[0].strip()
+        item_comment = self.element.css_first("span[id^='itemComment_']").text(strip=True)
         if item_comment == "":  # Done to preserve json null functionality
             return None
         else:
@@ -90,24 +87,26 @@ class WishlistItem(object):
     @property
     def price(self):
         price_text = None
-        if any((self.is_idea, self.is_deleted)):
-            return price_text
-        elif self.is_external:
-            price_text = self.element.xpath(".//span[starts-with(@id,'itemPrice_')]/span[@class='a-offscreen']")[0].text
-        else:
-            item_price_primary_elem = self.element.xpath(
-                ".//span[starts-with(@id,'itemPrice_')]/span[@class='a-offscreen']"
-            )
 
-            if item_price_primary_elem:
-                price_text = item_price_primary_elem[0].text
-            elif self.element.xpath("./@data-price")[0] == "-Infinity":  # Applies to out of stock items
+        if any((self.is_idea(), self.is_deleted())):
+            return price_text
+
+        price_elem = self.element.css_first("span[id^='itemPrice_'] > span.a-offscreen")
+
+        if self.is_external():
+            price_text = price_elem.text(strip=True)
+        else:
+            if price_elem:
+                price_text = price_elem.text(strip=True)
+            elif (
+                get_attr_value(self.element.css_first("[data-price]"), "data-price") == "-Infinity"
+            ):  # Applies to out of stock items
                 price_text = None
             else:
                 # Applies to items which only have a marketplace price
                 try:
-                    price_text = self.element.xpath(".//span[contains(@class,'itemUsedAndNewPrice')]/text()")[0].strip()
-                except IndexError:
+                    price_text = self.element.css_first("span[class*='itemUsedAndNewPrice']").text(strip=True)
+                except AttributeError:
                     # Usually when no Buy Box is available
                     price_text = None
 
@@ -116,49 +115,52 @@ class WishlistItem(object):
 
     @property
     def old_price(self):
-        if any((self.is_idea, self.is_external, self.is_deleted)):
+        if any((self.is_idea(), self.is_external(), self.is_deleted())):
             return None
         else:
             # Amazon does not always show this value
-            item_old_price_elem = self.element.xpath(".//div[contains(@class,'itemPriceDrop')]")
+            item_old_price_elem = self.element.css_first("div[class*='itemPriceDrop']")
             if not item_old_price_elem:
                 return None
             else:
-                item_old_price_text = item_old_price_elem[0].xpath(".//span[not(@*)]/text()")[0].strip()
+                item_old_price_text = next(
+                    (n.text(strip=True) for n in item_old_price_elem.css("span") if len(n.attributes) == 0)
+                )
 
                 return get_localized_price(item_old_price_text, self.store_tld, self.store_locale)
 
     @property
     def date_added(self):
         try:
-            item_date_added_full = self.element.xpath(".//span[starts-with(@id,'itemAddedDate_')]/text()")[0].strip()
-        except IndexError:
+            item_date_added_full = self.element.css_first("span[id^='itemAddedDate_']").text(strip=True)
+        except AttributeError:
             return None
 
         return get_formatted_date(item_date_added_full, self.store_locale, self.date_as_iso8601)
 
     @property
     def priority(self):
-        item_priority_text = self.element.xpath(".//span[starts-with(@id,'itemPriorityLabel_')]/text()")[0].strip()
+        item_priority_text = self.element.css_first("span[id^='itemPriorityLabel_']").text(strip=True)
+
         item_priority_text = item_priority_text.split("\n")[-1].strip()
-        item_priority_numerical = int(self.element.xpath(".//span[starts-with(@id,'itemPriority_')]/text()")[0].strip())
+        item_priority_numerical = int(self.element.css_first("span[id^='itemPriority_']").text(strip=True))
 
         if self.priority_is_localized:
             return item_priority_text
         else:
             return item_priority_numerical
 
-    @property
     def ratings_data(self):
-        if any((self.is_idea, self.is_external, self.is_deleted)):
+        if any((self.is_idea(), self.is_external(), self.is_deleted())):
             return None, None
         else:
-            item_rating_elem = self.element.xpath(".//a[contains(@href,'/product-reviews/') and not(@id)]/@aria-label")
+            item_rating_text = get_attr_value(
+                self.element.css_first("a[href*='/product-reviews/']:not([id])"), "aria-label"
+            )
 
             # Some Amazon products can have 0 ratings
-            if item_rating_elem:
-                item_rating_text = item_rating_elem[0]
-                item_total_ratings_text = self.element.xpath(".//a[starts-with(@id,'review_count_')]/text()")[0].strip()
+            if item_rating_text:
+                item_total_ratings_text = self.element.css_first("a[id^='review_count_']").text(strip=True)
 
                 item_rating, item_total_ratings = get_rating_from_locale(
                     item_rating_text, item_total_ratings_text, self.store_locale
@@ -170,54 +172,40 @@ class WishlistItem(object):
 
     @property
     def rating(self):
-        return self.ratings_data[0]
+        return self.ratings_data()[0]
 
     @property
     def total_ratings(self):
-        return self.ratings_data[1]
+        return self.ratings_data()[1]
 
     @property
     def image(self):
-        if any((self.is_idea, self.is_deleted)):
+        if any((self.is_idea(), self.is_deleted())):
             return None
-        elif self.is_external:
-            item_image = self.element.xpath(".//div[starts-with(@id,'itemImage_')]/img/@src")[0]
 
+        img_elem = self.element.css_first("div[id^='itemImage_'] img")
+        img_src = get_attr_value(img_elem, "src")
+
+        if self.is_external():
             # If Amazon does not have an image stored, we will try to find the open graph image
-            if re.search(r"[./-].*amazon\.\w{2,}\/.*wishlist.*no_image_", item_image):
-                item_image = get_external_image(self.link)
+            if re.search(r"[./-].*amazon\.\w{2,}\/.*wishlist.*no_image_", img_src):
+                img_src = get_external_image(self.link)
 
-            return item_image
-
-        else:
-            return self.element.xpath(".//div[starts-with(@id,'itemImage_')]//img/@src")[0]
+        return img_src
 
     @property
     def wants(self):
-        return int(self.element.xpath(".//span[starts-with(@id,'itemRequested_')]/text()")[0].strip())
+        return int(self.element.css_first("span[id^='itemRequested_']").text(strip=True))
 
     @property
     def has(self):
-        return int(self.element.xpath(".//span[starts-with(@id,'itemPurchased_')]/text()")[0].strip())
+        return int(self.element.css_first("span[id^='itemPurchased_']").text(strip=True))
 
     def asdict(self):
         return_dict = {
-            "name": self.name,
-            "link": self.link,
-            "asin": self.asin,
-            "comment": self.comment,
-            "price": self.price,
-            "old-price": self.old_price,
-            "date-added": self.date_added,
-            "priority": self.priority,
-            "rating": self.rating,
-            "total-ratings": self.total_ratings,
-            "image": self.image,
-            "wants": self.wants,
-            "has": self.has,
-            "is-external": self.is_external,
-            "is-idea": self.is_idea,
-            "is-deleted": self.is_deleted,
+            name.replace("_", "-"): getattr(self, name)
+            for name in dir(self.__class__)
+            if isinstance(getattr(self.__class__, name), property)
         }
 
         # Fix NBSP character
@@ -259,13 +247,13 @@ class Wishlist(object):
     @property
     def id(self):
         if not self.wishlist_id:
-            return self.first_page_html.xpath("//input[@id='listId']/@value")[0].strip()
+            return self.first_page_html.css_first("input#listId").text(strip=True)
         else:
             return self.wishlist_id
 
     @property
     def wishlist_title(self):
-        wishlist_title = self.first_page_html.xpath("//span[@id='profile-list-name']/text()")
+        wishlist_title = self.first_page_html.css_first("span#profile-list-name").text(strip=True)
 
         if wishlist_title:
             return wishlist_title[0].strip()
@@ -274,7 +262,7 @@ class Wishlist(object):
 
     @property
     def wishlist_comment(self):
-        wishlist_comment = self.first_page_html.xpath("//span[@id='wlDesc']/text()")
+        wishlist_comment = self.first_page_html.css_first("span#wlDesc").text(strip=True)
 
         if wishlist_comment:
             return wishlist_comment[0].strip()
@@ -288,17 +276,17 @@ class Wishlist(object):
     @property
     def wishlist_details(self):
         return {
-            "wishlist-id": self.id,
-            "wishlist-title": self.wishlist_title,
-            "wishlist-comment": self.wishlist_comment,
+            "id": self.id,
+            "title": self.wishlist_title,
+            "comment": self.wishlist_comment,
+            "url": self.wishlist_url,
             "locale": self.store_locale,
-            "wishlist-url": self.wishlist_url,
         }
 
     @property
     def wishlist_items(self):
         for page in self.all_pages_html:
-            items_list = page.xpath("//li[contains(@class,'g-item-sortable')]")
+            items_list = page.css('li[class*="g-item-sortable"]')
 
             for item_element in items_list:
                 yield self.item_class(
