@@ -1,6 +1,6 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.4.0"
+version = "0.5.0"
 description = "Export Amazon wishlist metadata to JSON"
 readme = "README.md"
 keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
@@ -8,7 +8,7 @@ authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
 ]
 license = {file = "LICENSE"}
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 dependencies = [
     "amazoncaptcha>=0.5.11",
     "babel>=2.16.0",
@@ -31,3 +31,13 @@ amazon-wishlist-exporter = "amazon_wishlist_exporter.__main__:cli"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv]
+override-dependencies = [
+    'pillow>=9.0.1, <9.6.0; python_version >= "3.6" and python_version <= "3.11"',
+    'pillow>=9.6.0, <12.0.0; python_version >= "3.12"'
+]
+dev-dependencies = [
+    "pytest>=8.3.3",
+]
+reinstall-package = ["amazon-wishlist-exporter", "pillow"]

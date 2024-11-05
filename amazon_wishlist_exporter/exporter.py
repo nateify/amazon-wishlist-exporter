@@ -175,7 +175,8 @@ class WishlistItem(object):
                     item_rating_text, item_total_ratings_text, self.store_locale
                 )
             else:
-                item_rating = item_total_ratings = None
+                item_rating = 0.0
+                item_total_ratings = 0
 
             return item_rating, item_total_ratings
 
@@ -257,11 +258,9 @@ class WishlistItem(object):
         }
 
         # Whitespace fixer
-        zs_pattern = r"[\u00A0\u2000-\u200A\u202F\u2025\u3000]"
-
         for k, v in return_dict.items():
             if isinstance(v, str):
-                v = re.sub(zs_pattern, " ", v)
+                v = re.sub(r"[\s\u2025\u3000]", " ", v)
                 return_dict[k] = v if v != "" else None
 
         return return_dict

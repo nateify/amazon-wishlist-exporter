@@ -1,5 +1,6 @@
 import locale
 from contextlib import contextmanager
+from .logger_config import logger
 
 
 class Locale(str):
@@ -8,6 +9,8 @@ class Locale(str):
 
 
 class Collator:
+    warning_logged = False
+
     def __init__(self, locale_string):
         self.locale_string = locale_string
 
@@ -19,8 +22,17 @@ class Collator:
     def _set_locale(self):
         old_locale = locale.getlocale(locale.LC_COLLATE)
         try:
-            locale.setlocale(locale.LC_COLLATE, self.locale_string)
-            yield locale.strxfrm  # Return transformation function
+            try:
+                locale.setlocale(locale.LC_COLLATE, self.locale_string)
+                yield locale.strxfrm  # Return transformation function
+            except locale.Error:
+                if not Collator.warning_logged:
+                    logger.warning(
+                        f"PyICU not found, and locale '{self.locale_string}' not available; falling back to C locale for collation."
+                    )
+                    Collator.warning_logged = True  # Set the flag to True after logging
+                    locale.setlocale(locale.LC_COLLATE, "C")
+                yield locale.strxfrm  # Return transformation function with fallback
         finally:
             locale.setlocale(locale.LC_COLLATE, old_locale)
 

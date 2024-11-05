@@ -1,8 +1,11 @@
 import re
 
+from .logger_config import logger
+
 try:
     import icu
 except ImportError:
+    logger.debug("PyICU not found - falling back to locale collation provided by system")
     from . import locale_collator as icu
 from babel import Locale
 from babel.dates import format_date
@@ -10,8 +13,6 @@ from babel.numbers import format_currency, get_territory_currencies
 from dateparser import parse as parse_date
 from dateparser.search import search_dates
 from price_parser import parse_price
-
-from .logger_config import logger
 
 tld_to_locale_mapping = {
     "ca": ["en_ca", "fr_ca"],
@@ -35,7 +36,7 @@ tld_to_locale_mapping = {
     "com.au": ["en_au"],
     "co.jp": ["ja_jp", "en_us", "zh_cn"],
     "co.za": ["en_za"],
-    "com.be": ["fr_be", "nl_be", "en_gb"]
+    "com.be": ["fr_be", "nl_be", "en_gb"],
 }
 
 special_tld_to_territory = {"com": "us", "co.uk": "gb"}
@@ -154,7 +155,7 @@ def get_parsed_date(text, babel_language):
     found_dates = search_dates(
         text,
         languages=[babel_language, "en"],
-        settings={"PREFER_DATES_FROM": "past", "PARSERS": ["custom-formats"]},
+        settings={"PREFER_DATES_FROM": "past"},
     )
 
     if found_dates:
@@ -192,18 +193,18 @@ def get_formatted_date(text, store_locale, date_as_iso8601):
 
 def get_rating_from_locale(rating_text, total_text, store_locale):
     rating_regex = locale_to_rating_regex.get(store_locale, locale_to_rating_regex["default"])
-    totals_regex = re.compile(r"^\D*\b(\d[ .,\d]*)\b")
+    totals_regex = re.compile(r"^\D*\b(\d[\s\u2025\u3000.,\d]*)\b")
 
     item_rating = item_match = rating_regex.search(rating_text)
     if item_match:
         rating = item_match.group(1)
-        rating = re.sub("[ ,.]", ".", rating)
+        rating = re.sub(r"[\s\u2025\u3000,.]", ".", rating)
         item_rating = float(rating)
 
     total_ratings = total_match = totals_regex.search(total_text)
     if total_match:
         total = total_match.group(1)
-        total = re.sub("[ ,.]", "", total)
+        total = re.sub(r"[\s\u2025\u3000,.]", "", total)
         total_ratings = int(total)
 
     return item_rating, total_ratings
