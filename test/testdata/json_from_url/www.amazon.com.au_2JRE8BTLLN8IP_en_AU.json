@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 10500,
+      "total-ratings": 10501,
       "wants": 1
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "asin": "0241694906",
-      "badge": "Best Seller in Developmental Psychology",
+      "badge": null,
       "byline": "by Jonathan Haidt (Paperback)",
       "comment": null,
       "coupon": null,
@@ -102,7 +102,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 3841,
+      "total-ratings": 3851,
       "wants": 1
     },
     {
@@ -162,7 +162,7 @@
       "price": "$28.07",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 461,
+      "total-ratings": 462,
       "wants": 1
     },
     {
@@ -279,7 +279,7 @@
       "link": "https://www.amazon.com.au/dp/1570625549/?coliid=I3O9OO80E3O0N7&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Integral Psychology: Consciousness, Spirit, Psychology, Therapy",
       "old-price": null,
-      "price": "$48.40",
+      "price": "$48.34",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 217,
@@ -299,7 +299,7 @@
       "link": "https://www.amazon.com.au/dp/1570628556/?coliid=I1Y8RI1BBGRHAA&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "A Theory of Everything: An Integral Vision for Business, Politics, Science, and Spirituality",
       "old-price": "$38.96",
-      "price": "$34.51",
+      "price": "$34.26",
       "priority": 0,
       "rating": 4.4,
       "total-ratings": 238,
@@ -402,7 +402,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1213,
+      "total-ratings": 1214,
       "wants": 1
     },
     {
@@ -480,8 +480,8 @@
       "item-option": null,
       "link": "https://www.amazon.com.au/dp/B00F5SGJIE/?coliid=I2VO3X6F3IT1T9&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Data Mining and Knowledge Discovery via Logic-Based Methods: Theory, Algorithms, and Applications (Springer Optimization and Its Applications Book 43)",
-      "old-price": null,
-      "price": "$234.18",
+      "old-price": "$234.18",
+      "price": "$220.16",
       "priority": 0,
       "rating": 0.0,
       "total-ratings": 0,

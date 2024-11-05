@@ -143,15 +143,15 @@
       "image": "https://m.media-amazon.com/images/I/41gC7L4hFmL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
-        "Color": "MAF04:61x18x21"
+        "Tamaño": "MAF04: ca. 61cm × 18cm × 21cm )"
       },
       "link": "https://www.amazon.es/dp/B0711F64VT/?coliid=I1H7SXSQST3AUP&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Elbe Safe Trampa para Marta Viva, Jaula Trampa para Gatos, Conejo Ardilla, Rata, Segura para niños y Mascotas, con Dos entradas, Resistente a la Intemperie, a Prueba de mordeduras, 61x18x21 cm",
       "old-price": null,
       "price": "45,99 €",
       "priority": 0,
-      "rating": 4.1,
-      "total-ratings": 880,
+      "rating": 3.9,
+      "total-ratings": 436,
       "wants": 1
     },
     {
@@ -425,10 +425,10 @@
       "link": "https://www.amazon.es/dp/B08TQPDTN1/?coliid=I15CEJOUNKOA67&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "CHURU Cat Receta DE ATUN Display 4X 14GR",
       "old-price": null,
-      "price": "7,84 €",
+      "price": "7,39 €",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 805,
+      "total-ratings": 806,
       "wants": 1
     },
     {
@@ -445,7 +445,7 @@
       "link": "https://www.amazon.es/dp/B08WKPG6WF/?coliid=IF7NA1X1KW5S6&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "FARMINA ND Cat Ocean NEUTERED 5KG",
       "old-price": null,
-      "price": "50,00 €",
+      "price": "50,30 €",
       "priority": 0,
       "rating": 4.5,
       "total-ratings": 177,
@@ -471,7 +471,7 @@
       "price": "20,99 €",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 2429,
+      "total-ratings": 2430,
       "wants": 1
     },
     {
@@ -493,7 +493,7 @@
       "price": "19,75 €",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 1068,
+      "total-ratings": 1069,
       "wants": 1
     },
     {
@@ -580,7 +580,7 @@
       "price": "49,99 €",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1762,
+      "total-ratings": 1764,
       "wants": 1
     },
     {
@@ -603,7 +603,7 @@
       "price": "16,27 €",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 923,
+      "total-ratings": 925,
       "wants": 1
     },
     {
@@ -623,10 +623,10 @@
       "link": "https://www.amazon.es/dp/B0BX4P2DTQ/?coliid=I3R8MGOETPZB2S&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "INABA Churu Box - Premios para Gatos - Snacks Saludables a Base de Atún, Varios Sabores - Textura Cremosa - Sin Cereales, Conservantes, Colorantes - 60x14g",
       "old-price": null,
-      "price": "34,95 €",
+      "price": "34,99 €",
       "priority": 0,
       "rating": 4.9,
-      "total-ratings": 457,
+      "total-ratings": 459,
       "wants": 1
     },
     {
@@ -643,7 +643,7 @@
       "link": "https://www.amazon.es/dp/B0BZWV75LG/?coliid=I1IGCDN6UALDM6&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "APPLAWS Cat Lata Kitten PECHUGA DE Pollo 24X70GR",
       "old-price": "34,55 €",
-      "price": "33,55 €",
+      "price": "33,15 €",
       "priority": 2,
       "rating": 0.0,
       "total-ratings": 0,
@@ -691,7 +691,7 @@
     },
     {
       "asin": "B0C6DX3YL2",
-      "badge": "Más vendido en Transportadoras para animales pequeños",
+      "badge": null,
       "byline": "de lionto (Target)",
       "comment": null,
       "coupon": null,
@@ -709,7 +709,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 419,
+      "total-ratings": 420,
       "wants": 1
     },
     {

@@ -42,7 +42,9 @@ tld_to_locale_mapping = {
 special_tld_to_territory = {"com": "us", "co.uk": "gb"}
 
 regex_date_added = {  # Missing bn_in, mr_in
-    **dict.fromkeys(["en_us", "en_ca"], re.compile(r"[^\d\s]+\s+(\w+\s\d+.*\d{4})")),
+    **dict.fromkeys(
+        ["en_us", "en_ca"], re.compile(r"[^\d\s\u2025\u3000]+[\s\u2025\u3000]+(\w+[\s\u2025\u3000]\d+.*\d{4})")
+    ),
     **dict.fromkeys(
         [
             "fr_fr",
@@ -67,11 +69,11 @@ regex_date_added = {  # Missing bn_in, mr_in
             "es_mx",
             "pt_br",
         ],
-        re.compile(r"[^\d\s]+\s+(\d{1,2}\.?\s.*\d{4})"),
+        re.compile(r"[^\d\s\u2025\u3000]+[\s\u2025\u3000]+(\d{1,2}\.?[\s\u2025\u3000].*\d{4})"),
     ),
-    "ta_in": re.compile(r"^\D+[\s\W]\s(\d{1,2}\s.*\d{4})$"),
-    "kn_in": re.compile(r"([^\d\s]+\s\d{1,2},\s\d{4})"),
-    "ml_in": re.compile(r"^(\d{4}[.,]?\s.*\d{1,2})"),
+    "ta_in": re.compile(r"^\D+[\s\u2025\u3000\W][\s\u2025\u3000](\d{1,2}[\s\u2025\u3000].*\d{4})$"),
+    "kn_in": re.compile(r"([^\d\s\u2025\u3000]+[\s\u2025\u3000]\d{1,2},[\s\u2025\u3000]\d{4})"),
+    "ml_in": re.compile(r"^(\d{4}[.,]?[\s\u2025\u3000].*\d{1,2})"),
     **dict.fromkeys(["ar_ae", "ar_sa"], re.compile(r"(\d{1,2}\D+\d{4})")),
     **dict.fromkeys(["ja_jp", "zh_cn"], re.compile(r"(\d{4}.*\d{1,2}日)")),
 }
@@ -80,7 +82,8 @@ regex_date_added = {  # Missing bn_in, mr_in
 # Only some languages show "x out of 5" backwards
 locale_to_rating_regex = {
     **dict.fromkeys(
-        ["ja_jp", "hi_in", "ta_in", "te_in", "kn_in", "ml_in", "mr_in"], re.compile(r"^\d\D+\s(\d(?:[.,]\d)?)$")
+        ["ja_jp", "hi_in", "ta_in", "te_in", "kn_in", "ml_in", "mr_in"],
+        re.compile(r"^\d\D+[\s\u2025\u3000](\d(?:[.,]\d)?)$"),
     ),
     "default": re.compile(r"^\D*(\d(?:[.,]\d)?)\D"),
 }

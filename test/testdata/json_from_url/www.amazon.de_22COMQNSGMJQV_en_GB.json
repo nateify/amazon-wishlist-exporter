@@ -24,7 +24,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.7,
-      "total-ratings": 2790,
+      "total-ratings": 2792,
       "wants": 80
     },
     {
@@ -47,7 +47,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.5,
-      "total-ratings": 4007,
+      "total-ratings": 4010,
       "wants": 50
     },
     {
@@ -91,7 +91,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.2,
-      "total-ratings": 758,
+      "total-ratings": 761,
       "wants": 5
     },
     {
@@ -137,7 +137,7 @@
       "price": "€100.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 3130,
+      "total-ratings": 3136,
       "wants": 20
     },
     {
@@ -151,7 +151,7 @@
       "image": "https://m.media-amazon.com/images/I/41o5RBFlXOL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
-        "Stil": "DJI Mavic 3 Pro mit DJI RC (Bildschirmfernsteuerung)"
+        "Stil": "Mavic 3 Pro mit DJI RC"
       },
       "link": "https://www.amazon.de/dp/B0BZSHHFVS/?coliid=IEBG39MUMZUY5&colid=22COMQNSGMJQV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "DJI Mavic 3 Pro mit DJI RC (Bildschirmfernsteuerung), Flaggschiff-Drohne mit Dreifachkamera und 4/3 CMOS Hasselblad-Kamera, 43 min Flugzeit und 15 km HD-Videoübertragung",
@@ -182,7 +182,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.5,
-      "total-ratings": 3088,
+      "total-ratings": 3089,
       "wants": 100
     }
   ]

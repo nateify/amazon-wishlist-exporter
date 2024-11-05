@@ -16,18 +16,20 @@ from amazon_wishlist_exporter.utils.locale_ import (
 )
 
 # Amazon's launch
-earliest_valid_date = date(1995, 7, 16)
+MIN_DATE = date(1995, 7, 16)
 
-# Account for edge case rounding up from time zone close to international date line
-today = date.today()
-one_day_from_today = today + timedelta(days=1)
+# Account for edge case when date is rounded up
+MAX_DATE = date.today() + timedelta(days=1)
 
 re_wishlist_parts = re.compile(r"\.amazon\.([a-z.]{2,})/.*?/wishlist.*/([A-Z0-9]{10,})[/?]?\b")
 
 
+def validate_optional_string(value):
+    return value is None or isinstance(value, str)
+
+
 # Load test JSON files
-@pytest.fixture
-def wishlist_data():
+def load_wishlist_data():
     testdata_dir = Path("./testdata")
     json_files = list(testdata_dir.rglob("*.json"))
 
@@ -40,107 +42,151 @@ def wishlist_data():
     return wishlist_data
 
 
-def validate_optional_string(value):
-    return value is None or isinstance(value, str)
+@pytest.mark.parametrize("wishlist", load_wishlist_data())
+def test_wishlist_structure(wishlist):
+    # Optional strings
+    optional_string_fields = ["title", "comment"]
+    for field in optional_string_fields:
+        assert validate_optional_string(wishlist[field])
+
+    # ID
+    assert isinstance(wishlist["id"], str)
+    assert wishlist["id"].isalnum()
+
+    # Valid URL
+    assert bool(urlparse(wishlist["url"]).netloc)
+
+    # Locale
+    try:
+        babel_locale = Locale.parse(wishlist["locale"])
+        assert isinstance(babel_locale, Locale), "Expected an object of type 'Locale'"
+    except (ValueError, TypeError, UnknownLocaleError) as e:
+        assert False, f"Function raised an exception: {e}"
 
 
-def test_wishlist_data(wishlist_data):
+# Determine the language and currency for date and price parsing once per wishlist
+def preproc_hints(wishlist):
+    babel_language = Locale.parse(wishlist["locale"]).language
+    wishlist_re_search = re.search(re_wishlist_parts, wishlist["url"])
+    wishlist_tld = wishlist_re_search.group(1)
+    territory_from_tld = get_territory_from_tld(wishlist_tld)
+    currency_from_tld = get_currency_from_territory(territory_from_tld)
+
+    return babel_language, currency_from_tld, wishlist["items"]
+
+
+def gen_wishlist_item_param():
+    wishlist_data = load_wishlist_data()
+    param_data = []
+
     for wishlist in wishlist_data:
-        assert isinstance(wishlist["id"], str) and wishlist["id"].isalnum()
+        babel_language, currency_from_tld, items = preproc_hints(wishlist)
+        for item in items:
+            param_data.append((babel_language, currency_from_tld, item))
 
-        assert validate_optional_string(wishlist["title"])
+    return param_data
 
-        assert validate_optional_string(wishlist["comment"])
 
-        wishlist_locale = wishlist["locale"]
+@pytest.mark.parametrize("babel_language, currency_from_tld, item", gen_wishlist_item_param())
+def test_wishlist_item_structure(babel_language, currency_from_tld, item):
+    # Optional strings
+    optional_string_fields = [
+        "name",
+        "asin",
+        "link",
+        "image",
+        "comment",
+        "date-added",
+        "price",
+        "old-price",
+        "byline",
+        "badge",
+        "coupon",
+    ]
+    for field in optional_string_fields:
+        assert validate_optional_string(item[field])
 
-        try:
-            babel_locale = Locale.parse(wishlist_locale)
-            assert isinstance(babel_locale, Locale), "Expected an object of type 'Locale'"
-        except (ValueError, TypeError, UnknownLocaleError) as e:
-            assert False, f"Function raised an exception: {e}"
+    # Category
+    assert item["item-category"] in ["purchasable", "deleted", "external", "idea"]
 
-        # Valid URLs will have netloc when scheme is defined
-        assert bool(urlparse(wishlist["url"]).netloc)
+    # ASIN
+    if item["item-category"] in ["purchasable", "deleted"]:
+        assert item["asin"]
 
-        # Used for date and price parsing hints
-        babel_language = babel_locale.language
-        wishlist_re_search = re.search(re_wishlist_parts, wishlist["url"])
-        wishlist_tld = wishlist_re_search.group(1)
-        territory_from_tld = get_territory_from_tld(wishlist_tld)
-        currency_from_tld = get_currency_from_territory(territory_from_tld)
+    if item["asin"]:
+        assert len(item["asin"]) == 10, "asin must be 10 characters long"
+        assert item["asin"].isalnum(), "asin must be alphanumeric"
 
-        for item in wishlist["items"]:
-            assert item["item-category"] in ["purchasable", "deleted", "external", "idea"]
+    # Item URL
+    if item["item-category"] in ["purchasable", "external"]:
+        assert item["link"]
 
-            assert validate_optional_string(item["name"])
+    if item["link"]:
+        assert bool(urlparse(item["link"]).netloc)
 
-            assert item["link"] is None or (bool(urlparse(item["link"]).netloc))
+    # Price and old price
+    for price_key in ["price", "old-price"]:
+        if item[price_key] is not None:
+            parsed_price = Price.fromstring(item[price_key], currency_hint=currency_from_tld)
+            assert parsed_price.amount is not None, f"{price_key} should have a valid amount"
+            assert isinstance(parsed_price.amount, Decimal), f"{price_key} amount should be a Decimal"
+            assert validate_optional_string(parsed_price.currency)
 
-            assert validate_optional_string(item["asin"])
+    # Date added
+    if item["date-added"] is not None:
+        parsed_date = get_parsed_date(item["date-added"], babel_language)
+        assert parsed_date is not None, "date-added should be a valid date"
 
-            # Validate ASIN
-            if isinstance(item["asin"], str):
-                assert len(item["asin"]) == 10, "asin must be 10 characters long"
-                assert item["asin"].isalnum(), "asin must be alphanumeric"
+        assert parsed_date.year is not None, "date-added should have a year"
+        assert parsed_date.month is not None, "date-added should have a month"
+        assert parsed_date.day is not None, "date-added should have a day"
 
-            assert validate_optional_string(item["comment"])
+        assert parsed_date >= MIN_DATE, "date-added is earlier than valid"
+        assert parsed_date <= MAX_DATE, "date-added is in the future"
 
-            # Check "price" and "old-price" using price_parser
-            for price_key in ["price", "old-price"]:
-                if item[price_key] is not None:
-                    parsed_price = Price.fromstring(item[price_key], currency_hint=currency_from_tld)
-                    assert parsed_price.amount is not None, f"{price_key} should have a valid amount"
-                    assert isinstance(parsed_price.amount, Decimal), f"{price_key} amount should be a Decimal"
-                    assert validate_optional_string(parsed_price.currency)
+    # Rating data
+    if item["item-category"] != "purchasable":
+        assert item["rating"] is None
+        assert item["total-ratings"] is None
+    else:
+        assert isinstance(item["rating"], float)
+        assert item["rating"] >= 0.0
+        assert item["rating"] <= 5.0
 
-            # Check "date-added" using dateparser
-            if item["date-added"] is not None:
-                parsed_date = get_parsed_date(item["date-added"], babel_language)
-                assert parsed_date is not None, "date-added should be a valid date"
+        assert isinstance(item["total-ratings"], int)
+        assert item["total-ratings"] >= 0
 
-                assert parsed_date.year is not None, "date-added should have a year"
-                assert parsed_date.month is not None, "date-added should have a month"
-                assert parsed_date.day is not None, "date-added should have a day"
+    # Image URL
+    if item["item-category"] == "purchasable":
+        assert item["image"]
 
-                assert parsed_date >= earliest_valid_date, "date-added is earlier than valid"
-                assert parsed_date <= one_day_from_today, "date-added is in the future"
+    if item["image"]:
+        assert bool(urlparse(item["image"]).netloc)
 
-            assert item["rating"] is None or isinstance(item["rating"], float)
+    # Wants
+    assert isinstance(item["wants"], int)
+    assert item["wants"] >= 1
 
-            if isinstance(item["rating"], float):
-                assert item["rating"] >= 0.0
+    # Has
+    assert isinstance(item["has"], int)
+    assert item["has"] >= 0
 
-            assert item["total-ratings"] is None or isinstance(item["total-ratings"], int)
+    # Item options such as color, size, etc
+    if item["item-category"] != "purchasable":
+        assert item["item-option"] is None
+    else:
+        assert item["item-option"] is None or isinstance(item["item-option"], dict)
 
-            if isinstance(item["total-ratings"], int):
-                assert item["total-ratings"] >= 0
+    if item["item-option"]:
+        assert bool(item["item-option"]), "item-option should not be an empty dict"
 
-            assert item["image"] is None or (bool(urlparse(item["image"]).netloc))
+    # Coupon
+    if item["coupon"]:
+        assert any(char.isdigit() for char in item["coupon"]), "coupon should contain a digit"
 
-            assert isinstance(item["wants"], int)
-            assert item["wants"] >= 1
+    # Priority can be string or int between -2..2
+    assert isinstance(item["priority"], (int, str))
 
-            assert isinstance(item["has"], int)
-            assert item["has"] >= 0
-
-            assert item["item-option"] is None or isinstance(item["item-option"], dict)
-
-            if isinstance(item["item-option"], dict):
-                assert bool(item["item-option"]), "item-option should not be an empty dict"
-
-            assert validate_optional_string(item["byline"])
-
-            assert validate_optional_string(item["badge"])
-
-            assert validate_optional_string(item["coupon"])
-
-            if isinstance(item["coupon"], str):
-                assert any(char.isdigit() for char in item["coupon"]), "coupon should contain a digit"
-
-            # Priority can be string or int between -2..2
-            assert isinstance(item["priority"], (int, str))
-
-            if isinstance(item["priority"], int):
-                assert item["priority"] >= -2
-                assert item["priority"] <= 2
+    if isinstance(item["priority"], int):
+        assert item["priority"] >= -2
+        assert item["priority"] <= 2

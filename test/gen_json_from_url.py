@@ -29,7 +29,7 @@ def generate_test_data(sample_wishlist_urls):
             sys.argv = ["cli.py"] + args + ["-u", url, "-l", locale, "-o", str(output_path)]
 
             cli()
-            sleep(5)
+            sleep(10)
 
 
 if __name__ == "__main__":

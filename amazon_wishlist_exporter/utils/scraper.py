@@ -2,9 +2,11 @@ import json
 from time import sleep
 
 from amazoncaptcha import AmazonCaptcha
+from babel import Locale
 from curl_cffi import requests
 from selectolax.lexbor import LexborHTMLParser
 
+from .locale_ import get_currency_from_territory, get_territory_from_tld
 from .logger_config import logger
 
 
@@ -78,10 +80,31 @@ def get_external_image(link):
     return None
 
 
-def get_pages_from_web(base_url, wishlist_url):
+def generate_locale_request_components(store_tld, store_locale):
+    territory_from_tld = get_territory_from_tld(store_tld)
+    currency_from_tld = get_currency_from_territory(territory_from_tld)
+
+    babel_locale = Locale.parse(store_locale)
+
+    primary_locale = str(babel_locale).replace("_", "-")
+    backup_locale = babel_locale.language
+    formatted_locales = [primary_locale, f"{backup_locale};0.9"]
+    formatted_string = ", ".join(formatted_locales)
+
+    headers_dict = {"Accept-Language": formatted_string}
+
+    cookies_dict = {"i18n-prefs": currency_from_tld, "lc-acbin": str(babel_locale)}
+
+    return headers_dict, cookies_dict
+
+
+def get_pages_from_web(base_url, wishlist_url, store_tld, store_locale):
+    # Required to get web page to return the correct formatting
+    locale_headers, locale_cookies = generate_locale_request_components(store_tld, store_locale)
+
     wishlist_pages = []
 
-    s = requests.Session(impersonate="chrome")
+    s = requests.Session(impersonate="chrome", cookies=locale_cookies, headers=locale_headers)
     logger.debug(f"Requesting {wishlist_url}")
     initial_request = s.get(wishlist_url)
     tree = LexborHTMLParser(initial_request.content)

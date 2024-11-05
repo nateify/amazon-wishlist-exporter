@@ -38,11 +38,11 @@
       "item-option": null,
       "link": "https://www.amazon.in/dp/B0747LTP56/?coliid=I4NFISKZ2BQWR&colid=1F776S6VRRQD9&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Me-O Wet Kitten Food, Tuna and Sardine in Jelly 80 gm (Pack of 12, 960 G)",
-      "old-price": "Rs669.00",
-      "price": "₹540.00",
+      "old-price": null,
+      "price": "₹680.00",
       "priority": 1,
       "rating": 4.2,
-      "total-ratings": 64,
+      "total-ratings": 66,
       "wants": 5
     },
     {
@@ -58,10 +58,10 @@
       "item-option": {
         "Size": "85 g (Pack of 24)"
       },
-      "link": "https://www.amazon.in/dp/B07HP9RP1J/?coliid=I2ZNGMXD2V8UZX&colid=1F776S6VRRQD9&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.in/dp/B07HP9RP1J/?coliid=I2ZNGMXD2V8UZX&colid=1F776S6VRRQD9&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Whiskas Adult (+1 Year) Wet Cat Food, Ocean Fish, 24 Pouches (24 X 80G), 1 Count",
       "old-price": null,
-      "price": "₹1,200.00",
+      "price": null,
       "priority": 2,
       "rating": 4.4,
       "total-ratings": 1224,
@@ -127,7 +127,7 @@
       "link": "https://www.amazon.in/dp/B0928PHZ41/?coliid=I1PP2S9WO5FD1M&colid=1F776S6VRRQD9&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Whiskas Adult (1+ year) Tasty Mix Wet Cat Food Made With Real Fish, Seafood Cocktail Wakame Seaweed in Gravy - Pack of 24",
       "old-price": null,
-      "price": "₹1,200.00",
+      "price": "₹1,400.00",
       "priority": 2,
       "rating": 4.4,
       "total-ratings": 1478,
@@ -149,7 +149,7 @@
       "link": "https://www.amazon.in/dp/B0928PWCPC/?coliid=IIBDOYR4FQHYV&colid=1F776S6VRRQD9&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Whiskas Adult (1+ year) Tasty Mix Wet Cat Food Made With Real Fish, Chicken With Salmon Wakame Seaweed in Gravy - Pack of 24 (1.68kg)",
       "old-price": null,
-      "price": "₹1,479.00",
+      "price": "₹1,488.00",
       "priority": 2,
       "rating": 4.4,
       "total-ratings": 1098,
@@ -240,7 +240,7 @@
       "price": "₹2,160.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 2048,
+      "total-ratings": 2049,
       "wants": 1
     },
     {

@@ -29,7 +29,7 @@ Install with pip:
 
     pip install amazon-wishlist-exporter
 
-[uv](https://docs.astral.sh/uv/) or [pipx](https://pipx.pypa.io/stable/) is recommended to install the package in a managed environment:
+[uv](https://docs.astral.sh/uv/) is recommended to install the package in a managed environment:
 
     uv tool install amazon-wishlist-exporter
 
@@ -47,7 +47,7 @@ Utilizing uv:
 
 ## Dependencies
 
-* Python >= 3.11
+* Python >= 3.9
 * amazoncaptcha
 * babel
 * curl_cffi
@@ -76,7 +76,7 @@ Excessive scraping in a short time frame will cause Amazon to serve HTTP 403 err
 
 ### Private Wishlists and "Date Added" Field
 
-This program is not capable of scraping private lists or authentication. Additionally, the "date added" field is only visible when you are authenticated.
+This program is not capable of scraping private lists or authentication. Additionally, the "date added" field is only visible when you are authenticated (except for some old lists).
 
 To scrape these lists, you must use the bookmarklet provided in the below section, which will download an HTML file you can pass to the program with the `--html-file` argument.
 
@@ -95,8 +95,3 @@ Alternatively, you can open a console using your browser's development tools, an
 ```javascript
 if(window.location.host.startsWith("www.amazon."))var previousCount=-1,unchangedCount=0,checkExist=setInterval(function(){var e=document.querySelectorAll(".g-item-sortable");if(document.getElementById("endOfListMarker")||unchangedCount>=3){clearInterval(checkExist);let t=document.createElement("a"),n=new Blob([document.getElementById("wishlist-page").outerHTML],{type:"text/html"});var o=window.location.host+"_"+document.getElementById("listId").value+"_"+opts.language+".html";t.href=URL.createObjectURL(n),t.download=o,t.click(),URL.revokeObjectURL(t.href)}else e.length===previousCount?unchangedCount++:unchangedCount=0,previousCount=e.length,(last=e[e.length-1]).scrollIntoView()},2e3);else alert("This bookmarklet must be run on an Amazon site!");
 ```
-
-# Todo
-
-* Logging and exception improvements
-* Testing

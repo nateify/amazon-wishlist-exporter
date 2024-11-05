@@ -288,7 +288,9 @@ class Wishlist(object):
         self.base_url = f"https://www.amazon.{self.store_tld}"
 
         if not self.html_file:
-            self.all_pages_html = get_pages_from_web(self.base_url, self.wishlist_url)
+            self.all_pages_html = get_pages_from_web(
+                self.base_url, self.wishlist_url, self.store_tld, self.store_locale
+            )
         else:
             self.all_pages_html = get_pages_from_local_file(self.html_file)
 

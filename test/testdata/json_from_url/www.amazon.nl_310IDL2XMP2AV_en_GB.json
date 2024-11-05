@@ -82,7 +82,7 @@
       "price": "€39.48",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 19191,
+      "total-ratings": 19194,
       "wants": 1
     },
     {
@@ -99,10 +99,10 @@
       "link": "https://www.amazon.nl/dp/B08X1RYZ1R/?coliid=I1YQDQYTTL639Q&colid=310IDL2XMP2AV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Potato Head Mr. Potato Head Classic Toy For Kids Ages 2 and Up, Includes 13 Parts and Pieces to Create Funny Faces",
       "old-price": null,
-      "price": "€23.78",
+      "price": "€23.87",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 7136,
+      "total-ratings": 7138,
       "wants": 1
     },
     {
@@ -142,7 +142,7 @@
       "price": "€39.98",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 683,
+      "total-ratings": 684,
       "wants": 1
     },
     {
@@ -162,7 +162,7 @@
       "price": "€29.95",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 6182,
+      "total-ratings": 6184,
       "wants": 1
     },
     {
@@ -202,7 +202,7 @@
       "price": "€47.99",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 376,
+      "total-ratings": 378,
       "wants": 1
     },
     {
@@ -222,7 +222,7 @@
       "price": "€39.99",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 287,
+      "total-ratings": 289,
       "wants": 1
     },
     {
@@ -256,13 +256,13 @@
       "image": "https://m.media-amazon.com/images/I/51ezmgcn29L._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.nl/dp/B0CFW21MG7/?coliid=I3P6YV7X2WYO6F&colid=310IDL2XMP2AV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.nl/dp/B0CFW21MG7/?coliid=I3P6YV7X2WYO6F&colid=310IDL2XMP2AV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "LEGO Harry Potter Vliegende Ford Anglia, Bouwpakket voor Kinderen, Bouwbare Speelgoed Auto uit de Films, Cadeau voor Jongens, Meisjes en Fans vanaf 7 jaar, inclusief 2 Minifiguren 76424",
-      "old-price": "€11.24",
-      "price": "€9.99",
+      "old-price": null,
+      "price": null,
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 929,
+      "total-ratings": 931,
       "wants": 1
     },
     {
@@ -282,7 +282,7 @@
       "price": "€13.79",
       "priority": 0,
       "rating": 4.9,
-      "total-ratings": 330,
+      "total-ratings": 332,
       "wants": 1
     },
     {
@@ -319,10 +319,10 @@
       "link": "https://www.amazon.nl/dp/B0CP66NNKG/?coliid=I3KHVGOOURCTRT&colid=310IDL2XMP2AV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Beyblade X Xtreme Battle-set",
       "old-price": "€55.04",
-      "price": "€49.87",
+      "price": "€49.97",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 130,
+      "total-ratings": 133,
       "wants": 1
     },
     {
@@ -341,8 +341,8 @@
       "old-price": "€45.95",
       "price": "€43.99",
       "priority": 0,
-      "rating": 4.6,
-      "total-ratings": 145,
+      "rating": 4.7,
+      "total-ratings": 147,
       "wants": 1
     },
     {
@@ -447,7 +447,7 @@
       "price": "€35.99",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 86,
+      "total-ratings": 89,
       "wants": 1
     },
     {
@@ -461,13 +461,13 @@
       "image": "https://m.media-amazon.com/images/I/41jECYUrTPL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.nl/dp/B0CWH1ZBTY/?coliid=I37HVIJ70UDWXT&colid=310IDL2XMP2AV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.nl/dp/B0CWH1ZBTY/?coliid=I37HVIJ70UDWXT&colid=310IDL2XMP2AV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "LEGO Harry Potter Scheurbek Hippogrief, Magisch Wezen, Speelgoed Dier, Rollenspellen Bouwpakket voor Kinderen, Cadeau voor Jongens, Meisjes en Fans 76427",
-      "old-price": "€44.99",
-      "price": "€37.99",
+      "old-price": null,
+      "price": null,
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 75,
+      "total-ratings": 76,
       "wants": 1
     }
   ]
