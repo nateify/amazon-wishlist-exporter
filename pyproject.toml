@@ -1,6 +1,6 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.5.0"
+version = "0.6.0"
 description = "Export Amazon wishlist metadata to JSON"
 readme = "README.md"
 keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
