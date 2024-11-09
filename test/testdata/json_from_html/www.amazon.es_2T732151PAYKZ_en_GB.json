@@ -7,7 +7,7 @@
   "items": [
     {
       "asin": "B005EFUL0K",
-      "badge": "Best Seller in Crunchy Cat Treats",
+      "badge": null,
       "byline": "by Vitakraft (Target)",
       "comment": null,
       "coupon": null,
@@ -18,13 +18,13 @@
       "item-option": {
         "Style Name": "Chicken with taurine"
       },
-      "link": "https://www.amazon.es/-/en/dp/B005EFUL0K/?coliid=I2JQ13ESWMUKQC&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.es/dp/B005EFUL0K/?coliid=I2JQ13ESWMUKQC&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Vitakraft Liquid Snack Liquid Cat Snack with Chicken, Soft and Creamy Texture, Delicious Cat Treat, Taurine, Promotes Eye and Heart Function, Low Calorie (1 Pack of 6 x 15g)",
-      "old-price": null,
-      "price": "€1.99",
+      "old-price": "€1.89",
+      "price": "€1.79",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 3959,
+      "total-ratings": 3945,
       "wants": 1
     },
     {
@@ -44,7 +44,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1878,
+      "total-ratings": 1879,
       "wants": 1
     },
     {
@@ -66,8 +66,8 @@
       "old-price": null,
       "price": "€33.85",
       "priority": 1,
-      "rating": 4.5,
-      "total-ratings": 2867,
+      "rating": 4.4,
+      "total-ratings": 2870,
       "wants": 6
     },
     {
@@ -89,7 +89,7 @@
       "price": "€7.99",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 4582,
+      "total-ratings": 4583,
       "wants": 1
     },
     {
@@ -126,7 +126,7 @@
       "link": "https://www.amazon.es/-/en/dp/B06XGBJWRQ/?coliid=I3CCDJPAGHGRC8&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Veterinary Hpm Virbac Hpm Dog G1 Digestive Support 3kg Virbac 01125 3000g",
       "old-price": "€43.63",
-      "price": "€38.99",
+      "price": "€38.68",
       "priority": 0,
       "rating": 4.4,
       "total-ratings": 74,
@@ -143,15 +143,15 @@
       "image": "https://m.media-amazon.com/images/I/41gC7L4hFmL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
-        "Colour Name": "MAF04:61x18x21"
+        "Size Name": "MAF04: ca. 61cm × 18cm × 21cm"
       },
       "link": "https://www.amazon.es/-/en/dp/B0711F64VT/?coliid=I1H7SXSQST3AUP&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Elbe Safe Live Sable Trap, Cage Trap for Cats, Squirrel Rabbit, Rat, Safe for Children and Pets, with Two Entrances, Weatherproof, Bite Proof, 61 x 18 x 21 cm",
       "old-price": null,
       "price": "€45.99",
       "priority": 0,
-      "rating": 4.1,
-      "total-ratings": 880,
+      "rating": 3.9,
+      "total-ratings": 436,
       "wants": 1
     },
     {
@@ -171,10 +171,10 @@
       "link": "https://www.amazon.es/-/en/dp/B07C9PSLPG/?coliid=IJ007XA8LX4T2&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Arquivet, Twist with Rolled Chicken, Natural Snacks for Dogs, Treats for Dogs, Treats for Your Pet, 13 cm, 1 kg",
       "old-price": null,
-      "price": "€23.39",
+      "price": "€25.88",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 2903,
+      "total-ratings": 2912,
       "wants": 1
     },
     {
@@ -194,7 +194,7 @@
       "price": "€25.40",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 951,
+      "total-ratings": 953,
       "wants": 1
     },
     {
@@ -214,7 +214,7 @@
       "price": "€17.99",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 4442,
+      "total-ratings": 4441,
       "wants": 1
     },
     {
@@ -231,13 +231,13 @@
         "Style Name": "Twist with rolled chicken 13 cm",
         "Size Name": "350 g (Paquete de 1)"
       },
-      "link": "https://www.amazon.es/dp/B07RXD4Y1T/?coliid=I2RO5NAEG9FRNZ&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.es/-/en/dp/B07RXD4Y1T/?coliid=I2RO5NAEG9FRNZ&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Arquivet Twist with Chicken Rolled 13cm, 350g (Pack of 1)",
       "old-price": null,
       "price": "€12.24",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 2903,
+      "total-ratings": 2912,
       "wants": 1
     },
     {
@@ -255,8 +255,8 @@
       },
       "link": "https://www.amazon.es/-/en/dp/B07SCC6LYB/?coliid=I1ZCVDB2ZPQCQJ&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Schesir Wet cat food with tuna, beef fillets, small wide and rice in several packages or as individual varieties (6 cans of 85 g).",
-      "old-price": null,
-      "price": "€8.69",
+      "old-price": "€8.69",
+      "price": "€7.69",
       "priority": 0,
       "rating": 4.5,
       "total-ratings": 587,
@@ -319,10 +319,10 @@
       "link": "https://www.amazon.es/-/en/dp/B086GVXZ5S/?coliid=IGPV0GHLP4CXO&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "ROYAL CANIN Veterinary Gastrointestinal Mousse | 12 x 200g | Complete Dietary Food for Adult Dogs | for Digestive Support | High Energy",
       "old-price": null,
-      "price": "€31.75",
+      "price": "€31.78",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 106,
+      "total-ratings": 107,
       "wants": 1
     },
     {
@@ -339,10 +339,10 @@
       "link": "https://www.amazon.es/-/en/dp/B086T6RJB8/?coliid=I2ZXOHOHAT1E43&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Royal Canin Veterinary Gastrointestinal Puppy Ultra Soft Mousse | 12 x 195 g | Complete Puppy Food | to Assist in Acute Intestinal Absorption Disorders",
       "old-price": null,
-      "price": "€35.71",
+      "price": "€32.32",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 237,
+      "total-ratings": 238,
       "wants": 1
     },
     {
@@ -362,7 +362,7 @@
       "price": "€44.19",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 186,
+      "total-ratings": 187,
       "wants": 1
     },
     {
@@ -403,10 +403,10 @@
       "link": "https://www.amazon.es/-/en/dp/B08MW7LX7H/?coliid=I1MYTPSYPFPBOW&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Schesir, Wet Food for Kittens, Bacoreta Flavor in Soft Gelatin - Total 1.7 kg (20 Sachets x 85 g)",
       "old-price": null,
-      "price": "€26.61",
+      "price": "€26.14",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 447,
+      "total-ratings": 448,
       "wants": 1
     },
     {
@@ -425,10 +425,10 @@
       "link": "https://www.amazon.es/-/en/dp/B08TQPDTN1/?coliid=I15CEJOUNKOA67&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "CHURU Cat Tuna Recipe Display 4X 14GR",
       "old-price": null,
-      "price": "€7.84",
+      "price": "€7.85",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 805,
+      "total-ratings": 794,
       "wants": 1
     },
     {
@@ -445,10 +445,10 @@
       "link": "https://www.amazon.es/-/en/dp/B08WKPG6WF/?coliid=IF7NA1X1KW5S6&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "FARMINA ND Cat Ocean NEUTERED 5kg",
       "old-price": null,
-      "price": "€50.90",
+      "price": "€50.60",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 177,
+      "total-ratings": 178,
       "wants": 1
     },
     {
@@ -462,16 +462,16 @@
       "image": "https://m.media-amazon.com/images/I/41rV9sjOLcL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
-        "Flavour Name": "44 x 85g sachets",
+        "Flavour Name": "Assorted Pack",
         "Size Name": "3.74 kg (Paquete de 1)"
       },
       "link": "https://www.amazon.es/-/en/dp/B08WSYSQVL/?coliid=IQYGLPZLRP51Y&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Felix Purina Fantastic Wet Adult Cat Food Variety Pack, 44 x 85g Sachets, 1 Count",
       "old-price": null,
-      "price": "€20.99",
+      "price": "€21.80",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 2428,
+      "total-ratings": 2434,
       "wants": 1
     },
     {
@@ -493,7 +493,7 @@
       "price": "€19.75",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 1066,
+      "total-ratings": 1073,
       "wants": 1
     },
     {
@@ -515,7 +515,7 @@
       "price": "€34.99",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 1455,
+      "total-ratings": 1456,
       "wants": 1
     },
     {
@@ -537,7 +537,7 @@
       "price": "€45.99",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 2223,
+      "total-ratings": 2227,
       "wants": 1
     },
     {
@@ -577,10 +577,10 @@
       "link": "https://www.amazon.es/-/en/dp/B0BN1KNDG6/?coliid=I37WZS0A2KJ11D&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Feandrea Kitten Tree up to 3 kg, Tower 67 cm, S, Large Platform, 2 Caves, Scratcher, Light Grey PCT611W01",
       "old-price": null,
-      "price": "€49.99",
+      "price": "€52.72",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1760,
+      "total-ratings": 1770,
       "wants": 1
     },
     {
@@ -599,11 +599,11 @@
       },
       "link": "https://www.amazon.es/-/en/dp/B0BX4NR73M/?coliid=IAJ6RH4VQ5B1F&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "INABA Churu - 4 Flavours Tuna Puree Cat Treats - Delicious Cat Snacks - Smooth & Creamy Texture - Cat Food - 20 Tubes x 14g",
-      "old-price": null,
-      "price": "€16.57",
+      "old-price": "€13.68",
+      "price": "€13.45",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 922,
+      "total-ratings": 926,
       "wants": 1
     },
     {
@@ -623,10 +623,10 @@
       "link": "https://www.amazon.es/-/en/dp/B0BX4P2DTQ/?coliid=I3R8MGOETPZB2S&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "INABA Churu Box - Cat Treats - Healthy Snacks Based on Tuna, Various Flavors - Creamy Texture - No Grains, Preservatives, Colorants - 60x14g",
       "old-price": null,
-      "price": "€33.75",
+      "price": "€34.99",
       "priority": 0,
       "rating": 4.9,
-      "total-ratings": 455,
+      "total-ratings": 463,
       "wants": 1
     },
     {
@@ -643,7 +643,7 @@
       "link": "https://www.amazon.es/-/en/dp/B0BZWV75LG/?coliid=I1IGCDN6UALDM6&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "APPLAWS Cat Tin Kitten Chicken Breast 24X70GR",
       "old-price": "€34.55",
-      "price": "€34.35",
+      "price": "€33.35",
       "priority": 2,
       "rating": 0.0,
       "total-ratings": 0,
@@ -663,7 +663,7 @@
       "link": "https://www.amazon.es/-/en/dp/B0C3ZSR6X5/?coliid=I2K7NXHXGDRYQ3&colid=2T732151PAYKZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Petstyle Living - Twisted Sticks with Duck - Advantage Bag 100 Pieces - Dog Snack",
       "old-price": null,
-      "price": "€27.95",
+      "price": "€29.95",
       "priority": 0,
       "rating": 4.4,
       "total-ratings": 48,
@@ -686,7 +686,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 91,
+      "total-ratings": 93,
       "wants": 1
     },
     {
@@ -708,8 +708,8 @@
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 4.2,
-      "total-ratings": 417,
+      "rating": 4.1,
+      "total-ratings": 423,
       "wants": 1
     },
     {
@@ -771,8 +771,10 @@
       "price": "€12.90",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 91,
+      "total-ratings": 93,
       "wants": 1
     }
-  ]
+  ],
+  "language": "en",
+  "currency": "EUR"
 }

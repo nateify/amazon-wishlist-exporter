@@ -6,6 +6,28 @@
   "locale": "en_SG",
   "items": [
     {
+      "asin": "B0050FNL4M",
+      "badge": null,
+      "byline": "by Pepperidge Farm (Grocery)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/412CXFk8kYL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": {
+        "Size Name": "6.75 Ounce (Pack of 1)"
+      },
+      "link": "https://www.amazon.sg/dp/B0050FNL4M/?coliid=I1WZ0HJR19Q90Q&colid=3RTYHM78C5OVZ&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Pepperidge Farm Distinctive Fruitful Strawberry Cookies, 191g",
+      "old-price": null,
+      "price": null,
+      "priority": 0,
+      "rating": 4.5,
+      "total-ratings": 2335,
+      "wants": 1
+    },
+    {
       "asin": "B00IAE6JOE",
       "badge": null,
       "byline": "by Pepperidge Farm (Grocery)",
@@ -22,7 +44,7 @@
       "price": "S$11.54",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 7590,
+      "total-ratings": 7599,
       "wants": 1
     },
     {
@@ -42,7 +64,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 483,
+      "total-ratings": 486,
       "wants": 1
     },
     {
@@ -62,10 +84,10 @@
       "link": "https://www.amazon.sg/dp/B00QRIGM1K/?coliid=I1795FAGE77014&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Lavish Home 3-Piece Brushed Microfiber Twin Sheet Set - Bedding with Wrinkle and Stain-Resistant Fitted and Flat Sheets Plus Pillowcase (Purple)",
       "old-price": null,
-      "price": "S$27.56",
+      "price": "S$27.68",
       "priority": 0,
       "rating": 4.1,
-      "total-ratings": 11892,
+      "total-ratings": 11885,
       "wants": 1
     },
     {
@@ -85,10 +107,10 @@
       "link": "https://www.amazon.sg/dp/B016S52XNM/?coliid=I2CAUOO9AICCE&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Pepperidge Farm Cookies Chocolate Collection, 7 Cookie Varieties, 13 oz. Box",
       "old-price": null,
-      "price": "S$15.82",
+      "price": "S$15.61",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 5832,
+      "total-ratings": 5833,
       "wants": 1
     },
     {
@@ -130,7 +152,7 @@
       "price": "S$11.60",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 2124,
+      "total-ratings": 2128,
       "wants": 1
     },
     {
@@ -146,10 +168,10 @@
       "item-option": {
         "Flavour Name": "Milk Chocolate Chip"
       },
-      "link": "https://www.amazon.sg/dp/B079P9XZVJ/?coliid=I28LN4L9QUGDXM&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.sg/dp/B079P9XZVJ/?coliid=I28LN4L9QUGDXM&colid=3RTYHM78C5OVZ&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Pepperidge Farm Farmhouse Thin & Crispy Cookies, Milk Chocolate Chip, 6.9 Ounce",
-      "old-price": "S$11.60",
-      "price": "S$11.54",
+      "old-price": null,
+      "price": null,
       "priority": 0,
       "rating": 4.2,
       "total-ratings": 1362,
@@ -209,15 +231,35 @@
       "link": "https://www.amazon.sg/dp/B07TXRRL46/?coliid=I3P5TB7YB2A161&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Ghirardelli Premium Chocolate Snowmen Assortment, Holiday Candy Christmas Gift, Snowman Assortment, 15.3 Oz",
       "old-price": "S$27.31",
-      "price": "S$26.21",
+      "price": "S$25.64",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1159,
+      "total-ratings": 1160,
+      "wants": 1
+    },
+    {
+      "asin": "B086BRKRHB",
+      "badge": null,
+      "byline": "by Swiss Miss (Grocery)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/519hbEbKjuL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": null,
+      "link": "https://www.amazon.sg/dp/B086BRKRHB/?coliid=I30T9T1VATBEC2&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Swiss Miss Milk Chocolate Flavor Hot Cocoa Mix Canister, 1085 g",
+      "old-price": null,
+      "price": "S$20.32",
+      "priority": 0,
+      "rating": 4.8,
+      "total-ratings": 598,
       "wants": 1
     },
     {
       "asin": "B086FC5B8X",
-      "badge": "Best Seller in Gift Cards",
+      "badge": null,
       "byline": "by Amazon (Ecard Gift Certificate)",
       "comment": "nessa81@gmail.com",
       "coupon": null,
@@ -340,7 +382,7 @@
     },
     {
       "asin": "B09JSQFXX8",
-      "badge": "Best Seller in Fitted Sheets",
+      "badge": null,
       "byline": "by Cathay Home (Kitchen)",
       "comment": null,
       "coupon": null,
@@ -381,7 +423,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1042,
+      "total-ratings": 1048,
       "wants": 1
     },
     {
@@ -401,10 +443,33 @@
       "link": "https://www.amazon.sg/dp/B09MJHCPGZ/?coliid=I16BTGOZL9VND2&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "YORK Dark Chocolate Snack Size Peppermint Patties, Candy Pantry Packs, 0.6 Ounce (Pack of 25)",
       "old-price": null,
-      "price": "S$13.79",
+      "price": "S$14.23",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 2284,
+      "total-ratings": 2285,
+      "wants": 1
+    },
+    {
+      "asin": "B09RPFYQMQ",
+      "badge": null,
+      "byline": "by Bauducco (Grocery)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/41Q3edmRrPL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": {
+        "Flavour Name": "Chocolate",
+        "Size Name": "25.3 Ounce (Pack of 40)"
+      },
+      "link": "https://www.amazon.sg/dp/B09RPFYQMQ/?coliid=ISPFI68JIZCR4&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Bauducco Choco Biscuit Cookies -Tub 40 pk - Crispy & Delicious - Great for Snacks, Dessert & Lunch Box – 2 cookies per pack, individually wrapped, 25.3 oz (Pack of 40)",
+      "old-price": null,
+      "price": "S$24.99",
+      "priority": 0,
+      "rating": 4.2,
+      "total-ratings": 1903,
       "wants": 1
     },
     {
@@ -417,16 +482,14 @@
       "has": 0,
       "image": "https://m.media-amazon.com/images/I/51WRQwZZuqL._SS135_.jpg",
       "item-category": "purchasable",
-      "item-option": {
-        "Style Name": "Bueno"
-      },
-      "link": "https://www.amazon.sg/dp/B0B72DZTL8/?coliid=IOXC3SPA2FPST&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "item-option": null,
+      "link": "https://www.amazon.sg/dp/B0B72DZTL8/?coliid=IOXC3SPA2FPST&colid=3RTYHM78C5OVZ&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "KINDER BUENO 2024 Advent Calendar, 24 Treats (167g)",
-      "old-price": "S$58.53",
-      "price": "S$46.08",
+      "old-price": null,
+      "price": null,
       "priority": 0,
-      "rating": 4.7,
-      "total-ratings": 355,
+      "rating": 4.6,
+      "total-ratings": 356,
       "wants": 1
     },
     {
@@ -451,7 +514,7 @@
     },
     {
       "asin": "B0BJKVFH2S",
-      "badge": null,
+      "badge": "Best Seller in Blood Pressure Monitor",
       "byline": "by Ouson+ Care",
       "comment": null,
       "coupon": null,
@@ -485,13 +548,35 @@
         "Colour Name": "Purple",
         "Size Name": "Medium"
       },
-      "link": "https://www.amazon.sg/dp/B0BP8XKPNV/?coliid=IONPUO1SGRNFU&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.sg/dp/B0BP8XKPNV/?coliid=IONPUO1SGRNFU&colid=3RTYHM78C5OVZ&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Ezy Dose Weekly (7-Day) AM/PM Pill Organizer, Vitamin Case, and Medicine Box, Medium Compartments, 2 Times a Day, Purple",
       "old-price": null,
-      "price": "S$7.82",
+      "price": "S$6.50",
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 1059,
+      "total-ratings": 1068,
+      "wants": 1
+    },
+    {
+      "asin": "B0BQSML6LG",
+      "badge": null,
+      "byline": "by Lucky Charms (Grocery)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/51-1LOc7d1L._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": {
+        "Size Name": "large"
+      },
+      "link": "https://www.amazon.sg/dp/B0BQSML6LG/?coliid=I22833HZNH1P82&colid=3RTYHM78C5OVZ&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Lucky Charms Just Magical Marshmallows, Limited Edition Snacks, Dessert Ingredient and Topping, 4 oz",
+      "old-price": null,
+      "price": null,
+      "priority": 0,
+      "rating": 4.6,
+      "total-ratings": 1570,
       "wants": 1
     },
     {
@@ -587,13 +672,13 @@
     },
     {
       "asin": "B0CH32JFJ9",
-      "badge": null,
+      "badge": "Best Seller in Sheet & Pillowcase Sets",
       "byline": "by Utopia Bedding (Kitchen)",
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/I/41gGxisSyEL._SS135_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41yg3qeD0aL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
         "Colour Name": "12 - Lavender",
@@ -605,7 +690,30 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 288768,
+      "total-ratings": 288982,
+      "wants": 1
+    },
+    {
+      "asin": "B0CN1KY8J2",
+      "badge": null,
+      "byline": "by Squishmallows (Toy)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/31kt5AjyGlL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": {
+        "Colour Name": "Archie",
+        "Size Name": "5 inch"
+      },
+      "link": "https://www.amazon.sg/dp/B0CN1KY8J2/?coliid=I293O2R3ZYKVGO&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Squishmallows Original 5-Inch Archie Pink Axolotl with White Fuzzy Belly - Official Jazwares Plush (Little)",
+      "old-price": null,
+      "price": "S$14.52",
+      "priority": 0,
+      "rating": 4.0,
+      "total-ratings": 3,
       "wants": 1
     },
     {
@@ -684,7 +792,7 @@
       "link": "https://www.amazon.sg/dp/B0D45GGB8P/?coliid=I282MSSAT2OAQH&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Upgraded Audio Video Capture Cards, 1080p 60fps Capture Card,Ultra High Speed USB 3.0 for Gaming, Streaming Compatible with Nintendo Switch, PS3/4, Xbox One, Twitch, YouTube",
       "old-price": null,
-      "price": "S$16.92",
+      "price": "S$17.28",
       "priority": 0,
       "rating": 3.6,
       "total-ratings": 20,
@@ -726,8 +834,8 @@
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 5,
+      "rating": 4.6,
+      "total-ratings": 6,
       "wants": 1
     },
     {
@@ -749,6 +857,28 @@
       "rating": 0.0,
       "total-ratings": 0,
       "wants": 3
+    },
+    {
+      "asin": "B0DHLM7TDK",
+      "badge": null,
+      "byline": "by Needzo (Unknown Binding)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/41kS1sYchBL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": null,
+      "link": "https://www.amazon.sg/dp/B0DHLM7TDK/?coliid=I2TU9PMLDG6ZQR&colid=3RTYHM78C5OVZ&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Needzo You've Been Booed Halloween Trick or Treat Tote with Peeps Marshmallow Ghosts, Boo Bag, 9 Marshmallows, White",
+      "old-price": null,
+      "price": "S$16.51",
+      "priority": 0,
+      "rating": 0.0,
+      "total-ratings": 0,
+      "wants": 1
     }
-  ]
+  ],
+  "language": "en",
+  "currency": "SGD"
 }

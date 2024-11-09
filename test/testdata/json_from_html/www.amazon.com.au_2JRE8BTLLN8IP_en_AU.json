@@ -16,10 +16,10 @@
       "image": "https://m.media-amazon.com/images/I/41m1T0CL4mL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.com.au/dp/0140159940/?coliid=IQXWPS24W1XCZ&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.au/dp/0140159940/?coliid=IQXWPS24W1XCZ&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Beyond the Hundredth Meridian: John Wesley Powell & the Second Opening of the West: John Wesley Powell and the Second Opening of the West",
       "old-price": null,
-      "price": "$40.90",
+      "price": null,
       "priority": 0,
       "rating": 4.3,
       "total-ratings": 299,
@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 10500,
+      "total-ratings": 10503,
       "wants": 1
     },
     {
@@ -76,10 +76,10 @@
       "image": "https://m.media-amazon.com/images/I/41VNCM8HBzL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.com.au/dp/0141394536/?coliid=I13L6VEVQ7CWUR&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.au/dp/0141394536/?coliid=I13L6VEVQ7CWUR&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "The Sleepwalkers: A History of Man's Changing Vision of the Universe",
       "old-price": null,
-      "price": "$31.05",
+      "price": null,
       "priority": 0,
       "rating": 4.5,
       "total-ratings": 182,
@@ -87,7 +87,7 @@
     },
     {
       "asin": "0241694906",
-      "badge": "Best Seller in Developmental Psychology",
+      "badge": null,
       "byline": "by Jonathan Haidt (Paperback)",
       "comment": null,
       "coupon": null,
@@ -102,7 +102,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 3828,
+      "total-ratings": 3893,
       "wants": 1
     },
     {
@@ -142,7 +142,7 @@
       "price": null,
       "priority": -1,
       "rating": 4.7,
-      "total-ratings": 1277,
+      "total-ratings": 1275,
       "wants": 1
     },
     {
@@ -162,7 +162,7 @@
       "price": "$28.07",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 461,
+      "total-ratings": 462,
       "wants": 1
     },
     {
@@ -262,7 +262,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 978,
+      "total-ratings": 980,
       "wants": 1
     },
     {
@@ -279,7 +279,7 @@
       "link": "https://www.amazon.com.au/dp/1570625549/?coliid=I3O9OO80E3O0N7&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Integral Psychology: Consciousness, Spirit, Psychology, Therapy",
       "old-price": null,
-      "price": "$48.46",
+      "price": "$47.92",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 217,
@@ -299,10 +299,10 @@
       "link": "https://www.amazon.com.au/dp/1570628556/?coliid=I1Y8RI1BBGRHAA&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "A Theory of Everything: An Integral Vision for Business, Politics, Science, and Spirituality",
       "old-price": "$38.96",
-      "price": "$33.76",
+      "price": "$33.63",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 238,
+      "total-ratings": 239,
       "wants": 1
     },
     {
@@ -347,7 +347,7 @@
     },
     {
       "asin": "1599475979",
-      "badge": "Best Seller in Unemployment Economics",
+      "badge": null,
       "byline": "by Nicholas Eberstadt (Paperback)",
       "comment": null,
       "coupon": null,
@@ -401,8 +401,8 @@
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 4.7,
-      "total-ratings": 1212,
+      "rating": 4.6,
+      "total-ratings": 1221,
       "wants": 1
     },
     {
@@ -442,7 +442,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 44,
+      "total-ratings": 46,
       "wants": 1
     },
     {
@@ -464,7 +464,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 12327,
+      "total-ratings": 12326,
       "wants": 1
     },
     {
@@ -504,8 +504,10 @@
       "price": "$51.60",
       "priority": 1,
       "rating": 4.9,
-      "total-ratings": 1336,
+      "total-ratings": 1341,
       "wants": 1
     }
-  ]
+  ],
+  "language": "en",
+  "currency": "AUD"
 }

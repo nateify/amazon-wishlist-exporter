@@ -2,7 +2,7 @@
   "id": "22COMQNSGMJQV",
   "title": "Ukraine Aid Operations GER",
   "comment": "Help us equip Ukraine with the items they're requesting most!\n\nImportant: If you buy an Amazon Prime product, please mark the box \"This is a Gift/Dies ist ein Geschenk\" with a check (\"✓\") after adding the items to your basket.\n\nYou can choose \"Ukraine Aid Operations\" as delivery option during the checkout.",
-  "url": "https://www.amazon.de/hz/wishlist/ls/22COMQNSGMJQV?language=de_de&viewType=list",
+  "url": "https://www.amazon.de/hz/wishlist/ls/22COMQNSGMJQV?language=de_DE&viewType=list",
   "locale": "de_de",
   "items": [
     {
@@ -24,7 +24,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.7,
-      "total-ratings": 2792,
+      "total-ratings": 2795,
       "wants": 80
     },
     {
@@ -34,7 +34,7 @@
       "comment": null,
       "coupon": null,
       "date-added": null,
-      "has": 12,
+      "has": 13,
       "image": "https://m.media-amazon.com/images/I/31y3f0Lv-AL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -47,7 +47,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.5,
-      "total-ratings": 4010,
+      "total-ratings": 4008,
       "wants": 50
     },
     {
@@ -91,7 +91,7 @@
       "price": null,
       "priority": 1,
       "rating": 4.2,
-      "total-ratings": 761,
+      "total-ratings": 768,
       "wants": 5
     },
     {
@@ -137,7 +137,7 @@
       "price": "100,00 €",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 3136,
+      "total-ratings": 3156,
       "wants": 20
     },
     {
@@ -158,8 +158,8 @@
       "old-price": null,
       "price": null,
       "priority": 2,
-      "rating": 4.2,
-      "total-ratings": 246,
+      "rating": 4.3,
+      "total-ratings": 374,
       "wants": 10
     },
     {
@@ -169,7 +169,7 @@
       "comment": "For all types of electric devices (drones, charging stations, tablets, etc.)",
       "coupon": null,
       "date-added": null,
-      "has": 10,
+      "has": 12,
       "image": "https://m.media-amazon.com/images/I/41+WqjGNjlL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -182,8 +182,10 @@
       "price": null,
       "priority": 1,
       "rating": 4.5,
-      "total-ratings": 3089,
+      "total-ratings": 3091,
       "wants": 100
     }
-  ]
+  ],
+  "language": "de",
+  "currency": "EUR"
 }

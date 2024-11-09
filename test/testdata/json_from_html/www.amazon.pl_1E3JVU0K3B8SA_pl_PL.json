@@ -19,10 +19,10 @@
       "link": "https://www.amazon.pl/dp/B01N1081RO/?coliid=I2U0WJ10NA9SGH&colid=1E3JVU0K3B8SA&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Mario Kart 8 Deluxe Nintendo Switch",
       "old-price": null,
-      "price": "228,99 zł",
+      "price": "249,00 zł",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 44165,
+      "total-ratings": 44167,
       "wants": 1
     },
     {
@@ -42,7 +42,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 5929,
+      "total-ratings": 5930,
       "wants": 1
     },
     {
@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 10293,
+      "total-ratings": 10296,
       "wants": 1
     },
     {
@@ -99,10 +99,10 @@
       "link": "https://www.amazon.pl/dp/B07K2PK3BV/?coliid=I36Y420ZXZSBW&colid=1E3JVU0K3B8SA&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Apple Pencil (2. generacji): Precyzja co do piksela i najniższe w branży opóźnienie – idealne narzędzie do notowania, rysowania i podpisywania dokumentów. Przyłącza się, ładuje i paruje magnetycznie.",
       "old-price": "599,00 zł",
-      "price": "499,00 zł",
+      "price": "479,38 zł",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 53307,
+      "total-ratings": 53325,
       "wants": 1
     },
     {
@@ -122,7 +122,7 @@
       "price": "595,99 zł",
       "priority": 0,
       "rating": 4.1,
-      "total-ratings": 1156,
+      "total-ratings": 1157,
       "wants": 1
     },
     {
@@ -142,10 +142,10 @@
       "link": "https://www.amazon.pl/dp/B07QD6R5L7/?coliid=I3LET18CPRXCUE&colid=1E3JVU0K3B8SA&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "SanDisk 256GB microSDXC card for Nintendo Switch consoles up to 100 MB/s UHS-I Class 10 U3",
       "old-price": "208,92 zł",
-      "price": "119,92 zł",
+      "price": "107,79 zł",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 314780,
+      "total-ratings": 314853,
       "wants": 2
     },
     {
@@ -165,7 +165,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 33162,
+      "total-ratings": 33160,
       "wants": 2
     },
     {
@@ -184,10 +184,10 @@
       "link": "https://www.amazon.pl/dp/B07VGY2LWT/?coliid=I95IR4J77C2NV&colid=1E3JVU0K3B8SA&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Nintendo Kontroler Nintendo Switch, Neon Purple/Neon Orange, 2 Sztuki",
       "old-price": "348,97 zł",
-      "price": "285,34 zł",
+      "price": "297,57 zł",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 95662,
+      "total-ratings": 95655,
       "wants": 1
     },
     {
@@ -264,10 +264,10 @@
       "link": "https://www.amazon.pl/dp/B098BYN3X3/?coliid=I3O5K41W3H3BII&colid=1E3JVU0K3B8SA&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Nintendo Konsola Switch, Wielokolorowy, OLED",
       "old-price": "1 763,97 zł",
-      "price": "1 432,03 zł",
+      "price": "1 419,07 zł",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 3939,
+      "total-ratings": 3942,
       "wants": 1
     },
     {
@@ -332,5 +332,7 @@
       "total-ratings": 96,
       "wants": 1
     }
-  ]
+  ],
+  "language": "pl",
+  "currency": "PLN"
 }

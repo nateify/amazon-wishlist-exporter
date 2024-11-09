@@ -2,7 +2,7 @@
   "id": "1XDRMTRBU6K3H",
   "title": "Regali Lorenzo",
   "comment": null,
-  "url": "https://www.amazon.it/hz/wishlist/ls/1XDRMTRBU6K3H?language=it_it&viewType=list",
+  "url": "https://www.amazon.it/hz/wishlist/ls/1XDRMTRBU6K3H?language=it_IT&viewType=list",
   "locale": "it_it",
   "items": [
     {
@@ -25,7 +25,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 889,
+      "total-ratings": 890,
       "wants": 1
     },
     {
@@ -70,7 +70,7 @@
       "price": "5,89 €",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 532209,
+      "total-ratings": 533710,
       "wants": 1
     },
     {
@@ -92,7 +92,7 @@
       "price": "184,99 €",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 2069,
+      "total-ratings": 2071,
       "wants": 1
     },
     {
@@ -131,13 +131,13 @@
       "item-option": {
         "Nome stile": "Mario Kart Wheel Mini"
       },
-      "link": "https://www.amazon.it/dp/B07YMFYRVQ/?coliid=IOTWDN5DWNT2E&colid=1XDRMTRBU6K3H&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.it/dp/B07YMFYRVQ/?coliid=IOTWDN5DWNT2E&colid=1XDRMTRBU6K3H&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "HORI Volante da corsa Mario Kart Racing Wheel Pro Mini per Nintendo Switch, OLED e PC - Licenza Ufficiale Nintendo",
       "old-price": null,
-      "price": null,
+      "price": "56,99 €",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 3469,
+      "total-ratings": 3471,
       "wants": 1
     },
     {
@@ -157,18 +157,18 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 11337,
+      "total-ratings": 11326,
       "wants": 1
     },
     {
       "asin": "B08WLVP9LF",
       "badge": null,
-      "byline": null,
+      "byline": "di Disney (Abbigliamento)",
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/G/01/x-locale/communities/wishlist/no_image_2x._CB485924800_SS135_.png",
+      "image": "https://m.media-amazon.com/images/I/41fgQ6kOdeL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
       "link": "https://www.amazon.it/dp/B08WLVP9LF/?coliid=I2MWHCISD7OU0H&colid=1XDRMTRBU6K3H&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
@@ -176,8 +176,8 @@
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 0.0,
-      "total-ratings": 0,
+      "rating": 5.0,
+      "total-ratings": 2,
       "wants": 1
     },
     {
@@ -266,7 +266,7 @@
       "price": "109,99 €",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 3608,
+      "total-ratings": 3637,
       "wants": 1
     },
     {
@@ -286,7 +286,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 915,
+      "total-ratings": 911,
       "wants": 1
     },
     {
@@ -306,7 +306,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 106,
+      "total-ratings": 107,
       "wants": 1
     },
     {
@@ -372,5 +372,7 @@
       "total-ratings": 2,
       "wants": 1
     }
-  ]
+  ],
+  "language": "it",
+  "currency": "EUR"
 }

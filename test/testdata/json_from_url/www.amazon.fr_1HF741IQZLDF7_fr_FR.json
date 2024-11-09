@@ -2,7 +2,7 @@
   "id": "1HF741IQZLDF7",
   "title": "Soutenez l'ASBL La Maison des Chons",
   "comment": "L'ASBL La Maison des Chons est un refuge pour cochon d'Inde situé à Tournai en Belgique. Chaque article est nécessaire pour prendre soins de nos pensionnaires",
-  "url": "https://www.amazon.fr/hz/wishlist/ls/1HF741IQZLDF7?language=fr_fr&viewType=list",
+  "url": "https://www.amazon.fr/hz/wishlist/ls/1HF741IQZLDF7?language=fr_FR&viewType=list",
   "locale": "fr_fr",
   "items": [
     {
@@ -24,7 +24,7 @@
       "price": "8,79 €",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 6271,
+      "total-ratings": 6273,
       "wants": 1
     },
     {
@@ -43,10 +43,10 @@
       "link": "https://www.amazon.fr/dp/B0017JFIDC/?coliid=I36QEDNCFZA5SH&colid=1HF741IQZLDF7&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Petlife Oxbow Australis Cuisine Complete pour d'adulte Cochon d'Inde, 4.5 kg",
       "old-price": null,
-      "price": "28,73 €",
+      "price": "28,75 €",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 4283,
+      "total-ratings": 4257,
       "wants": 1
     },
     {
@@ -86,7 +86,7 @@
       "price": null,
       "priority": -1,
       "rating": 4.7,
-      "total-ratings": 1396,
+      "total-ratings": 1391,
       "wants": 1
     },
     {
@@ -169,7 +169,7 @@
       "price": "44,80 €",
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 51630,
+      "total-ratings": 51624,
       "wants": 1
     },
     {
@@ -256,7 +256,7 @@
     },
     {
       "asin": "B07DPPGLBY",
-      "badge": "N°1 des ventes dans Enclos et cages pour l’extérieur pour petits animaux",
+      "badge": null,
       "byline": "de lionto (Target)",
       "comment": null,
       "coupon": null,
@@ -270,11 +270,11 @@
       },
       "link": "https://www.amazon.fr/dp/B07DPPGLBY/?coliid=I15X34Z1ZPWIMS&colid=1HF741IQZLDF7&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "lionto Clapier Bois pour Lapins Petit enclos Animaux Clapier d’extérieur 43x43x52 cm",
-      "old-price": "52,95 €",
-      "price": "44,95 €",
+      "old-price": null,
+      "price": "53,95 €",
       "priority": -1,
       "rating": 4.5,
-      "total-ratings": 2793,
+      "total-ratings": 2794,
       "wants": 1
     },
     {
@@ -293,10 +293,10 @@
       "link": "https://www.amazon.fr/dp/B07H8Q9TS4/?coliid=IRCIH3HUZAOAZ&colid=1HF741IQZLDF7&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "VERSELE-LAGA - Complete Cavia - Extrudés Tout-en-Un Riches en Fibres pour Cobayes - 8kg",
       "old-price": "52,65 €",
-      "price": "48,47 €",
+      "price": "48,70 €",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 842,
+      "total-ratings": 844,
       "wants": 1
     },
     {
@@ -335,10 +335,10 @@
       "link": "https://www.amazon.fr/dp/B07WVQ36R9/?coliid=I2AUJDF1DOR7QT&colid=1HF741IQZLDF7&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Distributeur Eau Lapin 600ml Suspendue Abreuvoir Lapin Automatique Biberon Cochon d'Inde Anti-Goutte Biberon Hamster pour Lapin Chinchilla Cochon d'Inde Hérisson Furet",
       "old-price": null,
-      "price": "10,26 €",
+      "price": "10,59 €",
       "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 5,
+      "rating": 4.4,
+      "total-ratings": 6,
       "wants": 1
     },
     {
@@ -382,7 +382,7 @@
       "price": "15,99 €",
       "priority": 2,
       "rating": 3.8,
-      "total-ratings": 1618,
+      "total-ratings": 1620,
       "wants": 1
     },
     {
@@ -447,5 +447,7 @@
       "total-ratings": 1,
       "wants": 1
     }
-  ]
+  ],
+  "language": "fr",
+  "currency": "EUR"
 }

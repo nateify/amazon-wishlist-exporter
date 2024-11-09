@@ -22,7 +22,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 12100,
+      "total-ratings": 12099,
       "wants": 1
     },
     {
@@ -36,13 +36,13 @@
       "image": "https://m.media-amazon.com/images/I/41t-pJJAfYL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.co.za/dp/034943767X/?coliid=I1V3ULOI86FLSZ&colid=2ZWMRYBQANDTV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.za/dp/034943767X/?coliid=I1V3ULOI86FLSZ&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Flawless: Enter your cowboy era with this must-read, small-town romance from Sunday Times bestselling author!: 1",
       "old-price": null,
-      "price": null,
+      "price": "R169.00",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 930,
+      "total-ratings": 935,
       "wants": 1
     },
     {
@@ -59,10 +59,10 @@
       "link": "https://www.amazon.co.za/dp/034943770X/?coliid=I1X04FGX1FJKS5&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Powerless: A sweet and steamy small-town romance from the Sunday Times bestselling author of Wild Love!: 3",
       "old-price": null,
-      "price": "R211.50",
+      "price": "R188.00",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 714,
+      "total-ratings": 717,
       "wants": 1
     },
     {
@@ -82,7 +82,7 @@
       "price": "R193.50",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 936,
+      "total-ratings": 940,
       "wants": 1
     },
     {
@@ -102,7 +102,7 @@
       "price": "R170.10",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 1461,
+      "total-ratings": 1467,
       "wants": 1
     },
     {
@@ -122,12 +122,12 @@
       "price": "R215.10",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 177,
+      "total-ratings": 178,
       "wants": 1
     },
     {
       "asin": "1035013487",
-      "badge": null,
+      "badge": "Best Seller in Erotic Literature & Fiction",
       "byline": "by Kate Stewart (Paperback)",
       "comment": null,
       "coupon": null,
@@ -142,7 +142,7 @@
       "price": "R175.51",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 4052,
+      "total-ratings": 4054,
       "wants": 1
     },
     {
@@ -222,7 +222,7 @@
       "price": "R211.50",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 790,
+      "total-ratings": 792,
       "wants": 1
     },
     {
@@ -242,12 +242,12 @@
       "price": "R225.00",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 365,
+      "total-ratings": 361,
       "wants": 1
     },
     {
       "asin": "1399728547",
-      "badge": "Best Seller in Romantic Suspense",
+      "badge": null,
       "byline": "by Liz Tomforde (Mass Market Paperback)",
       "comment": null,
       "coupon": null,
@@ -256,13 +256,13 @@
       "image": "https://m.media-amazon.com/images/I/519wMwxu9ZL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.co.za/dp/1399728547/?coliid=I2JW2GM2T3A0EA&colid=2ZWMRYBQANDTV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.za/dp/1399728547/?coliid=I2JW2GM2T3A0EA&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Mile High: The unputdownable first book in TikTok sensation, the Windy City series, featuring an ice hockey enemies-to-lovers sports romance: 1",
-      "old-price": null,
-      "price": null,
+      "old-price": "R189.00",
+      "price": "R170.10",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 337,
+      "total-ratings": 340,
       "wants": 1
     },
     {
@@ -279,10 +279,10 @@
       "link": "https://www.amazon.co.za/dp/1399728563/?coliid=I2DAFEKXJU72NT&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "The Right Move: A forced proximity, fake dating sports romance from the TikTok sensation and author of MILE HIGH: 2",
       "old-price": null,
-      "price": "R199.00",
+      "price": "R185.00",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 318,
+      "total-ratings": 320,
       "wants": 1
     },
     {
@@ -299,10 +299,10 @@
       "link": "https://www.amazon.co.za/dp/1399728598/?coliid=I9WIVBCHLUC3J&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Caught Up: The hottest new must-read enemies-to-lovers sports romance in the Windy City Series, following the TikTok sensation, MILE HIGH",
       "old-price": null,
-      "price": "R170.00",
+      "price": "R169.00",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 587,
+      "total-ratings": 589,
       "wants": 1
     },
     {
@@ -336,18 +336,18 @@
       "image": "https://m.media-amazon.com/images/I/51rGBCRI42L._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.co.za/dp/1638931798/?coliid=I3N3ARTDOG25NU&colid=2ZWMRYBQANDTV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.za/dp/1638931798/?coliid=I3N3ARTDOG25NU&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Leather & Lark: The Ruinous Love Trilogy: 2",
       "old-price": null,
-      "price": null,
+      "price": "R401.00",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 865,
+      "total-ratings": 870,
       "wants": 1
     },
     {
       "asin": "1728205484",
-      "badge": "Best Seller in Fiction About Friendship for Young Adults",
+      "badge": null,
       "byline": "by Laura Nowlin (Paperback)",
       "comment": null,
       "coupon": null,
@@ -359,10 +359,10 @@
       "link": "https://www.amazon.co.za/dp/1728205484/?coliid=IH4I645ANY24V&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "If He Had Been with Me: The Tiktok Sensation",
       "old-price": null,
-      "price": "R170.00",
+      "price": "R159.00",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 7769,
+      "total-ratings": 7772,
       "wants": 1
     },
     {
@@ -382,7 +382,7 @@
       "price": "R166.50",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 1754,
+      "total-ratings": 1768,
       "wants": 1
     },
     {
@@ -402,7 +402,7 @@
       "price": "R337.50",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 614,
+      "total-ratings": 615,
       "wants": 1
     },
     {
@@ -439,7 +439,7 @@
       "link": "https://www.amazon.co.za/dp/1728282160/?coliid=I3P9PGLL29PNWP&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Mercy: 4",
       "old-price": null,
-      "price": "R420.00",
+      "price": "R359.00",
       "priority": 0,
       "rating": 4.8,
       "total-ratings": 146,
@@ -462,7 +462,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 1109,
+      "total-ratings": 1111,
       "wants": 1
     },
     {
@@ -499,7 +499,7 @@
       "link": "https://www.amazon.co.za/dp/1728294215/?coliid=I3QC4CF3BF7LT6&colid=2ZWMRYBQANDTV&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Bloody Heart: 4",
       "old-price": null,
-      "price": "R359.00",
+      "price": "R420.00",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 179,
@@ -522,7 +522,7 @@
       "price": "R380.00",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 556,
+      "total-ratings": 560,
       "wants": 1
     },
     {
@@ -582,7 +582,7 @@
       "price": "R562.90",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 134,
+      "total-ratings": 135,
       "wants": 1
     },
     {
@@ -665,5 +665,7 @@
       "total-ratings": 1,
       "wants": 1
     }
-  ]
+  ],
+  "language": "en",
+  "currency": "ZAR"
 }

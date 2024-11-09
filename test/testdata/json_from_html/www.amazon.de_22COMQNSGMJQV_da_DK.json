@@ -12,7 +12,7 @@
       "comment": "We give these out with generators. For 40 newly bought generators, we need 80 liters oil!",
       "coupon": null,
       "date-added": null,
-      "has": 84,
+      "has": 95,
       "image": "https://m.media-amazon.com/images/I/51kqoNuwoML._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -24,7 +24,7 @@
       "price": null,
       "priority": 1,
       "rating": 5.0,
-      "total-ratings": 2790,
+      "total-ratings": 2795,
       "wants": 80
     },
     {
@@ -34,7 +34,7 @@
       "comment": null,
       "coupon": null,
       "date-added": null,
-      "has": 12,
+      "has": 13,
       "image": "https://m.media-amazon.com/images/I/31y3f0Lv-AL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -47,7 +47,7 @@
       "price": null,
       "priority": 1,
       "rating": 5.0,
-      "total-ratings": 4007,
+      "total-ratings": 4008,
       "wants": 50
     },
     {
@@ -91,7 +91,7 @@
       "price": null,
       "priority": 1,
       "rating": 5.0,
-      "total-ratings": 756,
+      "total-ratings": 768,
       "wants": 5
     },
     {
@@ -124,7 +124,7 @@
       "comment": "For artillery and drone units",
       "coupon": null,
       "date-added": null,
-      "has": 31,
+      "has": 32,
       "image": "https://m.media-amazon.com/images/I/31BLXSKRshL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -137,7 +137,7 @@
       "price": "100,00 €",
       "priority": 0,
       "rating": 5.0,
-      "total-ratings": 3123,
+      "total-ratings": 3154,
       "wants": 20
     },
     {
@@ -151,7 +151,7 @@
       "image": "https://m.media-amazon.com/images/I/41o5RBFlXOL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
-        "Navn på stil": "DJI Mavic 3 Pro med DJI RC (skærmfjernbetjening)"
+        "Navn på stil": "Mavic 3 Pro med DJI RC"
       },
       "link": "https://www.amazon.de/-/da/dp/B0BZSHHFVS/?coliid=IEBG39MUMZUY5&colid=22COMQNSGMJQV&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "DJI Mavic 3 Pro med DJI RC (skærmfjernbetjening), flagskibsdrone med tredobbelt kamera og 4/3 CMOS hasselblad-kamera, 43 min flyvetid og 15 km HD-videooverførsel",
@@ -159,7 +159,7 @@
       "price": null,
       "priority": 2,
       "rating": 5.0,
-      "total-ratings": 245,
+      "total-ratings": 374,
       "wants": 10
     },
     {
@@ -169,7 +169,7 @@
       "comment": "For all types of electric devices (drones, charging stations, tablets, etc.)",
       "coupon": null,
       "date-added": null,
-      "has": 0,
+      "has": 12,
       "image": "https://m.media-amazon.com/images/I/41+WqjGNjlL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -182,8 +182,10 @@
       "price": null,
       "priority": 1,
       "rating": 5.0,
-      "total-ratings": 3088,
+      "total-ratings": 3091,
       "wants": 100
     }
-  ]
+  ],
+  "language": "da",
+  "currency": "EUR"
 }

@@ -2,7 +2,7 @@
   "id": "2JRE8BTLLN8IP",
   "title": "Useful",
   "comment": "Thanks for helping me read more books!",
-  "url": "https://www.amazon.com.au/hz/wishlist/ls/2JRE8BTLLN8IP?language=en_au&viewType=list",
+  "url": "https://www.amazon.com.au/hz/wishlist/ls/2JRE8BTLLN8IP?language=en_AU&viewType=list",
   "locale": "en_au",
   "items": [
     {
@@ -16,10 +16,10 @@
       "image": "https://m.media-amazon.com/images/I/41m1T0CL4mL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.com.au/dp/0140159940/?coliid=IQXWPS24W1XCZ&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.au/dp/0140159940/?coliid=IQXWPS24W1XCZ&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Beyond the Hundredth Meridian: John Wesley Powell & the Second Opening of the West: John Wesley Powell and the Second Opening of the West",
       "old-price": null,
-      "price": "$40.90",
+      "price": null,
       "priority": 0,
       "rating": 4.3,
       "total-ratings": 299,
@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 10501,
+      "total-ratings": 10503,
       "wants": 1
     },
     {
@@ -102,7 +102,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 3851,
+      "total-ratings": 3893,
       "wants": 1
     },
     {
@@ -142,7 +142,7 @@
       "price": null,
       "priority": -1,
       "rating": 4.7,
-      "total-ratings": 1277,
+      "total-ratings": 1275,
       "wants": 1
     },
     {
@@ -262,7 +262,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 978,
+      "total-ratings": 980,
       "wants": 1
     },
     {
@@ -279,7 +279,7 @@
       "link": "https://www.amazon.com.au/dp/1570625549/?coliid=I3O9OO80E3O0N7&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Integral Psychology: Consciousness, Spirit, Psychology, Therapy",
       "old-price": null,
-      "price": "$48.34",
+      "price": "$47.92",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 217,
@@ -299,10 +299,10 @@
       "link": "https://www.amazon.com.au/dp/1570628556/?coliid=I1Y8RI1BBGRHAA&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "A Theory of Everything: An Integral Vision for Business, Politics, Science, and Spirituality",
       "old-price": "$38.96",
-      "price": "$34.26",
+      "price": "$33.63",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 238,
+      "total-ratings": 239,
       "wants": 1
     },
     {
@@ -401,8 +401,8 @@
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 4.7,
-      "total-ratings": 1214,
+      "rating": 4.6,
+      "total-ratings": 1221,
       "wants": 1
     },
     {
@@ -442,7 +442,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 45,
+      "total-ratings": 46,
       "wants": 1
     },
     {
@@ -464,7 +464,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 12328,
+      "total-ratings": 12326,
       "wants": 1
     },
     {
@@ -480,8 +480,8 @@
       "item-option": null,
       "link": "https://www.amazon.com.au/dp/B00F5SGJIE/?coliid=I2VO3X6F3IT1T9&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Data Mining and Knowledge Discovery via Logic-Based Methods: Theory, Algorithms, and Applications (Springer Optimization and Its Applications Book 43)",
-      "old-price": "$234.18",
-      "price": "$220.16",
+      "old-price": null,
+      "price": "$234.18",
       "priority": 0,
       "rating": 0.0,
       "total-ratings": 0,
@@ -504,8 +504,10 @@
       "price": "$51.60",
       "priority": 1,
       "rating": 4.9,
-      "total-ratings": 1339,
+      "total-ratings": 1341,
       "wants": 1
     }
-  ]
+  ],
+  "language": "en",
+  "currency": "AUD"
 }

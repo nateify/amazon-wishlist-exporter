@@ -1,14 +1,27 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.6.0"
+version = "0.7.0"
 description = "Export Amazon wishlist metadata to JSON"
-readme = "README.md"
-keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
 authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
 ]
-license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
 requires-python = ">=3.9"
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Utilities",
+]
+license = {file = "LICENSE"}
 dependencies = [
     "amazoncaptcha>=0.5.11",
     "babel>=2.16.0",
@@ -38,6 +51,20 @@ override-dependencies = [
     'pillow>=9.6.0, <12.0.0; python_version >= "3.12"'
 ]
 dev-dependencies = [
-    "pytest>=8.3.3",
+    "nox>=2024.10.9",
+    "playwright>=1.48.0",
+    "pytest>=7.2.0",
+    "uv>=0.5.0",
 ]
-reinstall-package = ["amazon-wishlist-exporter", "pillow"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+src = ["amazon_wishlist_exporter", "test"]
+
+[tool.ruff.format]
+preview = true

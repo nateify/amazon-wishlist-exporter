@@ -2,10 +2,14 @@ import json
 import re
 from pathlib import Path
 
+from babel.core import Locale
+
 from .utils.locale_ import (
+    get_currency_from_territory,
     get_formatted_date,
     get_localized_price,
     get_rating_from_locale,
+    get_territory_from_tld,
     sort_items,
 )
 from .utils.logger_config import logger
@@ -18,15 +22,14 @@ from .utils.scraper import (
 )
 
 
-class WishlistItem(object):
-    def __init__(self, element, id, store_tld, store_locale, base_url, priority_is_localized, date_as_iso8601):
+class WishlistItem:
+    def __init__(self, element, **config):
         self.element = element
-        self.id = id
-        self.store_tld = store_tld
-        self.store_locale = store_locale
-        self.base_url = base_url
-        self.priority_is_localized = priority_is_localized
-        self.date_as_iso8601 = date_as_iso8601
+        self.store_locale = config.get("store_locale").lower()
+        self.base_url = config.get("base_url")
+        self.priority_is_localized = config.get("priority_is_localized", False)
+        self.date_as_iso8601 = config.get("date_as_iso8601", False)
+        self.wishlist_currency = config.get("wishlist_currency")
 
     @property
     def item_category(self):
@@ -120,7 +123,7 @@ class WishlistItem(object):
                     price_text = None
 
         if price_text:
-            return get_localized_price(price_text, self.store_tld, self.store_locale)
+            return get_localized_price(price_text, self.wishlist_currency, self.store_locale)
 
     @property
     def old_price(self):
@@ -133,10 +136,10 @@ class WishlistItem(object):
                 return None
             else:
                 item_old_price_text = next(
-                    (n.text(strip=True) for n in item_old_price_elem.css("span") if len(n.attributes) == 0)
+                    n.text(strip=True) for n in item_old_price_elem.css("span") if len(n.attributes) == 0
                 )
 
-                return get_localized_price(item_old_price_text, self.store_tld, self.store_locale)
+                return get_localized_price(item_old_price_text, self.wishlist_currency, self.store_locale)
 
     @property
     def date_added(self):
@@ -196,10 +199,9 @@ class WishlistItem(object):
         img_elem = self.element.css_first("div[id^='itemImage_'] img")
         img_src = get_attr_value(img_elem, "src")
 
-        if self.is_external():
-            # If Amazon does not have an image stored, we will try to find the open graph image
-            if re.search(r"[./-].*amazon\.\w{2,}/.*wishlist.*no_image_", img_src):
-                img_src = get_external_image(self.link)
+        # If Amazon does not have an image stored, we will try to find the open graph image
+        if self.is_external() and re.search(r"[./-].*amazon\.\w{2,}/.*wishlist.*no_image_", img_src):
+            img_src = get_external_image(self.link)
 
         return img_src
 
@@ -266,7 +268,7 @@ class WishlistItem(object):
         return return_dict
 
 
-class Wishlist(object):
+class Wishlist:
     item_class = WishlistItem
 
     def __init__(
@@ -277,6 +279,7 @@ class Wishlist(object):
         store_locale=None,
         priority_is_localized=False,
         date_as_iso8601=False,
+        test_output=False,
     ):
         self.wishlist_id = wishlist_id
         self.html_file = html_file
@@ -284,12 +287,13 @@ class Wishlist(object):
         self.store_locale = store_locale
         self.priority_is_localized = priority_is_localized
         self.date_as_iso8601 = date_as_iso8601
+        self.test_output = test_output
 
         self.base_url = f"https://www.amazon.{self.store_tld}"
 
         if not self.html_file:
             self.all_pages_html = get_pages_from_web(
-                self.base_url, self.wishlist_url, self.store_tld, self.store_locale
+                self.base_url, self.wishlist_url, self.wishlist_babel_locale, self.wishlist_currency
             )
         else:
             self.all_pages_html = get_pages_from_local_file(self.html_file)
@@ -317,63 +321,80 @@ class Wishlist(object):
 
     @property
     def wishlist_url(self):
-        return f"{self.base_url}/hz/wishlist/ls/{self.id}?language={self.store_locale}&viewType=list"
+        return f"{self.base_url}/hz/wishlist/ls/{self.id}?language={self.wishlist_babel_locale}&viewType=list"
+
+    @property
+    def wishlist_babel_locale(self):
+        return Locale.parse(self.store_locale)
+
+    @property
+    def wishlist_babel_language(self):
+        return self.wishlist_babel_locale.language
+
+    @property
+    def wishlist_currency(self):
+        territory_from_tld = get_territory_from_tld(self.store_tld)
+        currency_from_tld = get_currency_from_territory(territory_from_tld)
+
+        return currency_from_tld
+
+    @property
+    def config(self):
+        return {
+            "store_locale": self.store_locale,
+            "base_url": self.base_url,
+            "priority_is_localized": self.priority_is_localized,
+            "date_as_iso8601": self.date_as_iso8601,
+            "wishlist_babel_locale": self.wishlist_babel_locale,
+            "wishlist_babel_language": self.wishlist_babel_language,
+            "wishlist_currency": self.wishlist_currency,
+        }
+
+    def __iter__(self):
+        for page in self.all_pages_html:
+            items_list = page.css('li[class*="g-item-sortable"]')
+            for item_element in items_list:
+                yield self.item_class(item_element, **self.config).asdict()
+
+    @property
+    def items(self):
+        return list(iter(self))
 
     @property
     def wishlist_details(self):
-        return {
+        details = {
             "id": self.id,
             "title": self.wishlist_title,
             "comment": self.wishlist_comment,
             "url": self.wishlist_url,
             "locale": self.store_locale,
+            "items": self.items,
         }
+        if self.test_output:
+            details["language"] = self.wishlist_babel_language
+            details["currency"] = self.wishlist_currency
 
-    @property
-    def wishlist_items(self):
-        for page in self.all_pages_html:
-            items_list = page.css('li[class*="g-item-sortable"]')
-
-            for item_element in items_list:
-                yield self.item_class(
-                    item_element,
-                    self.wishlist_id,
-                    self.store_tld,
-                    self.store_locale,
-                    self.base_url,
-                    self.priority_is_localized,
-                    self.date_as_iso8601,
-                )
-
-    def __iter__(self):
-        return (item.asdict() for item in self.wishlist_items)
+        return details
 
 
 def main(args):
+    wishlist_args = {
+        "store_tld": args.store_tld,
+        "store_locale": args.store_locale,
+        "priority_is_localized": args.priority_is_localized,
+        "date_as_iso8601": args.iso8601,
+        "test_output": args.test,
+    }
+
     if args.html_file:
-        parsed_path = str(Path(args.html_file).resolve())
-        w = Wishlist(
-            html_file=parsed_path,
-            store_tld=args.store_tld,
-            store_locale=args.store_locale,
-            priority_is_localized=args.priority_is_localized,
-            date_as_iso8601=args.iso8601,
-        )
+        wishlist_args["html_file"] = str(Path(args.html_file).resolve())
     else:
-        w = Wishlist(
-            wishlist_id=args.id,
-            store_tld=args.store_tld,
-            store_locale=args.store_locale,
-            priority_is_localized=args.priority_is_localized,
-            date_as_iso8601=args.iso8601,
-        )
+        wishlist_args["wishlist_id"] = args.id
 
-    wishlist_items = []
-
-    for i in w:
-        wishlist_items.append(i)
+    w = Wishlist(**wishlist_args)
 
     wishlist_full = w.wishlist_details
+    wishlist_items = wishlist_full["items"]
 
     if args.sort_keys:
         sort_keys = [key.strip() for key in args.sort_keys.split(",")]

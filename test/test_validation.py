@@ -6,14 +6,15 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import pytest
-from babel.core import Locale, UnknownLocaleError
-from price_parser import Price
-
 from amazon_wishlist_exporter.utils.locale_ import (
     get_currency_from_territory,
     get_parsed_date,
     get_territory_from_tld,
 )
+from babel.core import Locale, UnknownLocaleError
+from price_parser import Price
+
+working_dir = Path(__file__).resolve().parent
 
 # Amazon's launch
 MIN_DATE = date(1995, 7, 16)
@@ -30,12 +31,12 @@ def validate_optional_string(value):
 
 # Load test JSON files
 def load_wishlist_data():
-    testdata_dir = Path("./testdata")
+    testdata_dir = working_dir / "testdata"
     json_files = list(testdata_dir.rglob("*.json"))
 
     wishlist_data = []
     for json_file in json_files:
-        with open(json_file, "r", encoding="utf-8") as f:
+        with open(json_file, encoding="utf-8") as f:
             data = json.load(f)
             wishlist_data.append(data)
 
@@ -61,16 +62,16 @@ def test_wishlist_structure(wishlist):
         babel_locale = Locale.parse(wishlist["locale"])
         assert isinstance(babel_locale, Locale), "Expected an object of type 'Locale'"
     except (ValueError, TypeError, UnknownLocaleError) as e:
-        assert False, f"Function raised an exception: {e}"
+        raise AssertionError(f"Function raised an exception: {e}") from e
+
+    # Items are not empty
+    assert wishlist["items"] != []
 
 
 # Determine the language and currency for date and price parsing once per wishlist
 def preproc_hints(wishlist):
-    babel_language = Locale.parse(wishlist["locale"]).language
-    wishlist_re_search = re.search(re_wishlist_parts, wishlist["url"])
-    wishlist_tld = wishlist_re_search.group(1)
-    territory_from_tld = get_territory_from_tld(wishlist_tld)
-    currency_from_tld = get_currency_from_territory(territory_from_tld)
+    babel_language = wishlist["language"]
+    currency_from_tld = wishlist["currency"]
 
     return babel_language, currency_from_tld, wishlist["items"]
 

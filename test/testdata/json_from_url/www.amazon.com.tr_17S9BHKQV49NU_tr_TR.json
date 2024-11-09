@@ -2,7 +2,7 @@
   "id": "17S9BHKQV49NU",
   "title": "Alışveriş Listesi",
   "comment": null,
-  "url": "https://www.amazon.com.tr/hz/wishlist/ls/17S9BHKQV49NU?language=tr_tr&viewType=list",
+  "url": "https://www.amazon.com.tr/hz/wishlist/ls/17S9BHKQV49NU?language=tr_TR&viewType=list",
   "locale": "tr_tr",
   "items": [
     {
@@ -42,7 +42,7 @@
       "price": "TL511,01",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 372,
+      "total-ratings": 373,
       "wants": 1
     },
     {
@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 1016,
+      "total-ratings": 1017,
       "wants": 1
     },
     {
@@ -79,7 +79,7 @@
       "link": "https://www.amazon.com.tr/dp/3836559862/?coliid=I2D6D4BMEISUST&colid=17S9BHKQV49NU&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Bosch",
       "old-price": null,
-      "price": "TL810,36",
+      "price": "TL797,45",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 184,
@@ -107,7 +107,7 @@
     },
     {
       "asin": "3836565544",
-      "badge": null,
+      "badge": "Çok Satan Mobilya Tasarımı içinde",
       "byline": "Yazar: Magdalena Droste (Ciltli Kapak)",
       "comment": null,
       "coupon": null,
@@ -119,7 +119,7 @@
       "link": "https://www.amazon.com.tr/dp/3836565544/?coliid=IVCOCEH17MGX3&colid=17S9BHKQV49NU&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Bauhaus. Updated Edition",
       "old-price": null,
-      "price": "TL939,95",
+      "price": "TL926,29",
       "priority": 0,
       "rating": 4.6,
       "total-ratings": 901,
@@ -144,7 +144,7 @@
       "price": "TL1.144,08",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 15433,
+      "total-ratings": 15439,
       "wants": 1
     },
     {
@@ -160,13 +160,13 @@
       "item-option": {
         "Renk": "Siyah"
       },
-      "link": "https://www.amazon.com.tr/dp/B01K7GEAFC/?coliid=I3H0ZZ0YL5U61W&colid=17S9BHKQV49NU&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.tr/dp/B01K7GEAFC/?coliid=I3H0ZZ0YL5U61W&colid=17S9BHKQV49NU&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Logitech M330 Sessiz Kablosuz Mouse, Sağ Elle Kullanıma Uygun, 10 m Kullanım Mesafesi, 1.000 DPI Yüksek Hassasiyetli Optik İzleme, 24 Ay Pil Ömrü, Siyah",
       "old-price": null,
-      "price": "TL529,00",
+      "price": "TL589,00",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 15927,
+      "total-ratings": 15941,
       "wants": 1
     },
     {
@@ -186,10 +186,10 @@
       "link": "https://www.amazon.com.tr/dp/B08GDDZML8/?coliid=IJF9BC4KJKMY6&colid=17S9BHKQV49NU&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "SteelSeries Rival 3 Wireless - Kablosuz Gaming Mouse - 60 Milyon Tıklama - 18.000 CPI - 2.4 GHz Çift Wireless ve Bluetooth 5.0",
       "old-price": null,
-      "price": "TL1.439,00",
+      "price": "TL1.399,00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 18273,
+      "total-ratings": 18285,
       "wants": 1
     },
     {
@@ -214,5 +214,7 @@
       "total-ratings": 1,
       "wants": 1
     }
-  ]
+  ],
+  "language": "tr",
+  "currency": "TRY"
 }

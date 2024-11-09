@@ -12,7 +12,7 @@
       "comment": null,
       "coupon": null,
       "date-added": null,
-      "has": 0,
+      "has": 1,
       "image": "https://m.media-amazon.com/images/I/41aA90GvF-L._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -21,11 +21,31 @@
       "link": "https://www.amazon.com.be/dp/B00140J3JY/?coliid=I1EVS56HBWOW2O&colid=3J7QQS2PPNW8L&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Bresser Nautic 7x50 WD Boussole Jumelles",
       "old-price": null,
-      "price": "180,56 €",
+      "price": "180,75 €",
       "priority": 0,
       "rating": 4.3,
       "total-ratings": 238,
       "wants": 5
+    },
+    {
+      "asin": "B00ZZV9OTC",
+      "badge": null,
+      "byline": "de Zippo (Vêtements)",
+      "comment": null,
+      "coupon": null,
+      "date-added": null,
+      "has": 0,
+      "image": "https://m.media-amazon.com/images/I/31vqQuflBwL._SS135_.jpg",
+      "item-category": "purchasable",
+      "item-option": null,
+      "link": "https://www.amazon.com.be/dp/B00ZZV9OTC/?coliid=I1J1XXVYRY79P7&colid=3J7QQS2PPNW8L&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "name": "Zippo Chauffe-mains rechargeable 12 heures - Sans flamme - Sans chaleur et sans odeur - Pour les activités par temps froid - Briquet rechargeable - Construction en métal durable - Noir",
+      "old-price": null,
+      "price": "29,00 €",
+      "priority": 0,
+      "rating": 4.4,
+      "total-ratings": 792,
+      "wants": 10
     },
     {
       "asin": "B07T6B74B8",
@@ -34,7 +54,7 @@
       "comment": null,
       "coupon": null,
       "date-added": null,
-      "has": 15,
+      "has": 17,
       "image": "https://m.media-amazon.com/images/I/51+zrMReaPL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -47,7 +67,7 @@
       "price": "64,99 €",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 7887,
+      "total-ratings": 8989,
       "wants": 20
     },
     {
@@ -67,7 +87,7 @@
       "price": "22,99 €",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 6018,
+      "total-ratings": 6027,
       "wants": 30
     },
     {
@@ -77,7 +97,7 @@
       "comment": null,
       "coupon": null,
       "date-added": null,
-      "has": 23,
+      "has": 24,
       "image": "https://m.media-amazon.com/images/I/51HT+Btmd-L._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
@@ -89,7 +109,7 @@
       "price": "47,99 €",
       "priority": 0,
       "rating": 3.9,
-      "total-ratings": 1636,
+      "total-ratings": 1637,
       "wants": 25
     },
     {
@@ -111,7 +131,7 @@
       "price": "154,88 €",
       "priority": 2,
       "rating": 4.7,
-      "total-ratings": 811,
+      "total-ratings": 817,
       "wants": 10
     },
     {
@@ -158,5 +178,7 @@
       "total-ratings": 10,
       "wants": 8
     }
-  ]
+  ],
+  "language": "fr",
+  "currency": "EUR"
 }

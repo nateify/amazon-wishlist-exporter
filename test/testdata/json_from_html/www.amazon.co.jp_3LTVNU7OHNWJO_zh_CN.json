@@ -2,7 +2,7 @@
   "id": "3LTVNU7OHNWJO",
   "title": "花花の欲しいものリスト",
   "comment": null,
-  "url": "https://www.amazon.co.jp/hz/wishlist/ls/3LTVNU7OHNWJO?language=zh_CN&viewType=list",
+  "url": "https://www.amazon.co.jp/hz/wishlist/ls/3LTVNU7OHNWJO?language=zh_Hans_CN&viewType=list",
   "locale": "zh_CN",
   "items": [
     {
@@ -25,55 +25,33 @@
       "price": "¥364.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 3248,
-      "wants": 1
-    },
-    {
-      "asin": "B001GR2AZ4",
-      "badge": null,
-      "byline": "作者：三菱鉛筆 (办公用品)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/418nitvtU5L._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": null,
-      "link": "https://www.amazon.co.jp/dp/B001GR2AZ4/?coliid=IBGAFQ5BQA4E8&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "三菱鉛筆 油性ボールペン シグノ替芯 UMR-83 赤 15",
-      "old-price": null,
-      "price": "¥55.00",
-      "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 58,
+      "total-ratings": 3251,
       "wants": 1
     },
     {
       "asin": "B002Q8H7SW",
       "badge": null,
-      "byline": "作者：キユーピー (食品)",
+      "byline": "作者：キユーピー 1L (食品)",
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 6,
-      "image": "https://m.media-amazon.com/images/I/31BFGNVYioL._SS135_.jpg",
+      "image": "https://m.media-amazon.com/images/I/312FJ6mw0EL._SS135_.jpg",
       "item-category": "purchasable",
-      "item-option": {
-        "尺寸": "1000ml"
-      },
+      "item-option": null,
       "link": "https://www.amazon.co.jp/-/zh/dp/B002Q8H7SW/?coliid=I2QOPGZIG3IG31&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Kewpie丘比 焙煎芝麻口味沙拉汁",
       "old-price": null,
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 2409,
+      "total-ratings": 2368,
       "wants": 1
     },
     {
       "asin": "B002U0OUSQ",
       "badge": null,
-      "byline": "作者：三菱鉛筆 (办公用品)",
+      "byline": "作者：三菱鉛筆(Mitsubishi Pencil) (办公用品)",
       "comment": null,
       "coupon": null,
       "date-added": null,
@@ -89,7 +67,7 @@
       "price": "¥72.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 982,
+      "total-ratings": 983,
       "wants": 1
     },
     {
@@ -105,13 +83,13 @@
       "item-option": {
         "样式": "1)[东]狐狸乌冬面"
       },
-      "link": "https://www.amazon.co.jp/-/zh/dp/B004768V22/?coliid=I1DDKFAJQJSPU8&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/dp/B004768V22/?coliid=I1DDKFAJQJSPU8&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "どん兵衛 狐狸乌冬面 (东) 日清食品 杯面 96克×12个",
       "old-price": null,
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 5510,
+      "total-ratings": 5514,
       "wants": 2
     },
     {
@@ -147,7 +125,7 @@
       "item-option": {
         "尺寸": "200ミリリットル (x 1)"
       },
-      "link": "https://www.amazon.co.jp/dp/B005FO7HZ2/?coliid=I15QLOAWLMNPKM&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/-/zh/dp/B005FO7HZ2/?coliid=I15QLOAWLMNPKM&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Simple balance ( シンプルバランス ) 弹力保湿化妆水 ( 替换装 ) 200ml",
       "old-price": "JP¥421",
       "price": "¥298.00",
@@ -158,7 +136,7 @@
     },
     {
       "asin": "B00UFJMPDQ",
-      "badge": "最畅销商品 在驱蚊用品中",
+      "badge": null,
       "byline": "作者：アースノーマット (健康与美容)",
       "comment": null,
       "coupon": null,
@@ -176,7 +154,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 7963,
+      "total-ratings": 7958,
       "wants": 1
     },
     {
@@ -196,7 +174,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 3844,
+      "total-ratings": 3845,
       "wants": 1
     },
     {
@@ -216,10 +194,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B01BG9QLM4/?coliid=IOA1S6AQOOD24&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "マルマン ノート セプトクルール A5 ブルー N572B-02",
       "old-price": null,
-      "price": "¥449.00",
+      "price": "¥485.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 355,
+      "total-ratings": 357,
       "wants": 1
     },
     {
@@ -236,13 +214,13 @@
         "颜色": "粉色",
         "尺寸": "A5"
       },
-      "link": "https://www.amazon.co.jp/-/zh/dp/B01BG9QNKY/?coliid=I25GEDYU5X2OSP&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/dp/B01BG9QNKY/?coliid=I25GEDYU5X2OSP&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "マルマン ノート セプトクルール A5 ピンク N572B-08",
       "old-price": null,
-      "price": "¥434.00",
+      "price": "¥449.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 355,
+      "total-ratings": 357,
       "wants": 1
     },
     {
@@ -262,10 +240,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B01BG9QNLI/?coliid=I3OXNSU3TOTWS8&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "マルマン ノート セプトクルール A5 オレンジ N572B-09",
       "old-price": null,
-      "price": "¥449.00",
+      "price": "¥485.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 355,
+      "total-ratings": 357,
       "wants": 1
     },
     {
@@ -289,7 +267,7 @@
       "price": "¥863.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 53080,
+      "total-ratings": 53101,
       "wants": 1
     },
     {
@@ -305,13 +283,13 @@
       "item-option": {
         "样式名称": "2个"
       },
-      "link": "https://www.amazon.co.jp/-/zh/dp/B01LAUWXSK/?coliid=I3IKRLDAR6BQHR&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/dp/B01LAUWXSK/?coliid=I3IKRLDAR6BQHR&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "【量贩装】小林制药的牙线棒 可轻松放入狭窄的牙缝 牙线&拨片 牙线 60根×2个",
       "old-price": null,
-      "price": null,
+      "price": "¥1,501.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 1389,
+      "total-ratings": 1392,
       "wants": 1
     },
     {
@@ -356,7 +334,7 @@
     },
     {
       "asin": "B07C5CS8TJ",
-      "badge": "最畅销商品 在便签\\\\\\\\随意贴中",
+      "badge": null,
       "byline": "作者：スリーエム(3M) (办公用品)",
       "comment": null,
       "coupon": null,
@@ -370,7 +348,7 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B07C5CS8TJ/?coliid=I3F4F4G41PKL4O&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "3M 便签 便利贴 强粘性便签纸 75×25 毫米",
       "old-price": null,
-      "price": "¥673.00",
+      "price": "¥676.00",
       "priority": 0,
       "rating": 4.4,
       "total-ratings": 1141,
@@ -414,10 +392,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B07HWR8213/?coliid=I3QQZ1L2L86YN8&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "BRUNO BRUNO 小型电烤盘 可选蒸锅 蒸笼 BOE021-STEAM",
       "old-price": null,
-      "price": "¥4,800.00",
+      "price": "¥4,624.00",
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 300,
+      "total-ratings": 301,
       "wants": 1
     },
     {
@@ -442,7 +420,7 @@
     },
     {
       "asin": "B07Q6DW85S",
-      "badge": "最畅销商品 在女袜船袜中",
+      "badge": "最畅销商品 在时尚中",
       "byline": "作者：okamoto(オカモト) (服饰)",
       "comment": null,
       "coupon": null,
@@ -458,10 +436,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B07Q6DW85S/?coliid=I3AYOPAUO54C8X&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Okamoto 袜子保健品 宛如被炉袜 温暖 防寒 室内袜 532-995",
       "old-price": "JP¥1,954",
-      "price": "¥1,733.00",
+      "price": "¥1,739.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 12402,
+      "total-ratings": 12436,
       "wants": 1
     },
     {
@@ -483,12 +461,12 @@
       "price": null,
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 1170,
+      "total-ratings": 1174,
       "wants": 1
     },
     {
       "asin": "B082SQX6TD",
-      "badge": "最畅销商品 在浴室秤、体脂仪、人体体质分析仪中",
+      "badge": null,
       "byline": "作者：INSMART",
       "comment": null,
       "coupon": null,
@@ -505,7 +483,7 @@
       "price": "¥3,280.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 14938,
+      "total-ratings": 14950,
       "wants": 1
     },
     {
@@ -525,7 +503,7 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B086P9DFFB/?coliid=I1OV60NEDO5H2C&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Barifall 女士 运动衫 下 侧线裤 运动服 运动裤 休闲 带瑜伽裤口袋 美腿",
       "old-price": null,
-      "price": "¥2,380.00",
+      "price": "¥1,859.00",
       "priority": 0,
       "rating": 3.8,
       "total-ratings": 286,
@@ -551,7 +529,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 1835,
+      "total-ratings": 1834,
       "wants": 1
     },
     {
@@ -571,10 +549,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B08CBFL4V3/?coliid=I1S183UGWDULNY&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "[旧商品] Aqua Label 特殊啫喱霜N (保湿)",
       "old-price": null,
-      "price": "¥1,560.00",
+      "price": "¥1,590.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 1010,
+      "total-ratings": 1012,
       "wants": 1
     },
     {
@@ -594,10 +572,10 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B08DNKT4LV/?coliid=I1Z3EYDOHIT0H0&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Skater 斯凯达 闪亮 厨房 海绵刷 Hello Kitty 三丽鸥 KKSP1",
       "old-price": null,
-      "price": "¥630.00",
+      "price": "¥440.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 65,
+      "total-ratings": 63,
       "wants": 1
     },
     {
@@ -619,7 +597,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 7181,
+      "total-ratings": 7172,
       "wants": 1
     },
     {
@@ -661,7 +639,7 @@
       "price": "¥7,999.00",
       "priority": 0,
       "rating": 3.8,
-      "total-ratings": 1277,
+      "total-ratings": 1280,
       "wants": 1
     },
     {
@@ -683,7 +661,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 7181,
+      "total-ratings": 7172,
       "wants": 1
     },
     {
@@ -705,7 +683,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 7181,
+      "total-ratings": 7172,
       "wants": 1
     },
     {
@@ -773,7 +751,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 1740,
+      "total-ratings": 1745,
       "wants": 2
     },
     {
@@ -786,14 +764,16 @@
       "has": 1,
       "image": "https://m.media-amazon.com/images/I/41MFFh4sH1L._SS135_.jpg",
       "item-category": "purchasable",
-      "item-option": null,
+      "item-option": {
+        "样式": "洗发水替换用(光滑护理)"
+      },
       "link": "https://www.amazon.co.jp/-/zh/dp/B0B4RQCTYN/?coliid=ISPKUVWJNKR69&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "いち髪 【光滑柔顺护理】 洗发水 大容量 替换装 660ml | 无硅 氨基酸洗发水 头发护理 受损护理 男士 女士",
       "old-price": null,
       "price": "¥669.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 563,
+      "total-ratings": 1291,
       "wants": 1
     },
     {
@@ -830,7 +810,7 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B0B4RVJTK3/?coliid=IXC2AICUNRSPZ&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "いち髪 【光滑柔顺护理】 护发素 按压式 480g | 发护理 男士 女士",
       "old-price": null,
-      "price": "¥739.00",
+      "price": "¥702.00",
       "priority": 0,
       "rating": 4.2,
       "total-ratings": 109,
@@ -855,7 +835,7 @@
       "price": "¥1,398.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 770,
+      "total-ratings": 771,
       "wants": 1
     },
     {
@@ -869,13 +849,13 @@
       "image": "https://m.media-amazon.com/images/I/51Mise6sm+L._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.co.jp/dp/B0B9675MJ6/?coliid=I2XO2SYKUE2JWZ&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/-/zh/dp/B0B9675MJ6/?coliid=I2XO2SYKUE2JWZ&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "House 热炖菜 奶油 180克×5个 [适用于微波炉化・微波炉简单烹饪]",
       "old-price": null,
       "price": null,
       "priority": 0,
       "rating": 4.0,
-      "total-ratings": 833,
+      "total-ratings": 836,
       "wants": 1
     },
     {
@@ -895,7 +875,7 @@
       "link": "https://www.amazon.co.jp/-/zh/dp/B0BHY1RX5P/?coliid=I26FZON9Q21W1N&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "[DAMILY] 袜子 女士 保暖 冬季 袜子 厚 防寒 袜子 女士 棉 可爱 保暖性 多彩 保暖 冬袜 5双装 花纹 女性用 水手袜 户外 防寒袜 北欧 22-24.5厘米 休闲袜",
       "old-price": null,
-      "price": "¥1,980.00",
+      "price": "¥1,768.00",
       "priority": 0,
       "rating": 3.8,
       "total-ratings": 57,
@@ -936,11 +916,11 @@
       },
       "link": "https://www.amazon.co.jp/-/zh/dp/B0BK33ZLPY/?coliid=I3NX6BU6YK35JU&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "【防灾用品大奖2024获奖】 Suuture® 简易厕所 从防灾到户外 便携式厕所 便携厕所 承重100千克 (b.黑色&灰色/M尺寸/附排便袋&凝固剂)",
-      "old-price": "JP¥2,980",
-      "price": "¥2,580.00",
+      "old-price": null,
+      "price": "¥3,480.00",
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 1806,
+      "total-ratings": 1834,
       "wants": 1
     },
     {
@@ -960,7 +940,7 @@
       "price": "¥1,357.00",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 681,
+      "total-ratings": 684,
       "wants": 1
     },
     {
@@ -1068,7 +1048,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 902,
+      "total-ratings": 904,
       "wants": 1
     },
     {
@@ -1084,13 +1064,13 @@
       "item-option": {
         "颜色": "エールブラシ（ローズゴールド）"
       },
-      "link": "https://www.amazon.co.jp/-/zh/dp/B0C5WZMG4C/?coliid=I3POFS6YT486ZL&colid=3LTVNU7OHNWJO&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.co.jp/-/zh/dp/B0C5WZMG4C/?coliid=I3POFS6YT486ZL&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "ReFa AILE BRUSH (玫瑰金)MTG mtiji 发刷 礼物",
       "old-price": null,
-      "price": null,
+      "price": "¥3,800.00",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 1313,
+      "total-ratings": 1328,
       "wants": 1
     },
     {
@@ -1108,11 +1088,11 @@
       },
       "link": "https://www.amazon.co.jp/-/zh/dp/B0CNSYK2WZ/?coliid=I79SAQUPISC5G&colid=3LTVNU7OHNWJO&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "CB Japan 微波炉炊具 可用微波炉加热 [ 炒 煮 烤 煮 蒸 但这一个 ] 可用洗碗机清洗 带食谱 微波炉烤架 copan",
-      "old-price": "JP¥4,084",
-      "price": "¥4,024.00",
+      "old-price": null,
+      "price": "¥4,527.00",
       "priority": 0,
       "rating": 4.1,
-      "total-ratings": 389,
+      "total-ratings": 400,
       "wants": 1
     },
     {
@@ -1172,7 +1152,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.3,
-      "total-ratings": 1091,
+      "total-ratings": 1110,
       "wants": 1
     },
     {
@@ -1215,5 +1195,7 @@
       "total-ratings": 1,
       "wants": 1
     }
-  ]
+  ],
+  "language": "zh",
+  "currency": "JPY"
 }

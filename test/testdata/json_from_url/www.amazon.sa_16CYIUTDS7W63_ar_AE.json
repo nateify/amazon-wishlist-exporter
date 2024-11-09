@@ -2,7 +2,7 @@
   "id": "16CYIUTDS7W63",
   "title": "Wish List",
   "comment": null,
-  "url": "https://www.amazon.sa/hz/wishlist/ls/16CYIUTDS7W63?language=ar_ae&viewType=list",
+  "url": "https://www.amazon.sa/hz/wishlist/ls/16CYIUTDS7W63?language=ar_AE&viewType=list",
   "locale": "ar_ae",
   "items": [
     {
@@ -83,10 +83,10 @@
       "link": "https://www.amazon.sa/dp/B0BPC73WH4/?coliid=I2J2A1SDAY0HJQ&colid=16CYIUTDS7W63&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "مجموعة العاب بناء كاي دراجون باور سبينجيتزو فليب 71777 نينجاجو® من ليجو® (72 قطعة)، بلاستيك",
       "old-price": "‏74.63 ر.س.‏",
-      "price": "‏49.00 ر.س.‏",
+      "price": "‏71.10 ر.س.‏",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 577,
+      "total-ratings": 578,
       "wants": 1
     },
     {
@@ -108,7 +108,7 @@
       "price": "‏79.00 ر.س.‏",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 669,
+      "total-ratings": 670,
       "wants": 1
     },
     {
@@ -127,7 +127,7 @@
       "link": "https://www.amazon.sa/dp/B0BPCB9HDY/?coliid=I2FMP0HJNVS9V2&colid=16CYIUTDS7W63&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "ليغو® NINJAGO®‎ انزلاقة سبينجيتسو بقوة التنين الخاصة بنيا 71778 مجموعة لعبة بناء (57 قطعة)، بلاستيك",
       "old-price": null,
-      "price": "‏79.00 ر.س.‏",
+      "price": "‏71.10 ر.س.‏",
       "priority": 0,
       "rating": 4.7,
       "total-ratings": 661,
@@ -147,7 +147,7 @@
       "link": "https://www.amazon.sa/dp/B0BPCBP5ZV/?coliid=I3KC4J1ZGZ5UTZ&colid=16CYIUTDS7W63&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "مجموعة العاب بناء سورا ترانسفورمينغ ميك بايك ريسر 71792 نينجاجو® من ليجو®، (384 قطعة)، بلاستيك",
       "old-price": "‏215.00 ر.س.‏",
-      "price": "‏209.00 ر.س.‏",
+      "price": "‏185.82 ر.س.‏",
       "priority": 0,
       "rating": 4.8,
       "total-ratings": 1385,
@@ -172,7 +172,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 620,
+      "total-ratings": 623,
       "wants": 1
     },
     {
@@ -189,11 +189,13 @@
       "link": "https://www.amazon.sa/dp/B0BPCF2J79/?coliid=I1RHHRWT5INFWN&colid=16CYIUTDS7W63&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "ليغو® NINJAGO®‎ سيارة سباق سبينجيتسو بقوة التنين الخاصة بزان 71791 مجموعة لعبة بناء (307 قطعة)، بلاستيك",
       "old-price": "‏224.25 ر.س.‏",
-      "price": "‏169.00 ر.س.‏",
+      "price": "‏153.00 ر.س.‏",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 1317,
+      "total-ratings": 1320,
       "wants": 1
     }
-  ]
+  ],
+  "language": "ar",
+  "currency": "SAR"
 }

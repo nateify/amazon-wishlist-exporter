@@ -145,11 +145,8 @@ def get_currency_from_territory(territory):
         return None
 
 
-def get_localized_price(text, store_tld, store_locale):
-    territory_from_tld = get_territory_from_tld(store_tld)
-    currency_from_tld = get_currency_from_territory(territory_from_tld)
-
-    parsed_price = parse_price(text, currency_hint=currency_from_tld)
+def get_localized_price(text, currency, store_locale):
+    parsed_price = parse_price(text, currency_hint=currency)
 
     return format_currency(parsed_price.amount, parsed_price.currency, locale=store_locale)
 
@@ -231,16 +228,16 @@ def sort_items(items, sort_keys, locale_string):
             value = item[key]
             if isinstance(value, str):
                 # Sort strings with locale-specific collation
-                result.append(collator.getSortKey(value))
+                result.append((0, collator.getSortKey(value)))
             elif isinstance(value, (int, float)):
                 # Sort numbers by largest to smallest (negative for reverse sort)
-                result.append(-value)
+                result.append((1, -value))
             elif value is None:
                 # Handle None values (sort them last)
-                result.append(b"")
+                result.append((2, float("inf")))
             else:
-                # Default behavior for other types
-                result.append(value)
+                # Fallback behavior for other types
+                result.append((3, float("inf")))
         return tuple(result)
 
     # Sort the items based on the sort keys and conditions
