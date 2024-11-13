@@ -30,7 +30,6 @@ def setup_parser():
     parser = LoggingArgumentParser()
 
     input_group = parser.add_mutually_exclusive_group(required=True)
-    input_group.add_argument("-i", "--id", type=str, help="Amazon wishlist ID")
     input_group.add_argument("-u", "--url", type=str, help="Amazon wishlist URL")
     input_group.add_argument("-f", "--html-file", "--html", type=str, help="Amazon wishlist HTML file")
 
@@ -57,15 +56,6 @@ def normalize_args(args, parser):
         args.store_tld = normalize_tld(args.store_tld)
     if args.store_locale:
         args.store_locale = normalize_locale(args.store_locale)
-
-
-def handle_id_case(args, parser):
-    if not args.store_tld:
-        parser.error("--store-tld is required when --id is provided")
-    if not args.store_locale:
-        args.store_locale = get_default_locale(args.store_tld)
-    else:
-        validate_tld_locale(args.store_tld, args.store_locale)
 
 
 def handle_url_case(args, parser):
@@ -119,9 +109,7 @@ def cli():
     normalize_args(args, parser)
 
     # Validate based on the input type
-    if args.id:
-        handle_id_case(args, parser)
-    elif args.url:
+    if args.url:
         handle_url_case(args, parser)
     elif args.html_file:
         handle_html_file_case(args, parser)

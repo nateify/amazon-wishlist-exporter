@@ -1,11 +1,10 @@
 # amazon-wishlist-exporter
 amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 
-    usage: amazon_wishlist_exporter.py [-h] (-i ID | -u URL | -f HTML_FILE) [-t STORE_TLD] [-l STORE_LOCALE] [-p] [-d] [-s SORT_KEYS] [-c] [-y] [-o OUTPUT_FILE]
+    usage: amazon_wishlist_exporter.py [-h] (-u URL | -f HTML_FILE) [-t STORE_TLD] [-l STORE_LOCALE] [-p] [-d] [-s SORT_KEYS] [-c] [-y] [-o OUTPUT_FILE] [--debug]
     
     options:
       -h, --help            show this help message and exit
-      -i ID, --id ID        Amazon wishlist ID
       -u URL, --url URL     Amazon wishlist URL
       -f HTML_FILE, --html-file HTML_FILE
                             Amazon wishlist HTML file
@@ -22,6 +21,7 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
       -y, --force           Overwrite existing output file without asking
       -o OUTPUT_FILE, --output-file OUTPUT_FILE
                             Output JSON file
+      --debug               Print debug messages
 
 ## Installation
 
@@ -58,11 +58,13 @@ Utilizing uv:
 
 ## Options
 
-* `--id`: The ID of the wishlist, highlighted in bold in this example URL: `https://www.amazon.com/hz/wishlist/ls/` **XXXXXXXXXX** `/ref=nav_wishlist_lists_1`
 * `--url`: Alternative to the above, allows whole wishlist URL as input - may need to be quoted
 * `--html`: For HTML files generated via below instructions
-* `--store-tld`: Required unless using `--url` - Any valid Amazon store TLD such as com, co.uk, de, etc.
-* `--store-locale`: Optional unless using `--html` - Store locale such as en_US, en_GB, de_DE, etc. - not all stores support all locales. If not specified, the default locale for that store will be chosen.
+* `--store-tld`: Optional for `--html`, will be guessed from filename
+* `--store-locale`: Optional - Store locale such as en_US, en_GB, de_DE, etc.
+  * Not all stores support all locales.
+  * If not specified, the default locale for that store will be chosen.
+  * This is required for HTML files if the locale is not in the file name
 * `--sort-keys`: Optional - A single key or comma separated list of key names to sort the wishlist items by. Example `priority,name` sorts first by priority value highest to lowest, then sorts by name
   * Numeric values (such as priority, rating) are sorted largest to smallest
   * String values (such as name, comment) are sorted using the specified locale - when the package is installed with PyICU, the Unicode Collation Algorithm for the locale is used
