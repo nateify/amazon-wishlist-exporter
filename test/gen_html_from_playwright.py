@@ -1,7 +1,7 @@
 import asyncio
 import re
 from pathlib import Path
-
+import os
 from amazon_wishlist_exporter.utils.locale_ import (
     get_currency_from_territory,
     get_territory_from_tld,
@@ -58,7 +58,7 @@ async def process_wishlist_url(url, fmt_locale, wishlist_tld):
             context = await p.chromium.launch_persistent_context(
                 user_data_dir=str(user_data_dir_locale),
                 channel="chrome",
-                executable_path=r"C:\Users\Nate\scoop\apps\ungoogled-chromium\current\chrome.exe",
+                executable_path=os.getenv("CHROME_BINARY_PATH"),
                 headless=False,
                 no_viewport=True,
                 args=[

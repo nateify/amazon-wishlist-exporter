@@ -263,6 +263,7 @@ class Wishlist:
 
     def __init__(
         self,
+        wishlist_id=None,
         html_file=None,
         store_tld=None,
         store_locale=None,
@@ -270,6 +271,7 @@ class Wishlist:
         date_as_iso8601=False,
         test_output=False,
     ):
+        self.wishlist_id = wishlist_id
         self.html_file = html_file
         self.store_tld = store_tld
         self.store_locale = store_locale
@@ -290,7 +292,10 @@ class Wishlist:
 
     @property
     def id(self):
-        return get_attr_value(self.first_page_html.css_first("#listId"), "value")
+        if self.wishlist_id:
+            return self.wishlist_id
+        else:
+            return get_attr_value(self.first_page_html.css_first("#listId"), "value")
 
     @property
     def wishlist_title(self):

@@ -1,6 +1,6 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.8.0"
+version = "0.9.0"
 description = "Export Amazon wishlist metadata to JSON"
 authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
