@@ -4,6 +4,15 @@ from time import sleep
 from amazoncaptcha import AmazonCaptcha
 from curl_cffi import requests
 from selectolax.lexbor import LexborHTMLParser
+from tenacity import (
+    before_sleep_log,
+    retry,
+    retry_if_result,
+    stop_after_attempt,
+    stop_after_delay,
+    wait_fixed,
+    wait_random,
+)
 
 from .logger_config import logger
 
@@ -27,6 +36,14 @@ def get_node_text(node):
     return node_text
 
 
+@retry(wait=wait_fixed(3) + wait_random(0, 2), stop=stop_after_delay(10), before_sleep=before_sleep_log(logger, 30))
+def get_with_retry(session, url, **kwargs):
+    logger.debug(f"Requesting {url}")
+    response = session.get(url, **kwargs)
+    response.raise_for_status()
+    return response
+
+
 def extract_pagination_details(page_html):
     pagination_elem = page_html.css_first('script[data-a-state=\'{"key":"scrollState"}\']')
     if pagination_elem:
@@ -40,7 +57,7 @@ def get_external_image(link):
 
     external_image_session = requests.Session(impersonate="chrome")
 
-    external_r = external_image_session.get(link, headers={"Referer": "https://www.amazon.com/"})
+    external_r = get_with_retry(external_image_session, link, headers={"Referer": "https://www.amazon.com/"})
 
     tree = LexborHTMLParser(external_r.content)
     head = tree.head
@@ -99,7 +116,8 @@ def get_pages_from_web(base_url, wishlist_url, babel_locale, babel_currency):
 
     s = requests.Session(impersonate="chrome", cookies=locale_cookies, headers=locale_headers)
     logger.debug(f"Requesting {wishlist_url}")
-    initial_request = s.get(wishlist_url)
+    # initial_request = s.get(wishlist_url)
+    initial_request = get_with_retry(s, wishlist_url)
     tree = LexborHTMLParser(initial_request.content)
 
     captcha_element = tree.css_first("form[action='/errors/validateCaptcha']")
@@ -116,7 +134,8 @@ def get_pages_from_web(base_url, wishlist_url, babel_locale, babel_currency):
         next_page_url = f"{base_url}{pagination_details['showMoreUrl']}"
         sleep(3)  # Slightly prevent anti-bot measures
         logger.debug(f"Requesting paginated URL {next_page_url}")
-        r = s.get(next_page_url)
+        # r = s.get(next_page_url)
+        r = get_with_retry(s, next_page_url)
         current_page = LexborHTMLParser(r.content)
         wishlist_pages.append(current_page)
         pagination_details = extract_pagination_details(current_page)
@@ -137,41 +156,56 @@ def get_pages_from_local_file(html_file):
     return [page]
 
 
-def solve_captcha(session, base_url, input_tree, wishlist_url, max_retries=3):
-    captcha_link = get_attr_value(
-        input_tree.css_first("img[src^='https://images-na.ssl-images-amazon.com/captcha']"), "src"
+def solve_captcha(session, base_url, input_tree, wishlist_url):
+    @retry(
+        wait=wait_fixed(5) + wait_random(2, 5),
+        stop=stop_after_attempt(5),
+        retry=(retry_if_result(lambda result: result is None)),
+        before_sleep=before_sleep_log(logger, 10),
     )
-    hidden_value = get_attr_value(input_tree.css_first("input[name='amzn']"), "value")
+    def attempt_solve():
+        # Fetch captcha link and hidden value from the input tree
+        captcha_link = get_attr_value(
+            input_tree.css_first("img[src^='https://images-na.ssl-images-amazon.com/captcha']"), "src"
+        )
+        hidden_value = get_attr_value(input_tree.css_first("input[name='amzn']"), "value")
 
-    if not captcha_link or not hidden_value:
-        raise Exception("Captcha elements not found on the page.")
+        if not captcha_link or not hidden_value:
+            logger.warning("Captcha elements not found on the page. Retrying...")
+            return None  # Trigger retry if elements are missing
 
-    captcha = AmazonCaptcha.fromlink(captcha_link)
-
-    for attempt in range(max_retries):
+        # Solve the captcha
+        captcha = AmazonCaptcha.fromlink(captcha_link)
         solution = captcha.solve()
         if not solution:
-            raise Exception("Failed to solve captcha.")
-        logger.debug("Captcha solved, sleeping 3 seconds")
+            logger.warning("Failed to solve captcha. Retrying...")
+            return None  # Trigger retry if no solution is found
 
+        logger.debug("Captcha solved, sleeping 3 seconds")
+        sleep(3)  # Slight delay to prevent bot detection
+
+        # Attempt to validate captcha
         validate_captcha_url = f"{base_url}/errors/validateCaptcha"
         params = {
             "amzn": hidden_value,
             "amzn-r": "/",
             "field-keywords": solution,
         }
-
-        sleep(3)  # Slightly prevent anti-bot measures
         response = session.get(url=validate_captcha_url, params=params)
 
-        if response.status_code == 200:
-            logger.debug("Successfully validated captcha URL")
-            # Retry loading the wishlist page after captcha validation
-            retry_page_response = session.get(wishlist_url)
-            if retry_page_response.status_code == 200:
-                logger.debug("Successfully requested wishlist page after captcha")
-                return LexborHTMLParser(retry_page_response.content)
-        else:
-            logger.debug(f"Captcha solution attempt {attempt + 1} failed. Retrying...")
+        response.raise_for_status()
 
-    raise Exception(f"Failed to solve captcha after {max_retries} attempts.")
+        logger.debug("Successfully validated captcha URL")
+        return True  # Proceed if captcha validation is successful
+
+    # Run the solve attempt with retries
+    try:
+        if attempt_solve():
+            # Retry loading the wishlist page after captcha validation
+            wishlist_response = get_with_retry(session, wishlist_url)
+            if wishlist_response:
+                logger.debug("Successfully requested wishlist page after captcha")
+                return LexborHTMLParser(wishlist_response.content)
+    except Exception as e:
+        logger.error(f"Failed to solve captcha: {e}")
+        raise Exception("Failed to solve captcha after maximum attempts")

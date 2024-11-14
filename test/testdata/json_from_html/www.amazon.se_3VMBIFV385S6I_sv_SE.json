@@ -7,13 +7,13 @@
   "items": [
     {
       "asin": "B0000C73CQ",
-      "badge": "Bästsäljare 1 Elektronik",
+      "badge": "Bästsäljare 1 Fotografisk film",
       "byline": "av instax (Tillbehör)",
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/I/416ZTR9MIAL._SS135_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41CFeRTBCiL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
         "Färg": "Vit",
@@ -22,10 +22,10 @@
       "link": "https://www.amazon.se/dp/B0000C73CQ/?coliid=ICF4ORTN88EO5&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "instax mini film, 20 pack",
       "old-price": null,
-      "price": "205,92 kr",
+      "price": "194,01 kr",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 314760,
+      "total-ratings": 316835,
       "wants": 1
     },
     {
@@ -45,30 +45,10 @@
       "link": "https://www.amazon.se/dp/B085SPRQSQ/?coliid=I1D9NY1ZF1Y7EF&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Nintendo Switch LITE HW Coral",
       "old-price": "2 699,00 kr",
-      "price": "2 563,10 kr",
+      "price": "2 563,30 kr",
       "priority": 0,
       "rating": 5.0,
       "total-ratings": 2,
-      "wants": 1
-    },
-    {
-      "asin": "B086MG1C7C",
-      "badge": null,
-      "byline": "av Intel (Personliga datorer)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/417O6DtsKJL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": null,
-      "link": "https://www.amazon.se/dp/B086MG1C7C/?coliid=I1136O7R2BLQ9D&colid=3VMBIFV385S6I&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "Intel Core i7-10700 skrivbordsprocessor med åtta kärnor upp till 4,8 GHz LGA 1200 (Intel 400-seriens chipset) 65 W, BX8070110700",
-      "old-price": null,
-      "price": null,
-      "priority": 0,
-      "rating": 4.6,
-      "total-ratings": 942,
       "wants": 1
     },
     {
@@ -91,30 +71,7 @@
       "price": "619,00 kr",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 313191,
-      "wants": 1
-    },
-    {
-      "asin": "B098FH5P3C",
-      "badge": null,
-      "byline": "av Bose (Elektroniska komponenter)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/31WeSO7J9nL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": {
-        "Färg": "Rökvit",
-        "Stil": "stängd_baksida"
-      },
-      "link": "https://www.amazon.se/dp/B098FH5P3C/?coliid=I146R5FLZ5JGXA&colid=3VMBIFV385S6I&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "Bose QuietComfort 45 Wireless Noise Cancelling Headphones med mikrofon – Rökvit",
-      "old-price": null,
-      "price": null,
-      "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 23793,
+      "total-ratings": 313470,
       "wants": 1
     },
     {
@@ -133,31 +90,11 @@
       },
       "link": "https://www.amazon.se/dp/B098RJXBTY/?coliid=I25UZU0S7VPUPT&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Nintendo Switch HW (OLED) w. White Joy-Con EUR",
-      "old-price": null,
-      "price": "4 175,00 kr",
+      "old-price": "4 061,00 kr",
+      "price": "3 999,00 kr",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 13615,
-      "wants": 1
-    },
-    {
-      "asin": "B09HZ5K5DY",
-      "badge": null,
-      "byline": "av SANAAA (Övrigt)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/51SuY+RuLZL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": null,
-      "link": "https://www.amazon.se/dp/B09HZ5K5DY/?coliid=I1D81SCREANHY6&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "SANAAA UV Resin Kit 100g UV med UV Lamp - Transparent hård harts - 100g Starter Kit - UV solhärdande harts för att göra örhängen, hängsmycken, smycken",
-      "old-price": null,
-      "price": "250,99 kr",
-      "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 506,
+      "total-ratings": 13627,
       "wants": 1
     },
     {
@@ -178,29 +115,6 @@
       "priority": 0,
       "rating": 4.6,
       "total-ratings": 173,
-      "wants": 1
-    },
-    {
-      "asin": "B09QR6MX9V",
-      "badge": null,
-      "byline": "av Nintendo (Videospel)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/51nLOYodICL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": {
-        "Plattform för visning": "Nintendo Switch",
-        "Utgåva": "Standard."
-      },
-      "link": "https://www.amazon.se/dp/B09QR6MX9V/?coliid=I3VAQOAJ5L6W6C&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "Kirby: And The Forgotten Land (Switch)",
-      "old-price": null,
-      "price": "767,15 kr",
-      "priority": 0,
-      "rating": 4.8,
-      "total-ratings": 3308,
       "wants": 1
     },
     {
@@ -242,30 +156,10 @@
       "link": "https://www.amazon.se/dp/B09Y9FSZFX/?coliid=I2WYU3M4ZHKFU1&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Fractal Design North Chalk White",
       "old-price": null,
-      "price": "1 715,58 kr",
+      "price": "1 706,31 kr",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 1277,
-      "wants": 1
-    },
-    {
-      "asin": "B0B12PTNG9",
-      "badge": null,
-      "byline": "av Funko (Tillbehör)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/310HiBodbBL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": null,
-      "link": "https://www.amazon.se/dp/B0B12PTNG9/?coliid=IP74KFYDZJKGG&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "FUNKO POP! SANRIO: Hello Kitty - My Melody (UP)",
-      "old-price": null,
-      "price": "299,57 kr",
-      "priority": 0,
-      "rating": 4.9,
-      "total-ratings": 735,
+      "total-ratings": 1284,
       "wants": 1
     },
     {
@@ -289,29 +183,6 @@
       "wants": 1
     },
     {
-      "asin": "B0BKFPN3LW",
-      "badge": null,
-      "byline": "av KERDOM (Kök)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/51yrc-5fnSL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": {
-        "Färg": "LJUSGRÅ",
-        "Storlek": "9060H"
-      },
-      "link": "https://www.amazon.se/dp/B0BKFPN3LW/?coliid=I2MLCB6ZBJK4LI&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "KERDOM Kontorsstol ergonomisk, ventilerande skrivbordsstol med justerbart nackstöd, armstöd, snurrstol vippfunktion upp till 135°, nätchefsfåtölj",
-      "old-price": null,
-      "price": "2 199,99 kr",
-      "priority": 0,
-      "rating": 4.0,
-      "total-ratings": 441,
-      "wants": 1
-    },
-    {
       "asin": "B0BMPTFCBY",
       "badge": null,
       "byline": "av YUNZII (Personliga datorer)",
@@ -329,29 +200,6 @@
       "priority": 0,
       "rating": 3.4,
       "total-ratings": 3,
-      "wants": 1
-    },
-    {
-      "asin": "B0BNYP87RZ",
-      "badge": null,
-      "byline": "av NZXT (Övrigt)",
-      "comment": null,
-      "coupon": null,
-      "date-added": null,
-      "has": 0,
-      "image": "https://m.media-amazon.com/images/I/31sYE4egRvL._SS135_.jpg",
-      "item-category": "purchasable",
-      "item-option": {
-        "Färg": "360mm Vit",
-        "Stil": "Kraken Elite RGB"
-      },
-      "link": "https://www.amazon.se/dp/B0BNYP87RZ/?coliid=IBB5B7GPUI8WG&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "NZXT KRAKEN ELITE 360 RGB Vattenkylningssystem, Flerfärgad, 39.4 x 2.7 x 12.1 cm",
-      "old-price": "3 200,00 kr",
-      "price": "3 191,36 kr",
-      "priority": 0,
-      "rating": 4.5,
-      "total-ratings": 1551,
       "wants": 1
     },
     {
@@ -391,10 +239,10 @@
       "link": "https://www.amazon.se/dp/B0BW65C1W4/?coliid=I3C9M1937V36EC&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "NZXT F120 RGB Core Triple Pack - 3 x 120mm Hub-Mounted RGB Fans with RGB Controller - 8 Individually-Addressable LEDs - Semi-Translucent Blades - High Static Pressure & Airflow - CAM Software - White",
       "old-price": "799,00 kr",
-      "price": "703,95 kr",
+      "price": "700,99 kr",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 814,
+      "total-ratings": 853,
       "wants": 1
     },
     {
@@ -434,7 +282,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.0,
-      "total-ratings": 156,
+      "total-ratings": 157,
       "wants": 1
     },
     {
@@ -454,10 +302,10 @@
       "link": "https://www.amazon.se/dp/B0C89S5PC5/?coliid=I2OPN2ID6W7SDD&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "NZXT H6 Flow RGB | CC-H61FW-R1 | Compact Dual-Chamber Mid-Tower Airflow Case | Includes 3 x 120mm RGB Fans | Panoramic Glass Panels | High-Performance Airflow Panels | Cable Management | White",
       "old-price": "1 834,99 kr",
-      "price": "1 649,00 kr",
+      "price": "1 640,87 kr",
       "priority": 0,
       "rating": 4.8,
-      "total-ratings": 1865,
+      "total-ratings": 1879,
       "wants": 1
     },
     {
@@ -479,7 +327,7 @@
       "price": "1 549,00 kr",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 42124,
+      "total-ratings": 42223,
       "wants": 1
     },
     {
@@ -554,16 +402,14 @@
       "has": 0,
       "image": "https://m.media-amazon.com/images/I/41jwchaxcfL._SS135_.jpg",
       "item-category": "purchasable",
-      "item-option": {
-        "Färg": "BLÅ"
-      },
-      "link": "https://www.amazon.se/dp/B0CKN8HY1G/?coliid=I362JWHSBRRP90&colid=3VMBIFV385S6I&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "item-option": null,
+      "link": "https://www.amazon.se/dp/B0CKN8HY1G/?coliid=I362JWHSBRRP90&colid=3VMBIFV385S6I&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "EPOMAKER CIDOO Nebulosa 65 % mekaniskt KIT-tangentbord, BT/2,4 GHz/typ C, VIA och Hot-swap, med 3 000 mAh batteri, NKRO, södra RGB, för Win/Mac (Blue)",
-      "old-price": "866,70 kr",
-      "price": "629,99 kr",
+      "old-price": null,
+      "price": null,
       "priority": 0,
       "rating": 3.0,
-      "total-ratings": 37,
+      "total-ratings": 38,
       "wants": 1
     },
     {

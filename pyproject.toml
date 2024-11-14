@@ -1,6 +1,6 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.9.0"
+version = "0.10.0"
 description = "Export Amazon wishlist metadata to JSON"
 authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
@@ -29,6 +29,7 @@ dependencies = [
     "dateparser>=1.2.0",
     "price-parser>=0.3.4",
     "selectolax>=0.3.25",
+    "tenacity>=9.0.0",
 ]
 
 [project.urls]

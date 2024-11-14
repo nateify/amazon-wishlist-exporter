@@ -62,7 +62,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 10503,
+      "total-ratings": 10514,
       "wants": 1
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "asin": "0241694906",
-      "badge": null,
+      "badge": "Best Seller in Developmental Psychology",
       "byline": "by Jonathan Haidt (Paperback)",
       "comment": null,
       "coupon": null,
@@ -102,7 +102,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 3893,
+      "total-ratings": 3951,
       "wants": 1
     },
     {
@@ -116,10 +116,10 @@
       "image": "https://m.media-amazon.com/images/I/41fCfhYawiL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.com.au/dp/0262013193/?coliid=IXBDPNXJGZSZ&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.au/dp/0262013193/?coliid=IXBDPNXJGZSZ&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Probabilistic Graphical Models: Principles and Techniques",
       "old-price": null,
-      "price": null,
+      "price": "$242.37",
       "priority": 2,
       "rating": 4.5,
       "total-ratings": 112,
@@ -182,7 +182,7 @@
       "price": "$37.89",
       "priority": -1,
       "rating": 4.7,
-      "total-ratings": 969,
+      "total-ratings": 970,
       "wants": 1
     },
     {
@@ -276,13 +276,13 @@
       "image": "https://m.media-amazon.com/images/I/41+1f4I68qL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": null,
-      "link": "https://www.amazon.com.au/dp/1570625549/?coliid=I3O9OO80E3O0N7&colid=2JRE8BTLLN8IP&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.com.au/dp/1570625549/?coliid=I3O9OO80E3O0N7&colid=2JRE8BTLLN8IP&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Integral Psychology: Consciousness, Spirit, Psychology, Therapy",
       "old-price": null,
-      "price": "$47.92",
+      "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 217,
+      "total-ratings": 218,
       "wants": 1
     },
     {
@@ -402,7 +402,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 1221,
+      "total-ratings": 1225,
       "wants": 1
     },
     {
@@ -442,7 +442,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 46,
+      "total-ratings": 47,
       "wants": 1
     },
     {
@@ -464,7 +464,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 12326,
+      "total-ratings": 12330,
       "wants": 1
     },
     {
@@ -504,7 +504,7 @@
       "price": "$51.60",
       "priority": 1,
       "rating": 4.9,
-      "total-ratings": 1341,
+      "total-ratings": 1343,
       "wants": 1
     }
   ],

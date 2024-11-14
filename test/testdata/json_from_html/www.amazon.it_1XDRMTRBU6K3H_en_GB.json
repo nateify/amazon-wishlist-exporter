@@ -8,24 +8,24 @@
     {
       "asin": "B00430I4BU",
       "badge": null,
-      "byline": "by SUPERGA (Apparel)",
+      "byline": "by SUPERGA (Shoes)",
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/I/41VK5CT6t4L._SS135_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41hPGab18HL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
         "Size": "30 EU",
         "Colour": "White White 901"
       },
       "link": "https://www.amazon.it/-/en/dp/B00430I4BU/?coliid=I3BY08IVGWGJKV&colid=1XDRMTRBU6K3H&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "SUPERGA 2750 Cotjstrap Classic, Unisex Sneaker - Children and Boys",
+      "name": "SUPERGA 2750 Cotjstrap Classic, Unisex Sneaker - Children and Boys, White White 901, 30 EU",
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 4.4,
-      "total-ratings": 890,
+      "rating": 4.2,
+      "total-ratings": 15,
       "wants": 1
     },
     {
@@ -44,10 +44,10 @@
       "link": "https://www.amazon.it/-/en/dp/B0069FCHJW/?coliid=I27RS1X2Z88ITJ&colid=1XDRMTRBU6K3H&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "KidKraft 00105 Children's Garden Sun Lounger with Cushions and Wooden Parasol, Sun Lounger for Children, Garden Furniture and Outdoor, Navy Blue and White Stripes",
       "old-price": null,
-      "price": "€134.99",
+      "price": "€130.12",
       "priority": 0,
       "rating": 4.4,
-      "total-ratings": 791,
+      "total-ratings": 792,
       "wants": 1
     },
     {
@@ -70,7 +70,7 @@
       "price": "€5.89",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 533704,
+      "total-ratings": 534464,
       "wants": 1
     },
     {
@@ -81,15 +81,15 @@
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/I/51-b+AgBJbL._SS135_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41H53r3YPAL._SS135_.jpg",
       "item-category": "purchasable",
       "item-option": {
         "Colour Name": "Oat/White"
       },
-      "link": "https://www.amazon.it/-/en/dp/B01BWMTHTE/?coliid=I1IO4J7AMSSC4H&colid=1XDRMTRBU6K3H&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+      "link": "https://www.amazon.it/-/en/dp/B01BWMTHTE/?coliid=I1IO4J7AMSSC4H&colid=1XDRMTRBU6K3H&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "KidKraft 00534 Children's Wooden Garden Sun Lounger with Sun Canopy and Cushions, Garden Furniture and Outdoor, Beige and White Stripes",
       "old-price": null,
-      "price": "€184.99",
+      "price": null,
       "priority": 0,
       "rating": 4.4,
       "total-ratings": 2071,
@@ -137,7 +137,7 @@
       "price": "€56.99",
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 3471,
+      "total-ratings": 3476,
       "wants": 1
     },
     {
@@ -157,27 +157,27 @@
       "price": null,
       "priority": 0,
       "rating": 4.7,
-      "total-ratings": 11326,
+      "total-ratings": 11349,
       "wants": 1
     },
     {
       "asin": "B08WLVP9LF",
       "badge": null,
-      "byline": "by Disney (Apparel)",
+      "byline": null,
       "comment": null,
       "coupon": null,
       "date-added": null,
       "has": 0,
-      "image": "https://m.media-amazon.com/images/I/41fgQ6kOdeL._SS135_.jpg",
-      "item-category": "purchasable",
+      "image": null,
+      "item-category": "deleted",
       "item-option": null,
-      "link": "https://www.amazon.it/-/en/dp/B08WLVP9LF/?coliid=I2MWHCISD7OU0H&colid=1XDRMTRBU6K3H&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-      "name": "Disney Mickey Mouse Children's Pyjamas Set 1-6 Years, red / black, 5-6 years",
+      "link": null,
+      "name": null,
       "old-price": null,
       "price": null,
       "priority": 0,
-      "rating": 5.0,
-      "total-ratings": 2,
+      "rating": null,
+      "total-ratings": null,
       "wants": 1
     },
     {
@@ -196,11 +196,11 @@
       },
       "link": "https://www.amazon.it/-/en/dp/B08ZSSWLLD/?coliid=I1E12AGXPBUBSQ&colid=1XDRMTRBU6K3H&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
       "name": "Super Mario Luigi Boys Swimming Shorts Kids Gamer Trousers for Children",
-      "old-price": "€23.99",
-      "price": "€18.04",
+      "old-price": null,
+      "price": "€23.99",
       "priority": 0,
       "rating": 4.6,
-      "total-ratings": 407,
+      "total-ratings": 408,
       "wants": 1
     },
     {
@@ -266,7 +266,7 @@
       "price": "€109.99",
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 3636,
+      "total-ratings": 3657,
       "wants": 1
     },
     {
@@ -286,7 +286,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.5,
-      "total-ratings": 911,
+      "total-ratings": 901,
       "wants": 1
     },
     {
@@ -306,7 +306,7 @@
       "price": null,
       "priority": 0,
       "rating": 4.2,
-      "total-ratings": 106,
+      "total-ratings": 107,
       "wants": 1
     },
     {

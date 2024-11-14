@@ -54,6 +54,7 @@ Utilizing uv:
 * dateparser
 * selectolax
 * price_parser
+* tenacity
 * PyICU (optional)
 
 ## Options
