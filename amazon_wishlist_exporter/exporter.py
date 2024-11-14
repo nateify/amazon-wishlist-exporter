@@ -90,11 +90,9 @@ class WishlistItem:
 
     @property
     def comment(self):
-        item_comment = self.element.css_first("span[id^='itemComment_']").text(strip=True)
-        if item_comment == "":  # Done to preserve json null functionality
-            return None
-        else:
-            return item_comment
+        item_comment = self.element.css_first("span[id^='itemComment_']")
+
+        return get_node_text(item_comment)
 
     @property
     def price(self):
@@ -110,17 +108,12 @@ class WishlistItem:
         else:
             if price_elem:
                 price_text = price_elem.text(strip=True)
-            elif (
-                get_attr_value(self.element.css_first("[data-price]"), "data-price") == "-Infinity"
-            ):  # Applies to out of stock items
+            elif get_attr_value(self.element.css_first("[data-price]"), "data-price") == "-Infinity":
+                # Applies to out of stock items
                 price_text = None
             else:
                 # Applies to items which only have a marketplace price
-                try:
-                    price_text = self.element.css_first("span[class*='itemUsedAndNewPrice']").text(strip=True)
-                except AttributeError:
-                    # Usually when no Buy Box is available
-                    price_text = None
+                price_text = get_node_text(self.element.css_first("span[class*='itemUsedAndNewPrice']"))
 
         if price_text:
             return get_localized_price(price_text, self.wishlist_currency, self.store_locale)
@@ -238,7 +231,7 @@ class WishlistItem:
         if badge_elem:
             badge_label = badge_elem.text(strip=True)
             badge_sup = badge_elem.parent.css_first('span[id$="-supplementary"]').text(strip=True)
-            # todo: check other locales
+            # Not checked against RTL languages
             return f"{badge_label} {badge_sup}"
         else:
             return None
@@ -247,10 +240,7 @@ class WishlistItem:
     def coupon(self):
         coupon_elem = self.element.css_first("i[id^='coupon-badge_']")
 
-        if coupon_elem:
-            return coupon_elem.text(strip=True)
-        else:
-            return None
+        return get_node_text(coupon_elem)
 
     def asdict(self):
         return_dict = {
@@ -273,7 +263,6 @@ class Wishlist:
 
     def __init__(
         self,
-        wishlist_id=None,
         html_file=None,
         store_tld=None,
         store_locale=None,
@@ -281,7 +270,6 @@ class Wishlist:
         date_as_iso8601=False,
         test_output=False,
     ):
-        self.wishlist_id = wishlist_id
         self.html_file = html_file
         self.store_tld = store_tld
         self.store_locale = store_locale
@@ -302,10 +290,7 @@ class Wishlist:
 
     @property
     def id(self):
-        if self.wishlist_id:
-            return self.wishlist_id
-        else:
-            return get_attr_value(self.first_page_html.css_first("#listId"), "value")
+        return get_attr_value(self.first_page_html.css_first("#listId"), "value")
 
     @property
     def wishlist_title(self):

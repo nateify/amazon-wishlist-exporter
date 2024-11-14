@@ -51,7 +51,7 @@ def setup_parser():
     return parser
 
 
-def normalize_args(args, parser):
+def normalize_args(args):
     if args.store_tld:
         args.store_tld = normalize_tld(args.store_tld)
     if args.store_locale:
@@ -106,7 +106,7 @@ def cli():
         logger.setLevel(logging.DEBUG)
 
     # Normalize the inputs
-    normalize_args(args, parser)
+    normalize_args(args)
 
     # Validate based on the input type
     if args.url:

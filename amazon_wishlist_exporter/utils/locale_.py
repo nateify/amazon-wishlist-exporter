@@ -240,5 +240,4 @@ def sort_items(items, sort_keys, locale_string):
                 result.append((3, float("inf")))
         return tuple(result)
 
-    # Sort the items based on the sort keys and conditions
     return sorted(items, key=collate_and_sort, reverse=False)
