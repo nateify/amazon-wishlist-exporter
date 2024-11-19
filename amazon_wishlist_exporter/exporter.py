@@ -1,5 +1,6 @@
 import json
 import re
+from collections import OrderedDict
 from pathlib import Path
 
 from babel.core import Locale
@@ -39,12 +40,16 @@ class WishlistItem:
         element_action_button_class = get_attr_value(element_action_button, "class")
 
         if not element_action_button_class:
-            return "deleted"
+            if self.element.css_first('span[id^="showkeyword-menu-modal"]'):
+                return "idea"
+            else:
+                return "deleted"
 
         element_action_value = re.search(r"\s(wl.*$)", element_action_button_class).group(1)
         action_mapping = {
             "wl-info-aa_shop_this_store": "external",
             "wl-info-wl_kindle_ov_wfa_button": "idea",
+            "wl-info-aa_buying_options_button": "see-options",
         }
         return action_mapping.get(element_action_value, "purchasable")
 
@@ -240,6 +245,9 @@ class WishlistItem:
     def coupon(self):
         coupon_elem = self.element.css_first("i[id^='coupon-badge_']")
 
+        if not coupon_elem:
+            coupon_elem = self.element.css_first(".wl-deal-rich-badge-label span")
+
         return get_node_text(coupon_elem)
 
     def asdict(self):
@@ -255,7 +263,31 @@ class WishlistItem:
                 v = re.sub(r"[\s\u2025\u3000]", " ", v)
                 return_dict[k] = v if v != "" else None
 
-        return return_dict
+        ordered_dict = OrderedDict()
+        for key in [
+            "asin",
+            "item-category",
+            "badge",
+            "name",
+            "byline",
+            "item-option",
+            "comment",
+            "link",
+            "image",
+            "wants",
+            "has",
+            "priority",
+            "price",
+            "old-price",
+            "coupon",
+            "rating",
+            "total-ratings",
+            "date-added",
+        ]:
+            if key in return_dict:
+                ordered_dict[key] = return_dict.pop(key)
+        ordered_dict.update(return_dict)
+        return ordered_dict
 
 
 class Wishlist:

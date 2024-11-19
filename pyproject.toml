@@ -1,13 +1,13 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.10.0"
+version = "0.11.0"
 description = "Export Amazon wishlist metadata to JSON"
 authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
 ]
 readme = "README.md"
 keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
-requires-python = ">=3.9"
+requires-python = ">=3.9,<3.12"
 classifiers = [
     "Environment :: Console",
     "Operating System :: OS Independent",
@@ -16,8 +16,6 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
     "Topic :: Utilities",
 ]
