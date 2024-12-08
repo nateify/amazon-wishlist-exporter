@@ -1,13 +1,13 @@
 [project]
 name = "amazon-wishlist-exporter"
-version = "0.11.0"
+version = "2024.12.07"
 description = "Export Amazon wishlist metadata to JSON"
 authors = [
     { name = "nateify", email = "nateify@users.noreply.github.com" }
 ]
 readme = "README.md"
 keywords = ["amazon", "wishlist", "scraper", "amazon-wishlist"]
-requires-python = ">=3.9,<3.12"
+requires-python = ">=3.9"
 classifiers = [
     "Environment :: Console",
     "Operating System :: OS Independent",
@@ -16,18 +16,20 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
     "Topic :: Utilities",
 ]
 license = {file = "LICENSE"}
 dependencies = [
-    "amazoncaptcha",
-    "babel>=2.16.0",
-    "curl-cffi>=0.7.3",
-    "dateparser>=1.2.0",
-    "price-parser>=0.3.4",
-    "selectolax>=0.3.25",
-    "tenacity>=9.0.0",
+    "amazoncaptcha>=0.5.11",
+    "babel~=2.16",
+    "curl-cffi~=0.7.3",
+    "dateparser~=1.2.0",
+    "price-parser~=0.3.4",
+    "selectolax~=0.3.26",
+    "tenacity~=9.0.0",
 ]
 
 [project.urls]
@@ -46,18 +48,16 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 override-dependencies = [
-    'pillow>=9.0.1, <9.6.0; python_version >= "3.9" and python_version <= "3.11"',
-    'pillow>=9.6.0, <12.0.0; python_version >= "3.12"'
+    'pillow~=11.0'
 ]
-dev-dependencies = [
+
+[dependency-groups]
+dev = [
     "nox>=2024.10.9",
-    "playwright>=1.48.0",
+    "playwright>=1.49.0",
     "pytest>=7.2.0",
     "uv>=0.5.0",
 ]
-
-[tool.uv.sources]
-amazoncaptcha = { url = "https://github.com/nateify/amazoncaptcha/releases/download/0.5.12/amazoncaptcha-0.5.12-py3-none-any.whl" }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

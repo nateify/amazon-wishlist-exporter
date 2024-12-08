@@ -25,25 +25,33 @@ amazon-wishlist-exporter.py - Scrapes Amazon wishlist data to JSON format
 
 ## Installation
 
-Install with pip:
+Due to an upstream dependency, this package can only be installed with pip for Python 3.9, 3.10, and 3.11.
 
     pip install amazon-wishlist-exporter
 
 [uv](https://docs.astral.sh/uv/) is recommended to install the package in a managed environment:
 
-    uv tool install amazon-wishlist-exporter
+    uv tool install -p 3.11 amazon-wishlist-exporter
 
 For improved sorting of non-Latin or mixed scripts with the Unicode Collation Algorithm, install with the optional `icu` dependency:
 
-    uv tool install amazon-wishlist-exporter[icu]
+    uv tool install -p 3.11 amazon-wishlist-exporter[icu]
 
 PyICU may need to be built separately: https://gitlab.pyicu.org/main/pyicu#installing-pyicu
 
 Windows users can use pre-built wheels from here: https://github.com/cgohlke/pyicu-build/releases
 
-Utilizing uv:
+Example:
 
-    uv tool install amazon-wishlist-exporter --python 3.11 --with https://github.com/cgohlke/pyicu-build/releases/download/v2.13/PyICU-2.13-cp311-cp311-win_amd64.whl
+    uv tool install -p 3.11 amazon-wishlist-exporter --with https://github.com/cgohlke/pyicu-build/releases/download/v2.13/PyICU-2.13-cp311-cp311-win_amd64.whl
+
+### Installation on Python 3.12 or newer
+
+uv can be used to override the Pillow dependency which has been tested up to Pillow 11.0 on Python 3.13:
+
+    uv tool install -p 3.13 amazon-wishlist-exporter --overrides overrides.txt
+
+The above uses the `overrides.txt` found in this repository. 
 
 ## Dependencies
 
